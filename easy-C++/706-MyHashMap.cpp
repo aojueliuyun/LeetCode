@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.14
 
-// leetcode 706 : MyHashMap / Éè¼Æ¹þÏ£Ó³Éä
+// leetcode 706 : MyHashMap / å®žçŽ°å“ˆå¸Œæ˜ å°„
 
 
 // solution 1 : use vector<int>

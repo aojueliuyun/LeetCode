@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.25
 
-// leetcode 345 reverseVowels / 反转字符串中的元音字母
+// leetcode 345 reverseVowels 
 
 
 // solution 1 : use a vector to save index of vowels

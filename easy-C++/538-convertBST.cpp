@@ -21,7 +21,7 @@ using namespace std;
 
 // 2018.7.29
 
-// leetcode 538 : convertBST / °Ñ¶ş²æËÑË÷Ê÷×ª»»ÎªÀÛ¼ÓÊ÷
+// leetcode 538 : convertBST / åè½¬äºŒå‰æ ‘
 
 
 // Definition for a binary tree node.

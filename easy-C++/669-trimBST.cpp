@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.4
 
-// leetcode 669 : trimBST / ĞŞ¼ô¶ş²æËÑË÷Ê÷
+// leetcode 669 : trimBST / ä¿®å‰ªäºŒå‰æ ‘
 
 
 // Definition for a binary tree node.

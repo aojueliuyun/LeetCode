@@ -21,7 +21,7 @@ using namespace std;
 
 // 2018.7.29
 
-// leetcode 530 : getMinimumDifference / 二叉搜索树的最小绝对差
+// leetcode 530 : getMinimumDifference
 
 
 // Definition for a binary tree node.

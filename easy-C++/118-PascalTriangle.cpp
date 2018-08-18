@@ -17,7 +17,7 @@ using namespace std;
 
 // 2018.7.16
 
-// leetcode 118 : Pascal's Triangle / Ñî»ÔÈı½Ç 
+// leetcode 118 : Pascal's Triangle / å¸•æ–¯å¡ä¸‰è§’
 
 // solution : use padcal identity 
 

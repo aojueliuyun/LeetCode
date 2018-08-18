@@ -22,8 +22,7 @@ using namespace std;
 
 // 2018.8.13
 
-// leetcode 700 : searchBST / ¶ş²æËÑË÷Ê÷ÖĞµÄËÑË÷
-
+// leetcode 700 : searchBST / æœç´¢äºŒå‰æ ‘
 
 
 // Definition for a binary tree node.

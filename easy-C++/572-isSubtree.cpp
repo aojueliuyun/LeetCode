@@ -21,7 +21,7 @@ using namespace std;
 
 // 2018.7.29
 
-// leetcode 572 : isSubtree / 判断一棵树是否是包含另一棵树
+// leetcode 572 : isSubtree / 鍒ゆ柇瀛愭爲
 
 
 //Definition for a binary tree node.
