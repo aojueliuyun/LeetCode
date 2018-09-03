@@ -25,7 +25,8 @@ using namespace std;
 // leetcode 705 : MyHashSet 
 
 
-// solution 1 : æ‹‰é“¾æ³•å¤„ç†å“ˆå¸Œå†²çª
+// solution 1 : À­Á´·¨´¦Àí¹şÏ£³åÍ» 
+
 struct Node {
 	int val;
 	Node * next;

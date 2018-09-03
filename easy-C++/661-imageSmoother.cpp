@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.3
 
-// leetcode 661 : imageSmoother 
+// leetcode 661 : imageSmoother / Í¼Æ¬Æ½»¬
 
 
 // solution 1 : just simulation

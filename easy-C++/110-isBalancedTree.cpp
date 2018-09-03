@@ -17,7 +17,7 @@ using namespace std;
 
 // 2018.7.16
 
-// leetcode 110 : isBalanced 
+// leetcode 110 isBalanced 判断二叉树是否是平衡二叉树
 
 // Definition for a binary tree node.
 struct TreeNode {

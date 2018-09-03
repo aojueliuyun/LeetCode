@@ -23,7 +23,8 @@ using namespace std;
 
 // 2018.8.18
 
-// leetcode 821 : shortestToChar 
+// leetcode 821 : shortestToChar / ×Ö·ûµÄ×î¶Ì¾àÀë
+
 
 // solution : 
 class Solution {

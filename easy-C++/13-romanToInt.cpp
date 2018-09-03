@@ -64,7 +64,7 @@ public:
 						i ++;
 					}
 					if(i+1 < len && s[i+1] == 'X') {
-						res += 8; 
+						res += 8;
 						i ++;
 					}
 					break;
@@ -91,6 +91,23 @@ public:
 		return accumulate(s.begin(), s.end(), 0, [&](int &sum, char word){return sum += last = last < config[word] ? config[word] -2*last: config[word];});
     }
 };
+
+
+// solution 3 : same as solution 2, just simpler writing
+class Solution3 {
+public:
+    int romanToInt(string s) {
+    	unordered_map<char, int> config{ {'I',1},{'V',5},{'X',10},{'L',50},{'C',100},{'D',500},{'M',1000} };
+		int last = 1000, res = 0;
+		for (auto c : s) {
+		    if (config[c] > last) res -= 2 * last;
+            res += config[c];
+            last = config[c];
+        }
+        return res;
+    }
+};
+
 
 
 int main()

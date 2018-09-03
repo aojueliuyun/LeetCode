@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.18
 
-// leetcode 796 : rotateString / æ—‹è½¬å­—ç¬¦ä¸²
+// leetcode 796 : rotateString / Ðý×ª×Ö·û´®
 
 
 // solution : usd string::substr() & +

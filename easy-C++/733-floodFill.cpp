@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.17
 
-// leetcode 733 : floodFill
+// leetcode 733 : floodFill / Í¼ÏñäÖÈ¾
 
 
 // solution : BFS / use queue --------> DFS also works.

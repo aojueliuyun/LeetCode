@@ -17,9 +17,7 @@ using namespace std;
 
 // 2018.7.15
 
-// leetcode 28 : 实现 strStr()函数 
-// strstr(str1,str2) 函数用于判断字符串str2是否是str1的子串。
-//如果是，则该函数返回str2在str1中首次出现的地址；否则，返回-1, str2为空串返回0
+// leetcode 28 : strStr function
 
 
 // Solution 1  : directly compare

@@ -17,7 +17,7 @@ using namespace std;
 
 // 2018.7.15
 
-// leetcode 20 : isValid
+// leetcode 20 : ÓÐÐ§À¨ºÅÆ¥Åä£¬
 
 
 // Solution : use stack
@@ -31,7 +31,7 @@ public:
         		case '(': case '[': case '{':
         			S.push(ch); break;
         		case ')':
-        			if (S.empty() || S.top() != '(') return false;
+        			if (S.empty() || S.top() != '(') return false; // || ÅÐ¶ÏÇ°ÕßÎª1¼´Í£Ö¹ 
         			S.pop();
         			break;
 				case '}':

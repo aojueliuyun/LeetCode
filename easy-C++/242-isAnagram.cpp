@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.23
 
-// leetcode 242 isAnagram
+// leetcode 242 isAnagram / 判断两个字符串是否是字母异位词
 
 
 // solution 1 : use vector / C array / hash map  || two maps or one map all alright

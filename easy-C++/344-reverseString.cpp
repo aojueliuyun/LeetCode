@@ -18,8 +18,8 @@
 using namespace std;
 
 // 2018.7.24
- 
-// leetcode 344 : reverseString / åè½¬å­—ç¬¦ä¸²
+
+// leetcode 344 reverseString / ·´×ª×Ö·û´® 
 
 // solution : use std::reverse in <algorithm>
 class Solution {

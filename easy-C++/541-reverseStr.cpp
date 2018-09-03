@@ -21,7 +21,7 @@ using namespace std;
 
 // 2018.7.29
 
-// leetcode 541 : reverseStr / åè½¬å­—ç¬¦ä¸²
+// leetcode 541 : reverseStr / ·´×ª×Ö·û´®
 
 
 // solution : 

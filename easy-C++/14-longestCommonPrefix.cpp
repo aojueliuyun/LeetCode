@@ -44,6 +44,29 @@ public:
 };
 
 
+// solution 2 :  same as solution 2
+class Solution2 {
+public:
+    string longestCommonPrefix(vector<string>& strs) {
+        if (strs.empty()) return "";
+        string res = strs[0];
+        for (int i = 1; i < strs.size(); i ++) {
+            res = LCP(res, strs[i]);
+            if (res.empty()) break;
+        }
+        return res;
+    }
+    string LCP(string s, string t) {
+        string res;
+        if (s.length() < t.length()) swap(s, t);
+        for (int i = 0; i < t.length(); i ++) {
+            if (s[i] == t[i]) res += s[i];
+            else break;
+        }
+        return res;
+    }
+}; 
+
 
 int main()
 {

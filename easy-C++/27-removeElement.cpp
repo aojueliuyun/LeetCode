@@ -18,8 +18,9 @@ using namespace std;
 
 // 2018.7.15
 
-// 27 remove Element
-// iterator 就是好用 
+// leetcode 27 : remove Element
+
+// solution 1 : use iterator
 class Solution {
 public:
     int removeElement(vector<int>& nums, int val) {
@@ -32,6 +33,21 @@ public:
 			}
 		}
 		return temp - nums.begin();
+    }
+};
+
+
+// solution 2 : just compare
+class Solution2 {
+public:
+    int removeElement(vector<int>& nums, int val) {
+        int i = 0;
+        for (int j = 0; j < nums.size(); j ++) {
+            if (nums[j] != val) {
+                nums[i ++] = nums[j];
+            }
+        }
+        return i;
     }
 };
 

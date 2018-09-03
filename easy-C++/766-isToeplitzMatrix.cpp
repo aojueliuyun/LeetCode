@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.17
 
-// leetcode 766 : isToeplitzMatrix
+// leetcode 766 : isToeplitzMatrix / ÍĞÆÕÀû´Ä¾ØÕó
 
 
 // solution 1 : get the liner equation for every diagonal line which is not neccessary.

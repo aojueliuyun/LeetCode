@@ -20,7 +20,7 @@ using namespace std;
 
 // 2018.7.26
 
-// leetcode 443 : compress 
+// leetcode 443 : compress / Ñ¹Ëõ×Ö·û´®
 
 // require : in place / O(1) space
 

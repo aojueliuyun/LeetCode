@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.22
 
-// leetocde 205 : isIsomorphic
+// leetocde 205 : isIsomorphic / 判断两个·字符串是否同构
 
 // solution
 // input : s and t has same length 

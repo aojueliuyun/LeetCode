@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.7.30
 
-// leetcode 590 :  postorder / ååºéå†äºŒå‰æ ‘
+// leetcode 590 :  postorder / N²æÊ÷µÄºóĞò±éÀú
 
 
 // Definition for a Node.

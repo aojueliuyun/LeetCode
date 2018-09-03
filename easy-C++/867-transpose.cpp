@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.17
 
-// leetcode 867 : transpose / è½¬ç½®çŸ©é˜µ
+// leetcode 867 : transpose / ×ªÖÃ¾ØÕó
 
 
 // solution : 

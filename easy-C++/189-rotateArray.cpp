@@ -19,9 +19,10 @@ using namespace std;
 
 // 2018.7.21
 
-// leetcode 189 : Ðý×ªÊý×é 
+// leetcode 189 : rotate array 
 
 // require: in-place, space:O(1)
+
 
 // solution 1 : use vector::insert (iterator position, InputIterator first, InputIterator last)
 // feture: not in-place
@@ -66,7 +67,7 @@ public:
 class Solution3 {
 public:
     void rotate(vector<int> & nums, int k) {
-    	k = k % nums.size();
+    	k = k % nums.size();   // essential
     	reverse(nums.begin(), nums.end()-k);
     	reverse(nums.end()-k, nums.end());
     	reverse(nums.begin(), nums.end());

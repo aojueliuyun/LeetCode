@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.18
 
-// leetcode 783 : minDiffInBST
+// leetcode 783 : minDiffInBST / 二叉搜索树结点最小距离
 
 
 

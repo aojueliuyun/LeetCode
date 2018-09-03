@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.17
 
-// leetcode 167 twoSum ---------> 在一个数组中找到两个数使得它们相加之和等于目标数，返回其下标
+// leetcode 167 : find twoSum in ordered array
 
 
 // solution 1 : traverse without thinking ---------> failed ------> TLE
@@ -80,6 +80,17 @@ public:
 
 
 
+// solution 4 : simlification from solution 3
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& numbers, int target) {
+        for (int i = 0, j = numbers.size()-1; i < j; ) {
+            if (numbers[i] + numbers[j] > target) j --;
+            else if (numbers[i] + numbers[j] < target) i ++;
+            else return {i+1, j+1};
+        }
+    }
+};
 
 
 

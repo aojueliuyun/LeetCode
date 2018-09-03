@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.5
 
-// leetcode 686 : repeatedStringMatch 
+// leetcode 686 : repeatedStringMatch /  ÖØ¸´µþ¼Ó×Ö·û´®Æ¥Åä
 
 
 // solution : simulation and match

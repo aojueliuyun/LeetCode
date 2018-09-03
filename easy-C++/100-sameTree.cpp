@@ -17,7 +17,7 @@ using namespace std;
 
 // 2018.7.16
 
-// leetcode 100 : Same Tree 
+// leetcode 100 : Same Tree 判断两颗树是否相同 
 
 
 
