@@ -6,9 +6,9 @@ Current solutions:
 
 |difficulty|number|
 |:-:|:-:|
-|easy|188|
-|medium|10|
-|hard|1|
+|easy|198|
+|medium|23|
+|hard|4|
 
 
 Updating...
