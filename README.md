@@ -14,4 +14,4 @@ Welcome to visit [my LeetCode-cn Page][1].
 
 Updating...
 
-[1] : https://leetcode-cn.com/aojueliuyun/
+[1]: https://leetcode-cn.com/aojueliuyun/
