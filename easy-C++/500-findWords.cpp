@@ -27,31 +27,31 @@ using namespace std;
 class Solution {
 public:
     vector<string> findWords(vector<string>& words) {
-    	vector<string> res;
+        vector<string> res;
         set<char> line1{'q', 'Q', 'w', 'W', 'e', 'E', 'r', 'R', 't', 'T', 'y', 'Y', 'u', 'U', 'i', 'I', 'o', 'O', 'p', 'P'};
         set<char> line2{'a', 'A', 's', 'S', 'd', 'D', 'f', 'F', 'g', 'G', 'h', 'H', 'j', 'J', 'k', 'K', 'l', 'L'};
         set<char> line3{'z', 'Z', 'x', 'X', 'c', 'C', 'v', 'V', 'b', 'B', 'n', 'N', 'm', 'M'};
         for (auto s : words) {
-        	if (s.empty()) continue;
-        	int in;
-        	if (line1.count(s[0])) in = 1;
-        	if (line2.count(s[0])) in = 2;
-        	if (line3.count(s[0])) in = 3;
-        	set<char> tmp;
-        	if (in == 1) tmp = line1;
-        	if (in == 2) tmp = line2;
-        	if (in == 3) tmp = line3;
-        	bool allin = false;
-        	for (auto c : s) {
-        		if (tmp.count(c)) allin = true;
-				else {
-					allin = false;
-					break;
-				}
-			}
-			if (allin) res.push_back(s);
-		}
-		return res;
+            if (s.empty()) continue;
+            int in;
+            if (line1.count(s[0])) in = 1;
+            if (line2.count(s[0])) in = 2;
+            if (line3.count(s[0])) in = 3;
+            set<char> tmp;
+            if (in == 1) tmp = line1;
+            if (in == 2) tmp = line2;
+            if (in == 3) tmp = line3;
+            bool allin = false;
+            for (auto c : s) {
+                if (tmp.count(c)) allin = true;
+                else {
+                    allin = false;
+                    break;
+                }
+            }
+            if (allin) res.push_back(s);
+        }
+        return res;
     }
 };
 
@@ -89,6 +89,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

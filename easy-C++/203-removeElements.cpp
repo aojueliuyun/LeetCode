@@ -34,18 +34,18 @@ struct ListNode {
 class Solution {
 public:
     ListNode* removeElements(ListNode* head, int val) {
-    	ListNode Head(0);
-    	Head.next = head;
-    	ListNode * p = & Head;
-    	while (p && p->next) {
-    		if (p->next->val == val) {
-    			ListNode * temp = p->next;
-    			p->next = temp->next;
-    			delete temp;
-			}
-			else p = p->next;
-		}
-		return Head.next;
+        ListNode Head(0);
+        Head.next = head;
+        ListNode * p = & Head;
+        while (p && p->next) {
+            if (p->next->val == val) {
+                ListNode * temp = p->next;
+                p->next = temp->next;
+                delete temp;
+            }
+            else p = p->next;
+        }
+        return Head.next;
     }
 };
 
@@ -55,6 +55,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

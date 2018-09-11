@@ -57,6 +57,6 @@ int main()
     cout << S.backspaceCompare("ab#c", "ad#c") << endl;
 
 
-	return 0;
+    return 0;
 }
 

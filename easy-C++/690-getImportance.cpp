@@ -46,20 +46,20 @@ public:
     int getImportance(vector<Employee*> employees, int id) {
         unordered_map<int, Employee *> dict;
         for (auto p : employees) {
-        	dict[p->id] = p;
-		}
-		queue<Employee *> Q;
-		Q.push(dict[id]);
-		int sum = 0;
-		while (!Q.empty()) {
-			Employee * cur = Q.front();
-			Q.pop();
-			sum += cur->importance;
-			for (auto x : cur->subordinates) {
-				Q.push(dict[x]);
-			}
-		}
-		return sum;
+            dict[p->id] = p;
+        }
+        queue<Employee *> Q;
+        Q.push(dict[id]);
+        int sum = 0;
+        while (!Q.empty()) {
+            Employee * cur = Q.front();
+            Q.pop();
+            sum += cur->importance;
+            for (auto x : cur->subordinates) {
+                Q.push(dict[x]);
+            }
+        }
+        return sum;
     }
 };
 
@@ -71,14 +71,14 @@ public:
     int getImportance(vector<Employee*> & employees, int id) {  // better pass emplyees by reference
         int sum = 0;
         for (auto p : employees) {
-        	if (p->id == id) {
-        		sum += p->importance;
-        		for (auto x : p->subordinates) {
-        			sum += getImportance(employees, x);
-				}
-			}
-		}
-		return sum;
+            if (p->id == id) {
+                sum += p->importance;
+                for (auto x : p->subordinates) {
+                    sum += getImportance(employees, x);
+                }
+            }
+        }
+        return sum;
     }
 };
 
@@ -89,6 +89,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

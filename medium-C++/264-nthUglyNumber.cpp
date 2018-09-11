@@ -28,17 +28,17 @@ public:
     int nthUglyNumber(int n) {
         int cnt = 1, num = 1;
         while (cnt < n) {
-        	num ++;
-        	if (isUgly(num)) cnt ++;
-		}
-		return num;
+            num ++;
+            if (isUgly(num)) cnt ++;
+        }
+        return num;
     }
     bool isUgly(int num) {
-    	if (num < 1) return false;
+        if (num < 1) return false;
         while (num % 2 == 0) num /= 2;
         while (num % 3 == 0) num /= 3;
         while (num % 5 == 0) num /= 5;
-		return num == 1;
+        return num == 1;
     }
 };
 
@@ -49,6 +49,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

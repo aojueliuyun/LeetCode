@@ -29,11 +29,11 @@ public:
     int minMoves(vector<int>& nums) {
         int minval = nums[0], sum = 0, n = nums.size();
         for (auto x : nums) {
-        	if (x < minval)
-        		minval = x;
-        	sum += x;
-		}
-		return sum - minval * n;
+            if (x < minval)
+                minval = x;
+            sum += x;
+        }
+        return sum - minval * n;
     }
 };
 
@@ -43,6 +43,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

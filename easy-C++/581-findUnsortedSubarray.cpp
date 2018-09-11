@@ -35,23 +35,23 @@ public:
         int left = 0, right = nums.size()-1;
         bool lt = true, gt = true;
         while (left < right) {
-         	for (int i = left+1; lt && i <= right; i ++) {
-         		if (nums[left] <= nums[i]) {
-         			lt = true;
-				}
-				else lt = false;
-			}
-			if (lt) left ++;
-			for (int j = right-1; gt && j >= left; j --) {
-				if (nums[right] >= nums[j]) {
-					gt = true;
-				}
-				else gt = false;
-			}
-			if (gt) right --;
-			if (!lt && !gt) return right-left+1; 
-		}
-		return 0;
+             for (int i = left+1; lt && i <= right; i ++) {
+                 if (nums[left] <= nums[i]) {
+                     lt = true;
+                }
+                else lt = false;
+            }
+            if (lt) left ++;
+            for (int j = right-1; gt && j >= left; j --) {
+                if (nums[right] >= nums[j]) {
+                    gt = true;
+                }
+                else gt = false;
+            }
+            if (gt) right --;
+            if (!lt && !gt) return right-left+1; 
+        }
+        return 0;
     }
 };
 
@@ -65,10 +65,10 @@ public:
     int findUnsortedSubarray(vector<int>& nums) {
         int n = nums.size(), i = 0, j = n-1;
         vector<int> v = nums;
-    	sort(v.begin(), v.end());
-    	while (i < n && nums[i] == v[i]) i++;
-    	while (j > i && nums[j] == v[j]) j--;
-    	return j == i ? 0 : j-i+1;
+        sort(v.begin(), v.end());
+        while (i < n && nums[i] == v[i]) i++;
+        while (j > i && nums[j] == v[j]) j--;
+        return j == i ? 0 : j-i+1;
     }
 };
 
@@ -84,12 +84,12 @@ public:
         int maxval = nums[0];
         int minval = nums[n-1];
         for(int i = 0; i < n; i ++) {
-        	maxval = max(nums[i], maxval);
-        	minval = min(nums[n-i-1], minval);
-        	if (nums[i] < maxval) right = i;
-        	if (nums[n-1-i] > minval) left = n-1-i;
-		}
-		return left == right ? 0 : right-left+1;
+            maxval = max(nums[i], maxval);
+            minval = min(nums[n-i-1], minval);
+            if (nums[i] < maxval) right = i;
+            if (nums[n-1-i] > minval) left = n-1-i;
+        }
+        return left == right ? 0 : right-left+1;
     }
 };
 
@@ -97,11 +97,11 @@ public:
 
 int main()
 {
-	vector<int> test{1,2,3,4};
-	Solution S;
-	cout << S.findUnsortedSubarray(test) << endl;
+    vector<int> test{1,2,3,4};
+    Solution S;
+    cout << S.findUnsortedSubarray(test) << endl;
 
 
-	return 0;
+    return 0;
 }
 

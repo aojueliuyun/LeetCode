@@ -28,15 +28,15 @@ public:
         if (needle.empty()) return 0;
         int len1 = haystack.length(), len2 = needle.length();
         for(int now = 0; now < len1; now ++) {
-        	int i = now, temp_sub = 0;
-        	while (i < len1 && temp_sub < len2 && haystack[i] == needle[temp_sub]) { 
-				i ++;
-				temp_sub ++;
-			}
-//        	cout << now << ',' << i << ',' << temp_sub << endl;
-        	if (temp_sub == len2) return now;
-		}
-		return -1;
+            int i = now, temp_sub = 0;
+            while (i < len1 && temp_sub < len2 && haystack[i] == needle[temp_sub]) { 
+                i ++;
+                temp_sub ++;
+            }
+//            cout << now << ',' << i << ',' << temp_sub << endl;
+            if (temp_sub == len2) return now;
+        }
+        return -1;
     }
 };
 
@@ -51,22 +51,22 @@ public:
         int len1 = haystack.length(), len2 = needle.length();
         if (haystack.empty() || len1 < len2) return -1;
         for (int i = 0; i <= len1-len2; i ++) {
-        	if (haystack.substr(i, len2) == needle) return i;
-		} 
-    	return -1;
-	}
+            if (haystack.substr(i, len2) == needle) return i;
+        } 
+        return -1;
+    }
 };
  
 
 int main()
 {
-	Solution2 S;
-	string a,b;
-	while (cin >> a >> b) {
-		cout << S.strStr(a, b);
-	}
+    Solution2 S;
+    string a,b;
+    while (cin >> a >> b) {
+        cout << S.strStr(a, b);
+    }
 
 
-	return 0;
+    return 0;
 }
 

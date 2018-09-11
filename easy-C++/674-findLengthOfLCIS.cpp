@@ -31,11 +31,11 @@ public:
     int findLengthOfLCIS(vector<int>& nums) {
         int maxlen = 1, count = 1;
         for (int i = 1; i < nums.size(); i ++) {
-        	if (nums[i] > nums[i-1]) count ++;
-        	else count = 1;
-        	if (count > maxlen) maxlen = count;
-		}
-		return nums.empty() ? 0 : maxlen;
+            if (nums[i] > nums[i-1]) count ++;
+            else count = 1;
+            if (count > maxlen) maxlen = count;
+        }
+        return nums.empty() ? 0 : maxlen;
     }
 };
 
@@ -45,11 +45,11 @@ public:
 
 int main()
 {
-	vector<int> test{1,2,6,4,7};
-	Solution S;
-	cout << S.findLengthOfLCIS(test) << endl;
+    vector<int> test{1,2,6,4,7};
+    Solution S;
+    cout << S.findLengthOfLCIS(test) << endl;
 
 
-	return 0;
+    return 0;
 }
 

@@ -55,6 +55,6 @@ int main()
     cout << S.findNthDigit(10) << endl;
 
 
-	return 0;
+    return 0;
 }
 

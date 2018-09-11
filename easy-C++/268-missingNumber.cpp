@@ -29,8 +29,8 @@ public:
     int missingNumber(vector<int>& nums) {
         int n = nums.size();
         long long int sum = n*(n+1) / 2;
-    	for (auto x : nums) sum -= x;
-    	return sum;
+        for (auto x : nums) sum -= x;
+        return sum;
     }
 }; 
 
@@ -52,6 +52,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

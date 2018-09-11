@@ -30,11 +30,11 @@ public:
     string reverseStr(string s, int k) {
         int n = ceil(s.length()*0.5/k);
         for (int i = 0; i < n; i ++) {
-        	for (int l = 2*i*k, r = min((2*i+1)*k-1, int(s.length()-1)); l < r; l ++, r--) {
-        		swap(s[l], s[r]);
-			}
-		}
-		return s;
+            for (int l = 2*i*k, r = min((2*i+1)*k-1, int(s.length()-1)); l < r; l ++, r--) {
+                swap(s[l], s[r]);
+            }
+        }
+        return s;
     }
 }; 
 
@@ -44,6 +44,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

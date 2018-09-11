@@ -32,15 +32,15 @@ public:
     int dominantIndex(vector<int>& nums) {
         int first = 0, second = -1;
         for (int i = 1; i < nums.size(); i ++) {
-        	if (nums[i] >= nums[first]) {
-        		second = first;
-				first = i;
-			}
-			else if (second == -1 || nums[i] > nums[second]) {
-				second = i;
-			}
-		}
-		return nums[first] >= 2 * nums[second] ? first : -1;
+            if (nums[i] >= nums[first]) {
+                second = first;
+                first = i;
+            }
+            else if (second == -1 || nums[i] > nums[second]) {
+                second = i;
+            }
+        }
+        return nums[first] >= 2 * nums[second] ? first : -1;
     }
 };
 
@@ -48,11 +48,11 @@ public:
 
 int main()
 {
-	Solution S;
-	vector<int> test{0,0,0,1};
-	cout << S.dominantIndex(test) << endl;
+    Solution S;
+    vector<int> test{0,0,0,1};
+    cout << S.dominantIndex(test) << endl;
 
 
-	return 0;
+    return 0;
 }
 

@@ -38,27 +38,27 @@ struct TreeNode {
 class Solution {
 public:
     TreeNode* mergeTrees(TreeNode* t1, TreeNode* t2) {
-    	if (t1 == nullptr && t2 == nullptr) return nullptr;
-    	else if (t1 == nullptr || t2 == nullptr) {
-    		TreeNode * tmp = new TreeNode(0);
-    		if (t1) {
-    			tmp->val = t1->val;
-    			tmp->left = mergeTrees(t1->left, nullptr);
-    			tmp->right = mergeTrees(t1->right, nullptr);
-			}
-			if (t2) {
-				tmp->val = t2->val;
-    			tmp->left = mergeTrees(t2->left, nullptr);
-    			tmp->right = mergeTrees(t2->right, nullptr);
-			}
-			return tmp;
-		}
+        if (t1 == nullptr && t2 == nullptr) return nullptr;
+        else if (t1 == nullptr || t2 == nullptr) {
+            TreeNode * tmp = new TreeNode(0);
+            if (t1) {
+                tmp->val = t1->val;
+                tmp->left = mergeTrees(t1->left, nullptr);
+                tmp->right = mergeTrees(t1->right, nullptr);
+            }
+            if (t2) {
+                tmp->val = t2->val;
+                tmp->left = mergeTrees(t2->left, nullptr);
+                tmp->right = mergeTrees(t2->right, nullptr);
+            }
+            return tmp;
+        }
         else {
-        	TreeNode * tmp = new TreeNode(t1->val + t2->val);
-        	tmp->left = mergeTrees(t1->left, t2->left);
-        	tmp->right = mergeTrees(t1->right, t2->right);
-        	return tmp;
-		}
+            TreeNode * tmp = new TreeNode(t1->val + t2->val);
+            tmp->left = mergeTrees(t1->left, t2->left);
+            tmp->right = mergeTrees(t1->right, t2->right);
+            return tmp;
+        }
     }
 }; 
 
@@ -68,12 +68,12 @@ public:
 class Solution2 {
 public:
     TreeNode* mergeTrees(TreeNode* t1, TreeNode* t2) {
-    	if (t1 == nullptr) return t2;
-    	if (t2 == nullptr) return t1;
-    	TreeNode * tmp = new TreeNode(t1->val + t2->val);
-    	tmp->left = mergeTrees(t1->left, t2->left);
-    	tmp->right = mergeTrees(t1->right, t2->right);
-    	return tmp;
+        if (t1 == nullptr) return t2;
+        if (t2 == nullptr) return t1;
+        TreeNode * tmp = new TreeNode(t1->val + t2->val);
+        tmp->left = mergeTrees(t1->left, t2->left);
+        tmp->right = mergeTrees(t1->right, t2->right);
+        return tmp;
     }
 }; 
 
@@ -83,6 +83,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

@@ -33,23 +33,23 @@ public:
         string tmp(A);
         while (tmp.length() < lenB+lenA) tmp += A;
         for (int i = 0; i < lenA; i ++) {
-        	if (tmp.substr(i, lenB) == B) {
-//        		return tmp.length() / lenA - (tmp.length()-i-lenB) / lenA;
-        		return (i + lenB + lenA - 1) / lenA;
-			}
-		}
-		return -1;
+            if (tmp.substr(i, lenB) == B) {
+//                return tmp.length() / lenA - (tmp.length()-i-lenB) / lenA;
+                return (i + lenB + lenA - 1) / lenA;
+            }
+        }
+        return -1;
     }
 };
 
 
 int main()
 {
-	string A = "abcd", B = "cdabcdab";
-	Solution S;
-	cout << S.repeatedStringMatch(A, B) << endl;
+    string A = "abcd", B = "cdabcdab";
+    Solution S;
+    cout << S.repeatedStringMatch(A, B) << endl;
 
 
-	return 0;
+    return 0;
 }
 

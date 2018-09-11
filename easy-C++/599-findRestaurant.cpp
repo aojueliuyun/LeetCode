@@ -34,22 +34,22 @@ public:
         vector<string> res;
         int minIndexSum = INT_MAX;
         for (int i = 0; i < list1.size(); i ++) {
-        	record[list1[i]] += i+1;
-		}
-		for (int i = 0; i < list2.size(); i ++) {
-			if (record[list2[i]] > 0) {
-				int sum = i + record[list2[i]] - 1;
-				if (sum < minIndexSum) {
-					minIndexSum = sum;
-					res.clear();
-					res.push_back(list2[i]);
-				}
-				else if (sum == minIndexSum) {
-					res.push_back(list2[i]);
-				}
-			}
-		}
-		return res;
+            record[list1[i]] += i+1;
+        }
+        for (int i = 0; i < list2.size(); i ++) {
+            if (record[list2[i]] > 0) {
+                int sum = i + record[list2[i]] - 1;
+                if (sum < minIndexSum) {
+                    minIndexSum = sum;
+                    res.clear();
+                    res.push_back(list2[i]);
+                }
+                else if (sum == minIndexSum) {
+                    res.push_back(list2[i]);
+                }
+            }
+        }
+        return res;
     }
 }; 
 
@@ -60,6 +60,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

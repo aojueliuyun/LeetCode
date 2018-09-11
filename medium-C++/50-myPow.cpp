@@ -27,22 +27,22 @@ using namespace std;
 class Solution {
 public:
     double myPow(double x, int n) {
-    	bool neg = false;
-    	unsigned long long m;
-    	if (n < 0) {
-    		neg = true;
-    		m = abs(n);        // -n to n, -2^32 must be as a border to be considered.
-		}
-		else m = n;
+        bool neg = false;
+        unsigned long long m;
+        if (n < 0) {
+            neg = true;
+            m = abs(n);        // -n to n, -2^32 must be as a border to be considered.
+        }
+        else m = n;
         double ans = 1;
         while (m) {
-        	if (m % 2 == 1) {
-        		ans *= x;
-			}
-			x *= x;
-			m /= 2;
-		}
-		return neg ? 1/ans : ans;
+            if (m % 2 == 1) {
+                ans *= x;
+            }
+            x *= x;
+            m /= 2;
+        }
+        return neg ? 1/ans : ans;
     }
 };
 
@@ -51,7 +51,7 @@ public:
 class Solution2 {
 public:
     double myPow(double x, int n) {
-    	return pow(x, n);
+        return pow(x, n);
     }
 };
 
@@ -64,13 +64,13 @@ public:
         bool neg = false;;
         if (n < 0) neg = true;
         while (n) {
-        	if (n % 2 == 1 || n % 2 == -1) {
-        		ans *= x;
-			}
-			x *= x;
-			n /= 2;
-		}
-		return neg ? 1/ans : ans;
+            if (n % 2 == 1 || n % 2 == -1) {
+                ans *= x;
+            }
+            x *= x;
+            n /= 2;
+        }
+        return neg ? 1/ans : ans;
     }
 };
 
@@ -95,15 +95,15 @@ public:
 
 int main()
 {
-	cout << -1 % 2 << endl;
-	double x;
-	int n;
-	Solution3 S;
-	while (cin >> x >> n) {
-		cout << S.myPow(x, n) << endl;
-	}
+    cout << -1 % 2 << endl;
+    double x;
+    int n;
+    Solution3 S;
+    while (cin >> x >> n) {
+        cout << S.myPow(x, n) << endl;
+    }
 
 
-	return 0;
+    return 0;
 }
 

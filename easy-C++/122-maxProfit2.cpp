@@ -23,12 +23,12 @@ using namespace std;
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
-    	int profit = 0;
+        int profit = 0;
         for (int i = 1; i < prices.size(); i++) {
-        	int delta = prices[i] - prices[i-1];
-        	profit += delta > 0 ? delta : 0;
-		}
-		return profit;
+            int delta = prices[i] - prices[i-1];
+            profit += delta > 0 ? delta : 0;
+        }
+        return profit;
     }
 };
 
@@ -41,6 +41,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

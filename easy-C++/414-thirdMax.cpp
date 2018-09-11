@@ -31,23 +31,23 @@ class Solution {
 public:
     int thirdMax(vector<int>& nums) {
         long long first, second, third;
-		first = second = third = LONG_LONG_MIN;   // have to use long long , not a good idea !
+        first = second = third = LONG_LONG_MIN;   // have to use long long , not a good idea !
         for (auto x : nums) {
-        	if (x > first) {
-        		third = second;
-        		second = first;
-        		first = x;
-			}
-			else if (x < first && x > second) {
-				third = second;
-				second = x;
-			}
-			else if (x < second && x > third) {
-				third = x;
-			}
-		}
-		if (third == LONG_LONG_MIN) return first;
-		return third;
+            if (x > first) {
+                third = second;
+                second = first;
+                first = x;
+            }
+            else if (x < first && x > second) {
+                third = second;
+                second = x;
+            }
+            else if (x < second && x > third) {
+                third = x;
+            }
+        }
+        if (third == LONG_LONG_MIN) return first;
+        return third;
     }
 };
 
@@ -68,16 +68,16 @@ public:
 
 int main()
 {
-	int n;
-	Solution S;
-	while (cin >> n) {
-		vector<int> vec(n);
-		cout << "please input " << n << " values for vector : ";
-		for (auto & x : vec) cin >> x;
-		cout << S.thirdMax(vec) << endl;
-	}
+    int n;
+    Solution S;
+    while (cin >> n) {
+        vector<int> vec(n);
+        cout << "please input " << n << " values for vector : ";
+        for (auto & x : vec) cin >> x;
+        cout << S.thirdMax(vec) << endl;
+    }
 
 
-	return 0;
+    return 0;
 }
 

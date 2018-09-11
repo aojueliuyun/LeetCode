@@ -27,10 +27,10 @@ public:
     int singleNumber(vector<int>& nums) {
         map<int, int> M;
         for (int x : nums) {
-        	M[x] ++;
-        	if (M[x] == 2) M.erase(x);
-		}
-		for (auto element : M) return element.first;
+            M[x] ++;
+            if (M[x] == 2) M.erase(x);
+        }
+        for (auto element : M) return element.first;
     }
 }; 
 
@@ -41,9 +41,9 @@ public:
     int singleNumber(vector<int>& nums) {
         int res = 0;
         for (auto x : nums) {
-        	res ^= x;
-		}
-		return res;
+            res ^= x;
+        }
+        return res;
     }
 };
 
@@ -59,6 +59,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

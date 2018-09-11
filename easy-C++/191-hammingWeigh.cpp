@@ -29,10 +29,10 @@ public:
     int hammingWeight(uint32_t n) {
         int count = 0;
         while (n > 0) {
-        	if (n & 1) count ++; // n % 2 == 1
-        	n >>= 1;
-		}
-		return count;
+            if (n & 1) count ++; // n % 2 == 1
+            n >>= 1;
+        }
+        return count;
     }
 };
 
@@ -54,13 +54,13 @@ public:
 
 int main()
 {
-	Solution2 S;
-	uint32_t n;
-	while (cin >> n) {
-		cout << S.hammingWeight(n) << endl;
-	}
+    Solution2 S;
+    uint32_t n;
+    while (cin >> n) {
+        cout << S.hammingWeight(n) << endl;
+    }
 
 
-	return 0;
+    return 0;
 }
 

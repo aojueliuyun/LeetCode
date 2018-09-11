@@ -28,49 +28,49 @@ using namespace std;
 // solution : use array, rear point to the next position of rear, front point to front
 class MyCircularQueue {
 private:
-	int * data;
-	int size, front, rear;
+    int * data;
+    int size, front, rear;
 public:
     /** Initialize your data structure here. Set the size of the queue to be k. */
     MyCircularQueue(int k) {
         data = new int[k+1];
         size = k+1;
-		front = rear = 0;
+        front = rear = 0;
     }
     
     /** Insert an element into the circular queue. Return true if the operation is successful. */
     bool enQueue(int value) {
-    	if (!isFull()) {
-    		data[rear] = value;
-    		rear = (rear+1) % size;
-    		return true;
-		}
-		else return false;
+        if (!isFull()) {
+            data[rear] = value;
+            rear = (rear+1) % size;
+            return true;
+        }
+        else return false;
     }
     
     /** Delete an element from the circular queue. Return true if the operation is successful. */
     bool deQueue() {
         if (!isEmpty()) {
-        	front = (front+1) % size;
-        	return true;
-		}
-		else return false;
+            front = (front+1) % size;
+            return true;
+        }
+        else return false;
     }
     
     /** Get the front item from the queue. */
     int Front() {
         if (!isEmpty()) {
-        	return data[front];
-		}
-		else return -1;
+            return data[front];
+        }
+        else return -1;
     }
     
     /** Get the last item from the queue. */
     int Rear() {
         if (!isEmpty()) {
-        	return data[(rear-1+size) % size];
-		}
-		else return -1;
+            return data[(rear-1+size) % size];
+        }
+        else return -1;
     }
     
     /** Checks whether the circular queue is empty or not. */
@@ -102,66 +102,66 @@ public:
 
 
 struct Node {
-	int val;
-	Node * next;
-	Node(int value) : val(value), next(nullptr) {}	
+    int val;
+    Node * next;
+    Node(int value) : val(value), next(nullptr) {}    
 };
 
 class MyCircularQueue2 {
 private:
-	Node * pHead, * pTail;
-	int capacity, size;
+    Node * pHead, * pTail;
+    int capacity, size;
 public:
     /** Initialize your data structure here. Set the size of the queue to be k. */
     MyCircularQueue2(int k) {
         capacity = k;
-    	size = 0;
-    	pHead = new Node(0);
-    	pTail = pHead;
+        size = 0;
+        pHead = new Node(0);
+        pTail = pHead;
     }
     
     /** Insert an element into the circular queue. Return true if the operation is successful. */
     bool enQueue(int value) {
-    	if (!isFull()) {
-    		Node * tmp = new Node(value);
-    		pTail->next = tmp;
-    		pTail = pTail->next;
-    		size ++;
-    		return true;
-		}
-		else return false;
+        if (!isFull()) {
+            Node * tmp = new Node(value);
+            pTail->next = tmp;
+            pTail = pTail->next;
+            size ++;
+            return true;
+        }
+        else return false;
     }
     
     /** Delete an element from the circular queue. Return true if the operation is successful. */
     bool deQueue() {
         if (!isEmpty()) {
-        	Node * tmp = pHead->next;
-        	pHead->next = tmp->next;
-        	delete tmp;
-        	size --;
-        	return true;
-		}
-		else return false;
+            Node * tmp = pHead->next;
+            pHead->next = tmp->next;
+            delete tmp;
+            size --;
+            return true;
+        }
+        else return false;
     }
     
     /** Get the front item from the queue. */
     int Front() {
-    	return isEmpty() ? -1 : pHead->next->val;
+        return isEmpty() ? -1 : pHead->next->val;
     }
     
     /** Get the last item from the queue. */
     int Rear() {
-    	return isEmpty() ? -1 : pTail->val;
+        return isEmpty() ? -1 : pTail->val;
     }
     
     /** Checks whether the circular queue is empty or not. */
     bool isEmpty() {
-    	return size == 0;
+        return size == 0;
     }
     
     /** Checks whether the circular queue is full or not. */
     bool isFull() {
-    	return size == capacity;
+        return size == capacity;
     }
 };
 
@@ -172,6 +172,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

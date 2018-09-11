@@ -32,13 +32,13 @@ struct TreeNode {
 class Solution {
 public:
     bool isBalanced(TreeNode* root) {
-    	if(root == nullptr) return true;   // trying use nullptr 
+        if(root == nullptr) return true;   // trying use nullptr 
         return abs(height(root->left) - height(root->right)) <= 1 && isBalanced(root->left) && isBalanced(root->right);
     }
     int height(TreeNode * root) {
-    	if (root == nullptr) return 0;
-    	return max(height(root->left), height(root->right)) + 1;
-	}
+        if (root == nullptr) return 0;
+        return max(height(root->left), height(root->right)) + 1;
+    }
 };
 
 
@@ -47,18 +47,18 @@ public:
 
 class Solution2 {
 public:
-	int check(TreeNode * root) {
-		if (root == nullptr) return 0;
-		int l = check(root->left);
-		int r = check(root->right);
-		if (l == -1 || r == -1) return -1;
-		if (abs(l - r) > 1) return -1;
-		return max(l, r) + 1;
-	}
-	bool isBalanced(TreeNode* root) {
-		if (check(root) == -1) return false;
-		return true;
-	}
+    int check(TreeNode * root) {
+        if (root == nullptr) return 0;
+        int l = check(root->left);
+        int r = check(root->right);
+        if (l == -1 || r == -1) return -1;
+        if (abs(l - r) > 1) return -1;
+        return max(l, r) + 1;
+    }
+    bool isBalanced(TreeNode* root) {
+        if (check(root) == -1) return false;
+        return true;
+    }
 };
 
 
@@ -67,6 +67,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

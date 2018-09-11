@@ -32,9 +32,9 @@ public:
         unordered_set<char> jewel(J.begin(), J.end());
         int count = 0;
         for (auto c : S) {
-        	if (jewel.count(c)) count ++;
-		}
-		return count;
+            if (jewel.count(c)) count ++;
+        }
+        return count;
     }
 };
 
@@ -45,6 +45,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

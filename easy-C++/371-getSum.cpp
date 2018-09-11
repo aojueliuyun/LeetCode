@@ -37,12 +37,12 @@ public:
 
 int main()
 {
-	int a, b;
-	Solution S;
-	while (cin >> a >> b) {
-		cout << S.getSum(a, b) << endl;
-	}
+    int a, b;
+    Solution S;
+    while (cin >> a >> b) {
+        cout << S.getSum(a, b) << endl;
+    }
 
-	return 0;
+    return 0;
 }
 

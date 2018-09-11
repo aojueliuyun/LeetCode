@@ -26,8 +26,8 @@ using namespace std;
 //Definition for a binary tree node.
 struct TreeNode {
     int val;
-  	TreeNode *left;
-	TreeNode *right;
+      TreeNode *left;
+    TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
@@ -36,22 +36,22 @@ struct TreeNode {
 class Solution {
 public:
     vector<string> binaryTreePaths(TreeNode* root) {
-    	vector<string> vec;
-    	string path = "";
-    	getTreePaths(root, path, vec);
+        vector<string> vec;
+        string path = "";
+        getTreePaths(root, path, vec);
         return vec; 
     }
     void getTreePaths(TreeNode * root, string path, vector<string> & vec) {
-    	if (root == nullptr) return;
-    	if (path.empty()) path += to_string(root->val);
-    	else path += "->" + to_string(root->val);
-    	if (root->left == nullptr && root->right == nullptr) {
-    		vec.push_back(path);
-    		return;
-		}
-		getTreePaths(root->left, path, vec);
-		getTreePaths(root->right, path, vec);
-	}
+        if (root == nullptr) return;
+        if (path.empty()) path += to_string(root->val);
+        else path += "->" + to_string(root->val);
+        if (root->left == nullptr && root->right == nullptr) {
+            vec.push_back(path);
+            return;
+        }
+        getTreePaths(root->left, path, vec);
+        getTreePaths(root->right, path, vec);
+    }
 };
 
 
@@ -62,6 +62,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

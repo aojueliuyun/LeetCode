@@ -29,23 +29,23 @@ class Solution {
 public:
     bool isHappy(int n) {
         set<int> Nums;
-    	Nums.insert(n);
-    	while (n != 1) {
-    		n = getNext(n);
-    		if (Nums.find(n) == Nums.end()) // equals to : Nums.count(x) ------> has return 1 else return 0 / return the number of x in NUms.
-    			Nums.insert(n);
-    		else return false;
-		}
-		return true;	
+        Nums.insert(n);
+        while (n != 1) {
+            n = getNext(n);
+            if (Nums.find(n) == Nums.end()) // equals to : Nums.count(x) ------> has return 1 else return 0 / return the number of x in NUms.
+                Nums.insert(n);
+            else return false;
+        }
+        return true;    
     }
     int getNext(int n) {
-    	int sum = 0;
-    	while (n > 0) {
-    		sum += pow(n%10, 2);
-    		n /= 10;
-		}
-		return sum;
-	}
+        int sum = 0;
+        while (n > 0) {
+            sum += pow(n%10, 2);
+            n /= 10;
+        }
+        return sum;
+    }
 };
 
 // solution 2 : do not use hash map, because the the ends of the loop is certain which are 1 or 4, 1 is happy, 4 is not.
@@ -55,15 +55,15 @@ public:
     bool isHappy(int n) {
         if (n == 1) return true;
         while (n != 1 && n != 4) {
-        	int sum = 0;
-        	while (n) {
-        		sum += pow(n%10, 2);
-        		n /= 10;
-			}
-			n = sum;
-		}
-		return n == 1;
-	}
+            int sum = 0;
+            while (n) {
+                sum += pow(n%10, 2);
+                n /= 10;
+            }
+            n = sum;
+        }
+        return n == 1;
+    }
 };
 
 
@@ -72,13 +72,13 @@ public:
 
 int main()
 {
-	Solution2 S;
-	int n;
-	while (cin >> n) {
-		cout << S.isHappy(n) << endl;
-	} 
+    Solution2 S;
+    int n;
+    while (cin >> n) {
+        cout << S.isHappy(n) << endl;
+    } 
 
 
-	return 0;
+    return 0;
 }
 

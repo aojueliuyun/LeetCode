@@ -24,9 +24,9 @@ class Solution {
 public:
     int searchInsert(vector<int>& nums, int target) {
         for (int i = 0; i < nums.size(); i ++) {
-        	if (target <= nums[i]) return i;
-		}
-		return nums.size();
+            if (target <= nums[i]) return i;
+        }
+        return nums.size();
     }
 };
  
@@ -35,16 +35,16 @@ class Solution2 {
 public:
     int searchInsert(vector<int>& nums, int target) {
         int left = 0, right = nums.size()-1, mid;
-		while(left < right) {
-			mid = (left + right) / 2;
-			if(nums[mid] == target) return mid;
-			else if(nums[mid] > target) right = mid;
-			else left = mid;
-			if (nums[right] < target) return right + 1;
-			if (nums[left] >= target) return left;
-			if (right - left == 1) return right;
-		}
-		return nums[0] < target ? 1 : 0; 
+        while(left < right) {
+            mid = (left + right) / 2;
+            if(nums[mid] == target) return mid;
+            else if(nums[mid] > target) right = mid;
+            else left = mid;
+            if (nums[right] < target) return right + 1;
+            if (nums[left] >= target) return left;
+            if (right - left == 1) return right;
+        }
+        return nums[0] < target ? 1 : 0; 
     }
 };
 
@@ -64,6 +64,6 @@ int main()
 {
 
 
-	return 0;
+    return 0;
 }
 

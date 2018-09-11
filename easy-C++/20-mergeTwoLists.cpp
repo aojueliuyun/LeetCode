@@ -33,32 +33,32 @@ struct ListNode {
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-    	ListNode * p = new ListNode(0), * merge = p;   // 头结点堆上分配栈上分配均可 
+        ListNode * p = new ListNode(0), * merge = p;   // 头结点堆上分配栈上分配均可 
         while (l1 && l2) {
-        	if (l1->val <= l2->val) {
-        		p -> next = l1;
-        		l1 = l1->next;
-			}
-			else {
-				p -> next = l2; 
-				l2 = l2->next;
-        	}
-        	p = p->next;
-		}
-		if (l1) p -> next = l1;        // 不需要一个一个复制 
-		if (l2) p -> next = l2;
-		ListNode * res = merge->next;
-		delete merge;
-		return res;
+            if (l1->val <= l2->val) {
+                p -> next = l1;
+                l1 = l1->next;
+            }
+            else {
+                p -> next = l2; 
+                l2 = l2->next;
+            }
+            p = p->next;
+        }
+        if (l1) p -> next = l1;        // 不需要一个一个复制 
+        if (l2) p -> next = l2;
+        ListNode * res = merge->next;
+        delete merge;
+        return res;
     }
 };
 
 
 int main()
 {
-	
+    
 
 
-	return 0;
+    return 0;
 }
 

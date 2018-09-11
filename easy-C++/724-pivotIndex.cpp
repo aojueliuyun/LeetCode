@@ -34,16 +34,16 @@ public:
         vector<int> sum;
         int cur = 0;
         for (auto x : nums) {
-        	cur += x;
-        	sum.push_back(cur);
-		}
-		for (int i = 0; i < sum.size(); i ++) {
-			int tmp = 0;
-			if (i == 0) tmp = 0;
-			else tmp = sum[i-1];
-			if (tmp * 2 == sum.back() - nums[i]) return i;
-		}
-		return -1;
+            cur += x;
+            sum.push_back(cur);
+        }
+        for (int i = 0; i < sum.size(); i ++) {
+            int tmp = 0;
+            if (i == 0) tmp = 0;
+            else tmp = sum[i-1];
+            if (tmp * 2 == sum.back() - nums[i]) return i;
+        }
+        return -1;
     }
 };
 
@@ -58,14 +58,14 @@ public:
         int rsum = accumulate(nums.begin(), nums.end(), 0); // in <numeric>
         int lsum = 0;
         for (int i = 0; i < nums.size(); i ++) {
-        	if (lsum == rsum - nums[i])
-        		return i;
-        	else {
-        		lsum += nums[i];
-        		rsum -= nums[i];
-			}
-		}
-		return -1;
+            if (lsum == rsum - nums[i])
+                return i;
+            else {
+                lsum += nums[i];
+                rsum -= nums[i];
+            }
+        }
+        return -1;
     }
 };
 
@@ -73,12 +73,12 @@ public:
 
 int main()
 {
-	vector<int> vec{1, 7, 3, 6, 5, 6};
-	Solution2 S;
-	cout << S.pivotIndex(vec) << endl;
+    vector<int> vec{1, 7, 3, 6, 5, 6};
+    Solution2 S;
+    cout << S.pivotIndex(vec) << endl;
 
 
 
-	return 0;
+    return 0;
 }
 

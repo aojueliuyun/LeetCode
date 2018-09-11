@@ -44,13 +44,13 @@ public:
         return root;
     }
     void convert(TreeNode * root, int & sum) {
-    	if (root) {
-    		convert(root->right, sum);
-			root->val += sum;
-    		sum = root->val;
-    		convert(root->left, sum);
-		}
-	}
+        if (root) {
+            convert(root->right, sum);
+            root->val += sum;
+            sum = root->val;
+            convert(root->left, sum);
+        }
+    }
 };
 
 
@@ -59,6 +59,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

@@ -222,6 +222,6 @@ int main()
     }
     cout << endl;
 
-	return 0;
+    return 0;
 }
 

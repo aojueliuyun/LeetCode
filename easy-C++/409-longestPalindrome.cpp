@@ -28,18 +28,18 @@ public:
     int longestPalindrome(string s) {
         unordered_map<char, int> dict;
         for (auto c : s) {
-        	dict[c] ++;
-		}
-		bool count1 = false;
-		int res = 0;
-		for (auto x : dict) {
-			if (!count1 && x.second % 2 == 1) {
-				res ++;
-				count1 = true;
-			}
-			res += (x.second / 2) * 2;
-		}
-		return res;
+            dict[c] ++;
+        }
+        bool count1 = false;
+        int res = 0;
+        for (auto x : dict) {
+            if (!count1 && x.second % 2 == 1) {
+                res ++;
+                count1 = true;
+            }
+            res += (x.second / 2) * 2;
+        }
+        return res;
     }
 }; 
 
@@ -51,6 +51,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

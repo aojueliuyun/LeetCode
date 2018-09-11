@@ -28,16 +28,16 @@ using namespace std;
 class Solution {
 public:
     string reverseWords(string s) {
-    	int pos = s.find(' ', 0), start = 0;
+        int pos = s.find(' ', 0), start = 0;
         while (pos != string::npos) {
-        	for (int i = start, j = pos-1; i < j; i ++, j --) {
-        		swap(s[i], s[j]);
-			}
-			start = pos+1;
-        	pos = s.find(' ', start);
-		}
-		for (int i = start, j = s.length()-1; i < j; i ++, j --) swap(s[i], s[j]); // reverse the last word
-		return s;
+            for (int i = start, j = pos-1; i < j; i ++, j --) {
+                swap(s[i], s[j]);
+            }
+            start = pos+1;
+            pos = s.find(' ', start);
+        }
+        for (int i = start, j = s.length()-1; i < j; i ++, j --) swap(s[i], s[j]); // reverse the last word
+        return s;
     }
 };
 
@@ -46,15 +46,15 @@ public:
 class Solution2 {
 public:
     string reverseWords(string s) {
-    	int t = 0;
-    	for (int i = 0; i < s.length(); i ++) {
-    		if (s[i] == ' ') {
-    			reverse(s.begin()+t, s.begin()+i);
-    			t = i+1;
-			}
-		}
-		reverse(s.begin()+t, s.end()); // reverse the last word
-		return s;
+        int t = 0;
+        for (int i = 0; i < s.length(); i ++) {
+            if (s[i] == ' ') {
+                reverse(s.begin()+t, s.begin()+i);
+                t = i+1;
+            }
+        }
+        reverse(s.begin()+t, s.end()); // reverse the last word
+        return s;
     }
 };
 
@@ -65,6 +65,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

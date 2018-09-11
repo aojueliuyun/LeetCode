@@ -37,10 +37,10 @@ public:
         return symmetric(root->left, root->right);
     }
     bool symmetric(TreeNode *p, TreeNode *q) {
-    	if (p == NULL || q == NULL)
-    		return p == q;
-    	return (p->val == q->val) && symmetric(p->left, q->right) && symmetric(p->right, q->left);
-	}
+        if (p == NULL || q == NULL)
+            return p == q;
+        return (p->val == q->val) && symmetric(p->left, q->right) && symmetric(p->right, q->left);
+    }
 };
 
 
@@ -49,6 +49,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

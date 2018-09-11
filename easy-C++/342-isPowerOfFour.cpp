@@ -35,20 +35,20 @@ public:
 class Solution2 {
 public:
     bool isPowerOfFour(int num) {
-    	return (num & (num-1)) == 0 && (num-1) % 3 == 0;
-	}
+        return (num & (num-1)) == 0 && (num-1) % 3 == 0;
+    }
 }; 
 
 
 int main()
 {
-	int n;
-	Solution2 S;
-	while (cin >> n) {
-		cout << S.isPowerOfFour(n) << endl;
-	}
+    int n;
+    Solution2 S;
+    while (cin >> n) {
+        cout << S.isPowerOfFour(n) << endl;
+    }
 
 
-	return 0;
+    return 0;
 }
 

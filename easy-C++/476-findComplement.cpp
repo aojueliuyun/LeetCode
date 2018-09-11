@@ -31,10 +31,10 @@ public:
         int bits = 0;
         int temp = num;
         while (num) {
-        	num >>= 1;
-        	bits ++;
-		}
-		return (~temp << (32-bits)) >> (32-bits);
+            num >>= 1;
+            bits ++;
+        }
+        return (~temp << (32-bits)) >> (32-bits);
     }
 };
 
@@ -44,10 +44,10 @@ public:
     int findComplement(int num) {
         int temp = num, mask = 0;
         while (temp) {
-        	temp >>= 1;
-        	mask = (mask << 1) + 1;
-		}
-		return num ^ mask;
+            temp >>= 1;
+            mask = (mask << 1) + 1;
+        }
+        return num ^ mask;
     }
 };
 
@@ -55,12 +55,12 @@ public:
 
 int main()
 {
-	int n;
-	Solution2 S;
-	while (cin >> n) {
-		cout << S.findComplement(n) << endl;
-	}
+    int n;
+    Solution2 S;
+    while (cin >> n) {
+        cout << S.findComplement(n) << endl;
+    }
 
-	return 0;
+    return 0;
 }
 

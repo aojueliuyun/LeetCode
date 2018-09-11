@@ -33,11 +33,11 @@ public:
         unordered_map<char, int> dict;
         for (auto c : letters) dict[c] ++;
         for (char c = target+1; c <= 'z'; c ++) {
-        	if (dict[c] > 0) return c;
-		}
-		for (char c = 'a'; c < target; c ++) {
-			if (dict[c] > 0) return c;
-		}
+            if (dict[c] > 0) return c;
+        }
+        for (char c = 'a'; c < target; c ++) {
+            if (dict[c] > 0) return c;
+        }
     }
 };
 
@@ -47,9 +47,9 @@ class Solution2 {
 public:
     char nextGreatestLetter(vector<char>& letters, char target) {
         for (auto c : letters) {
-        	if (c > target) return c;
-		}
-		return letters[0];
+            if (c > target) return c;
+        }
+        return letters[0];
     }
 };
 
@@ -59,6 +59,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

@@ -60,6 +60,6 @@ int main()
     cout << S.minSubArrayLen(7, test) << endl;
 
 
-	return 0;
+    return 0;
 }
 

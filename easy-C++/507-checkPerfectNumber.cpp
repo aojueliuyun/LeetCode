@@ -31,25 +31,25 @@ public:
         int sum = (num == 1 ? 0 : 1);
         int sq = floor(sqrt(num));
         for (int i = 2; i < sq; i ++) {
-        	if (num % i == 0) {
-        		sum += i + num/i;
-			}
-		}
-		sum += (sq*sq==num && num!=1 ? sq : 0);
-		return sum == num;
+            if (num % i == 0) {
+                sum += i + num/i;
+            }
+        }
+        sum += (sq*sq==num && num!=1 ? sq : 0);
+        return sum == num;
     }
 };
 
 
 int main()
 {
-	int n;
-	Solution S;
-	while (cin >> n) {
-		cout << S.checkPerfectNumber(n) << endl;
-	}
+    int n;
+    Solution S;
+    while (cin >> n) {
+        cout << S.checkPerfectNumber(n) << endl;
+    }
 
 
-	return 0;
+    return 0;
 }
 

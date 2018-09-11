@@ -27,24 +27,24 @@ using namespace std;
 class Solution {
 public:
     bool checkRecord(string s) {
-    	int numA = 0, numL = 0;
-		char pre = 'x';
-		for (auto c : s) {
-			if (c == 'A') {
-				numA ++;
-				if (numA > 1) return false;
-			}
-			if (c == 'L') {
-				if (pre == 'L') {
-					numL ++;
-					if (numL > 2) return false;
-				}
-				else numL = 1;
-			}
-			else numL = 0;
-			pre = c; 
-		}
-		return true;
+        int numA = 0, numL = 0;
+        char pre = 'x';
+        for (auto c : s) {
+            if (c == 'A') {
+                numA ++;
+                if (numA > 1) return false;
+            }
+            if (c == 'L') {
+                if (pre == 'L') {
+                    numL ++;
+                    if (numL > 2) return false;
+                }
+                else numL = 1;
+            }
+            else numL = 0;
+            pre = c; 
+        }
+        return true;
     }
 };
 
@@ -53,19 +53,19 @@ public:
 class Solution2 {
 public:
     bool checkRecord(string s) {
-    	int numA = 0, numL = 0;
-    	for (auto c : s) {
-    		if (c == 'A') {
-    			numA ++;
-    			if (numA > 1) return false;
-			}
-    		if (c == 'L') {
-    			numL ++;
-    			if (numL > 2) return false;
-			}
-			else numL = 0;
-		}
-		return true;
+        int numA = 0, numL = 0;
+        for (auto c : s) {
+            if (c == 'A') {
+                numA ++;
+                if (numA > 1) return false;
+            }
+            if (c == 'L') {
+                numL ++;
+                if (numL > 2) return false;
+            }
+            else numL = 0;
+        }
+        return true;
     }
 };
 
@@ -76,6 +76,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

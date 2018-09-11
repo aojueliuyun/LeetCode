@@ -32,28 +32,28 @@ using namespace std;
 class Solution_1 {
 public:
     int maxCount(int m, int n, vector<vector<int>>& ops) {
-    	vector<vector<int>> matrix(m, vector<int>(n, 0));
+        vector<vector<int>> matrix(m, vector<int>(n, 0));
         for (auto op : ops) {
-        	for (int i = 0; i < m; i ++) {
-        		for (int j = 0; j < n; j ++) {
-        			if (i < op[0] && j < op[1])
-        				matrix[i][j] ++;
-				}
-			}
-		}
-		int maxval = 0, count = 0;
-		for (auto row : matrix) {
-			for (auto x : row) {
-				if (x == maxval) {
-					count ++;
-				}
-				else if (x > maxval) {
-					count = 1;
-					maxval = x;
-				} 
-			}
-		}
-		return count;
+            for (int i = 0; i < m; i ++) {
+                for (int j = 0; j < n; j ++) {
+                    if (i < op[0] && j < op[1])
+                        matrix[i][j] ++;
+                }
+            }
+        }
+        int maxval = 0, count = 0;
+        for (auto row : matrix) {
+            for (auto x : row) {
+                if (x == maxval) {
+                    count ++;
+                }
+                else if (x > maxval) {
+                    count = 1;
+                    maxval = x;
+                } 
+            }
+        }
+        return count;
     }
 }; 
 
@@ -64,13 +64,13 @@ public:
 class Solution {
 public:
     int maxCount(int m, int n, vector<vector<int>>& ops) {
-    	if (ops.empty()) return m*n;
-    	int minr = ops[0][0], minc = ops[0][1]; // row ans column
-    	for (auto x : ops) {
-    		minr = min(minr, x[0]);
-    		minc = min(minc, x[1]);
-		}
-		return minr * minc;
+        if (ops.empty()) return m*n;
+        int minr = ops[0][0], minc = ops[0][1]; // row ans column
+        for (auto x : ops) {
+            minr = min(minr, x[0]);
+            minc = min(minc, x[1]);
+        }
+        return minr * minc;
     }
 };
 
@@ -81,6 +81,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

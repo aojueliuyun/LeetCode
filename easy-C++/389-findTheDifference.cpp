@@ -30,8 +30,8 @@ public:
         for (auto c : s) ms[c] ++;
         for (auto c : t) mt[c] ++;
         for (auto x : mt) {
-        	if (ms[x.first] != x.second) return x.first;
-		}
+            if (ms[x.first] != x.second) return x.first;
+        }
     }
 };
 
@@ -50,13 +50,13 @@ public:
 
 int main()
 {
-	Solution S;
-	string s, t;
-	while (cin >> s >> t) {
-		cout << S.findTheDifference(s, t) << endl;
-	}
+    Solution S;
+    string s, t;
+    while (cin >> s >> t) {
+        cout << S.findTheDifference(s, t) << endl;
+    }
 
 
-	return 0;
+    return 0;
 }
 

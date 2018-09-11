@@ -24,25 +24,25 @@ using namespace std;
 class Solution {
 public:
     string countAndSay(int n) {
-    	string now("1"), pre;
+        string now("1"), pre;
         for (int i = 1; i < n; i ++) {
-        	pre = now;
-        	now = "";
-        	char pre_ch = pre[0];
-        	int count = 1;
-        	for (int j = 1; j < pre.length(); j ++) {
-        		if (pre[j] == pre_ch) {
-        			count ++;
-				}
-				else {
-					now = now + to_string(count) + pre_ch;
-					pre_ch = pre[j];
-					count = 1;
-				}
-			}
-			now = now + to_string(count) + pre_ch;
-		}
-		return now;
+            pre = now;
+            now = "";
+            char pre_ch = pre[0];
+            int count = 1;
+            for (int j = 1; j < pre.length(); j ++) {
+                if (pre[j] == pre_ch) {
+                    count ++;
+                }
+                else {
+                    now = now + to_string(count) + pre_ch;
+                    pre_ch = pre[j];
+                    count = 1;
+                }
+            }
+            now = now + to_string(count) + pre_ch;
+        }
+        return now;
     }
 };
 
@@ -50,11 +50,11 @@ public:
 
 int main()
 {
-	Solution S;
-	int n;
-	while (cin >> n) {
-		cout << S.countAndSay(n) << endl;
-	}
-	return 0;
+    Solution S;
+    int n;
+    while (cin >> n) {
+        cout << S.countAndSay(n) << endl;
+    }
+    return 0;
 }
 

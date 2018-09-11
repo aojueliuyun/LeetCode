@@ -24,10 +24,10 @@ using namespace std;
 
 template<typename T1, typename T2>
 void printMap(unordered_map<T1, T2> M) {
-	for (auto x : M) {
-		cout << x.first << " : " << x.second << endl;
-	}
-	cout << endl;
+    for (auto x : M) {
+        cout << x.first << " : " << x.second << endl;
+    }
+    cout << endl;
 }
 
 
@@ -42,27 +42,27 @@ void printMap(unordered_map<T1, T2> M) {
 class Solution {
 public:
     vector<int> findAnagrams(string s, string p) {
-    	vector<int> res;
-    	if (s.length() < p.length())
-			return res;
+        vector<int> res;
+        if (s.length() < p.length())
+            return res;
         for (int i = 0; i <= s.length()-p.length(); i ++) {
-        	unordered_map<char, int> ms, mp;
-        	for (int j = 0; j < p.length(); j ++) {
-        		ms[s[i+j]] ++;
-        		mp[p[j]] ++;
-			}
-			if (ms.size() != mp.size()) continue;
-			bool same = true;
-			for (auto x : ms) {
-				if (mp[x.first] == x.second) continue;
-				else {
-					same = false;
-					break;
-				}
-			}
-			if (same) res.push_back(i);
-		}
-		return res;
+            unordered_map<char, int> ms, mp;
+            for (int j = 0; j < p.length(); j ++) {
+                ms[s[i+j]] ++;
+                mp[p[j]] ++;
+            }
+            if (ms.size() != mp.size()) continue;
+            bool same = true;
+            for (auto x : ms) {
+                if (mp[x.first] == x.second) continue;
+                else {
+                    same = false;
+                    break;
+                }
+            }
+            if (same) res.push_back(i);
+        }
+        return res;
     }
 };
 
@@ -78,28 +78,28 @@ public:
 // execution time: 32ms
 class Solution2 {
 public:
-	vector<int> findAnagrams(string s, string p) {
-		vector<int> hash1(256), hash2(256);     // if size of vector is 26 , there will be just alright
-		for (auto ch : p) hash1[ch] ++;
-		int lens = s.length(), lenp = p.length();
-		vector<int> ans;
-		for (int i = 0; i < lens; i ++) {
-			hash2[s[i]] ++;
-			if (i >= lenp) hash2[s[i-lenp]] --; // update hash table in time
-			if (hash1 == hash2) ans.push_back(i-lenp + 1); // just use == to judge equal
-		}
-		return ans;
-	}
+    vector<int> findAnagrams(string s, string p) {
+        vector<int> hash1(256), hash2(256);     // if size of vector is 26 , there will be just alright
+        for (auto ch : p) hash1[ch] ++;
+        int lens = s.length(), lenp = p.length();
+        vector<int> ans;
+        for (int i = 0; i < lens; i ++) {
+            hash2[s[i]] ++;
+            if (i >= lenp) hash2[s[i-lenp]] --; // update hash table in time
+            if (hash1 == hash2) ans.push_back(i-lenp + 1); // just use == to judge equal
+        }
+        return ans;
+    }
 };
  
 
 
 template<typename T>
 void printVec(vector<T> vec) {
-	for (auto x : vec) {
-		cout << x << " ";
-	}
-	cout << endl;
+    for (auto x : vec) {
+        cout << x << " ";
+    }
+    cout << endl;
 }
 
 
@@ -108,13 +108,13 @@ void printVec(vector<T> vec) {
 
 int main()
 {
-	string s, p;
-	Solution2 S;
-	while (cin >> s >> p) {
-		printVec(S.findAnagrams(s, p));
-	}
+    string s, p;
+    Solution2 S;
+    while (cin >> s >> p) {
+        printVec(S.findAnagrams(s, p));
+    }
 
 
-	return 0;
+    return 0;
 }
 

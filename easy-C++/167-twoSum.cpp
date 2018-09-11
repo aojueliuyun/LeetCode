@@ -29,12 +29,12 @@ using namespace std;
 class Solution {
 public:
     vector<int> twoSum(vector<int>& numbers, int target) {
-    	vector<int> res;
+        vector<int> res;
         for (int i = 0; i < numbers.size()-1; i ++)
-        	for (int j = i+1; j < numbers.size(); j ++)
-        		if (numbers[i] + numbers[j] == target)
-        			return {i+1, j+1};
-		return {}; 
+            for (int j = i+1; j < numbers.size(); j ++)
+                if (numbers[i] + numbers[j] == target)
+                    return {i+1, j+1};
+        return {}; 
     }
 };
 
@@ -46,17 +46,17 @@ public:
 class Solution2 {
 public:
     vector<int> twoSum(vector<int>& numbers, int target) {
-    	map<int, int> table;  // the first is the needed value, the second is index
-    	for (int i = 0; i < numbers.size(); i ++) {
-    		auto iter = table.find(numbers[i]);
-    		if (iter != table.end())
-    			return {iter->second+1, i+1};
-    		int needed = target - numbers[i];
-    		if (table.find(needed) == table.end())
-    			table[needed] = i;
-		}
-		return {};
-	}
+        map<int, int> table;  // the first is the needed value, the second is index
+        for (int i = 0; i < numbers.size(); i ++) {
+            auto iter = table.find(numbers[i]);
+            if (iter != table.end())
+                return {iter->second+1, i+1};
+            int needed = target - numbers[i];
+            if (table.find(needed) == table.end())
+                table[needed] = i;
+        }
+        return {};
+    }
 };
 
 // solution 3 : two piointers ------------> AC
@@ -66,16 +66,16 @@ public:
 class Solution3 {
 public:
     vector<int> twoSum(vector<int>& numbers, int target) {
-    	int left = 0, right = numbers.size()-1;
-    	while (left < right) {
-    		int temp = numbers[left] + numbers[right];
-    		if (temp == target)
-				return {left+1, right+1};
-    		else if (temp > target) right --;
-    		else left ++;
-		}
-		return {};
-	}
+        int left = 0, right = numbers.size()-1;
+        while (left < right) {
+            int temp = numbers[left] + numbers[right];
+            if (temp == target)
+                return {left+1, right+1};
+            else if (temp > target) right --;
+            else left ++;
+        }
+        return {};
+    }
 }; 
 
 
@@ -96,21 +96,21 @@ public:
 
 
 void printVec(vector<int> v) {
-	for (int x : v) cout << x << ' ';
-	cout << endl;
+    for (int x : v) cout << x << ' ';
+    cout << endl;
 }
 
 int main()
 {
-	vector<int> vec;
-	vec.push_back(2);
-	vec.push_back(7);
-	vec.push_back(10);
-	Solution2 S;
-	printVec(S.twoSum(vec, 9));
-	
-	
+    vector<int> vec;
+    vec.push_back(2);
+    vec.push_back(7);
+    vec.push_back(10);
+    Solution2 S;
+    printVec(S.twoSum(vec, 9));
+    
+    
 
-	return 0;
+    return 0;
 }
 

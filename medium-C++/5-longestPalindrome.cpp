@@ -27,41 +27,41 @@ using namespace std;
 class Solution {
 public:
     string longestPalindrome(string s) {
-    	if (s.length() <= 1)
-			return s;
-    	pair<int, int> curMax{0,-1};
+        if (s.length() <= 1)
+            return s;
+        pair<int, int> curMax{0,-1};
         for (int i = 0; i < s.length(); i ++) {
-        	int res = 0;
-        	int l = i, r = i+1; // the case like : abcba
-        	while (l >= 0 && r < s.length()) {
-        		res = res ^ (s[l] ^ s[r]);
-        		if (res == 0) {
-        			if (r-l > curMax.second-curMax.first)
-        				curMax = {l, r};
-        			l --;
-        			r ++;
-				}
-				else break;
-			}
-			l = i-1; // the case like : abba
-			r = i+1;
-			res = 0;
-			if (curMax.second - curMax.first <= 0) {
-				curMax = {i, i};
-			}
-			while (l >= 0 && r < s.length()) {
-				res = res ^ (s[l] ^ s[r]);
-        		if (res == 0) {
-        			if (r-l > curMax.second-curMax.first)
-        				curMax = {l, r};
-        			l --;
-        			r ++;
-				}
-				else break;
-			}
-		}
-		string res = s.substr(curMax.first, curMax.second - curMax.first + 1);
-		return res;
+            int res = 0;
+            int l = i, r = i+1; // the case like : abcba
+            while (l >= 0 && r < s.length()) {
+                res = res ^ (s[l] ^ s[r]);
+                if (res == 0) {
+                    if (r-l > curMax.second-curMax.first)
+                        curMax = {l, r};
+                    l --;
+                    r ++;
+                }
+                else break;
+            }
+            l = i-1; // the case like : abba
+            r = i+1;
+            res = 0;
+            if (curMax.second - curMax.first <= 0) {
+                curMax = {i, i};
+            }
+            while (l >= 0 && r < s.length()) {
+                res = res ^ (s[l] ^ s[r]);
+                if (res == 0) {
+                    if (r-l > curMax.second-curMax.first)
+                        curMax = {l, r};
+                    l --;
+                    r ++;
+                }
+                else break;
+            }
+        }
+        string res = s.substr(curMax.first, curMax.second - curMax.first + 1);
+        return res;
     }
 };
 
@@ -107,19 +107,19 @@ public:
         int leftres = 0;
         int maxlen = 0;
         for (int i = 0; i < len; i ++) {
-        	left = right = i;
-        	while (right + 1 < len && s[right + 1] == s[right]) {
-        		right ++;
-			}
-        	while (left >= 0 && right < len && s[left] == s[right]) {
-        		left --;
-        		right ++;
-			}
-			if (maxlen < right - left - 1) {
-				leftres = left + 1;
-				maxlen = right - left - 1;
-			}
-		}
+            left = right = i;
+            while (right + 1 < len && s[right + 1] == s[right]) {
+                right ++;
+            }
+            while (left >= 0 && right < len && s[left] == s[right]) {
+                left --;
+                right ++;
+            }
+            if (maxlen < right - left - 1) {
+                leftres = left + 1;
+                maxlen = right - left - 1;
+            }
+        }
         return s.substr(leftres, maxlen);
     }
 };
@@ -128,12 +128,12 @@ public:
 int main()
 {
 
-	string s;
-	Solution3 S;
-	while (cin >> s) {
-		cout << S.longestPalindrome(s) << endl;
-	}
+    string s;
+    Solution3 S;
+    while (cin >> s) {
+        cout << S.longestPalindrome(s) << endl;
+    }
 
-	return 0;
+    return 0;
 }
 

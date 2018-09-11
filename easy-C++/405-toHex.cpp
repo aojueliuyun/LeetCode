@@ -26,28 +26,28 @@ using namespace std;
 class Solution {
 public:
     string toHex(int num) {
-    	if (num == 0) return "0";
+        if (num == 0) return "0";
         unsigned int temp = num;         // unsigned int is useful !
         string res;
         while (temp > 0) {
-        	unsigned int x = temp % 16;
-        	temp /= 16;
-        	res = char(x >= 10 ? 'a'+x-10 : '0'+x) + res; 
-		}
-		return res;
+            unsigned int x = temp % 16;
+            temp /= 16;
+            res = char(x >= 10 ? 'a'+x-10 : '0'+x) + res; 
+        }
+        return res;
     }
 };
 
 
 int main()
 {
-	int num;
-	Solution S;
-	while (cin >> num) {
-		cout << S.toHex(num) << endl;
-	}
+    int num;
+    Solution S;
+    while (cin >> num) {
+        cout << S.toHex(num) << endl;
+    }
 
 
-	return 0;
+    return 0;
 }
 

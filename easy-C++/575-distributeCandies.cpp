@@ -30,7 +30,7 @@ class Solution {
 public:
     int distributeCandies(vector<int>& candies) {
         unordered_set<int> kinds(candies.begin(), candies.end());
-		return min(kinds.size(), candies.size() / 2);
+        return min(kinds.size(), candies.size() / 2);
     }
 };
 
@@ -40,6 +40,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

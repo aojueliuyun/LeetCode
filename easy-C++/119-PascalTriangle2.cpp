@@ -28,22 +28,22 @@ public:
     vector<int> getRow(int rowIndex) {
         vector<int> vec1(34), vec2(34);
         for (int i = 0; i <= rowIndex; i ++) {
-        	if (i % 2 == 0) {
-        		vec1[0] = 1;
-        		for (int j = 1; j < i; j ++)
-        			vec1[j] = vec2[j-1] + vec2[j];
-        		vec1[i] = 1;
-			}
-			else {
-				vec2[0] = 1;
-				for (int j = 1; j < i; j ++)
-					vec2[j] = vec1[j-1] + vec1[j];
-				vec2[i] = 1;
-			}
-		}
-		vec1.resize(rowIndex+1);
-		vec2.resize(rowIndex+1);
-		return rowIndex % 2 == 0 ? vec1 : vec2;
+            if (i % 2 == 0) {
+                vec1[0] = 1;
+                for (int j = 1; j < i; j ++)
+                    vec1[j] = vec2[j-1] + vec2[j];
+                vec1[i] = 1;
+            }
+            else {
+                vec2[0] = 1;
+                for (int j = 1; j < i; j ++)
+                    vec2[j] = vec1[j-1] + vec1[j];
+                vec2[i] = 1;
+            }
+        }
+        vec1.resize(rowIndex+1);
+        vec2.resize(rowIndex+1);
+        return rowIndex % 2 == 0 ? vec1 : vec2;
     }
 };
 
@@ -57,15 +57,15 @@ public:
         vector<int> res;
         res.push_back(1);
         for (int i = 0; i < rowIndex; i ++) {
-        	int temp = res[i];
-        	for (int j = 1; j <= i; j ++) {
-        		int tempp = res[j];
-        		res[j] += temp;
-        		temp = tempp;
-			}
-			res.push_back(1);
-		}
-		return res;
+            int temp = res[i];
+            for (int j = 1; j <= i; j ++) {
+                int tempp = res[j];
+                res[j] += temp;
+                temp = tempp;
+            }
+            res.push_back(1);
+        }
+        return res;
     }
 };
 
@@ -77,9 +77,9 @@ public:
 
 
 void printVec(vector<int> V) {
-	for (int i = 0; i < V.size(); i ++)
-		cout << V[i] << ' ';
-	cout << endl;
+    for (int i = 0; i < V.size(); i ++)
+        cout << V[i] << ' ';
+    cout << endl;
 }
 
 
@@ -87,12 +87,12 @@ void printVec(vector<int> V) {
 int main()
 {
 
-	Solution2 S;
-	int n;
-	while (cin >> n) {
-		printVec(S.getRow(n));
-	}
+    Solution2 S;
+    int n;
+    while (cin >> n) {
+        printVec(S.getRow(n));
+    }
 
-	return 0;
+    return 0;
 }
 

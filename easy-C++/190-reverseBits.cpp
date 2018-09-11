@@ -31,15 +31,15 @@ public:
     uint32_t reverseBits(uint32_t n) {
         vector<int> order;
         while (n > 0) {
-        	order.push_back(n % 2);
-        	n /= 2;
-		}
-		order.insert(order.end(), 32-order.size(), 0);
-		uint32_t res = 0;
-		for (int x : order) {
-			res = res*2 + x;
-		}
-		return res;
+            order.push_back(n % 2);
+            n /= 2;
+        }
+        order.insert(order.end(), 32-order.size(), 0);
+        uint32_t res = 0;
+        for (int x : order) {
+            res = res*2 + x;
+        }
+        return res;
     }
 };
 
@@ -50,13 +50,13 @@ public:
 class Solution2 {
 public:
     uint32_t reverseBits(uint32_t n) {
-    	uint32_t res = 0;
-    	for (int i=0; i < 32; i++) {
-//    		res = (res<<1) +  ((n>>i) & 1);  // use bit operation 
-    		res = res*2 + n%2;
-    		n /= 2;
-		}
-		return res;
+        uint32_t res = 0;
+        for (int i=0; i < 32; i++) {
+//            res = (res<<1) +  ((n>>i) & 1);  // use bit operation 
+            res = res*2 + n%2;
+            n /= 2;
+        }
+        return res;
     }
 };
 
@@ -65,12 +65,12 @@ public:
 int main()
 {
 
-	Solution2 S;
-	uint32_t n;
-	while (cin >> n) {
-		cout << S.reverseBits(n) << endl; 
-	}
+    Solution2 S;
+    uint32_t n;
+    while (cin >> n) {
+        cout << S.reverseBits(n) << endl; 
+    }
 
-	return 0;
+    return 0;
 }
 

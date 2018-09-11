@@ -25,36 +25,36 @@ using namespace std;
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
-    	int p = 0, temp = 0;
-    	if(!nums.empty()) temp = nums[0];
-    	else return 0;
+        int p = 0, temp = 0;
+        if(!nums.empty()) temp = nums[0];
+        else return 0;
         for (int i=1; i < nums.size(); i++) {
-        	if (nums[i] != temp) {
-        		temp = nums[i];
-        		nums[++p] = temp;
-			}
-		}
-		return p + 1;
+            if (nums[i] != temp) {
+                temp = nums[i];
+                nums[++p] = temp;
+            }
+        }
+        return p + 1;
     }
 }; 
 
 int main()
 {
-	Solution S;
-	int n;
-	cin >> n;
-	vector<int> nums(n);
-	for (int i=0; i < n; i++) {
-		cin >> nums[i];
-	}
-	int ans = S.removeDuplicates(nums);
-	cout << "new length:" << ans << endl; 
-	for (int i=0; i < ans; i++) {
-		cout << nums[i] << ' ';
-	}
+    Solution S;
+    int n;
+    cin >> n;
+    vector<int> nums(n);
+    for (int i=0; i < n; i++) {
+        cin >> nums[i];
+    }
+    int ans = S.removeDuplicates(nums);
+    cout << "new length:" << ans << endl; 
+    for (int i=0; i < ans; i++) {
+        cout << nums[i] << ' ';
+    }
 
 
 
-	return 0;
+    return 0;
 }
 

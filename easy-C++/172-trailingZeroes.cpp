@@ -27,7 +27,7 @@ public:
     int trailingZeroes(int n) {
         int res = 0;
         for (long long i=5; i <= n; i*=5) res += n/i; // i could exceed INT_MAX, use long long
-		return res;
+        return res;
     }
 }; 
 
@@ -35,13 +35,13 @@ public:
 
 int main()
 {
-	Solution S;
-	int n;
-	while (cin >> n) {
-		cout << S.trailingZeroes(n) << endl;
-	}
+    Solution S;
+    int n;
+    while (cin >> n) {
+        cout << S.trailingZeroes(n) << endl;
+    }
 
 
-	return 0;
+    return 0;
 }
 

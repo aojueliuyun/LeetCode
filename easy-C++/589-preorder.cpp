@@ -48,13 +48,13 @@ public:
         return res;
     }
     void preTraverse(Node * root, vector<int> & vec) {
-    	if (root) {
-    		vec.push_back(root->val);
-    		for (auto node : root->children) {
-    			preTraverse(node, vec);
-			}
-		}
-	}
+        if (root) {
+            vec.push_back(root->val);
+            for (auto node : root->children) {
+                preTraverse(node, vec);
+            }
+        }
+    }
 }; 
 
 
@@ -62,20 +62,20 @@ public:
 class Solution2 {
 public:
     vector<int> preorder(Node* root) {
-    	vector<int> res;
-    	stack<Node *> data;
-    	data.push(root);
+        vector<int> res;
+        stack<Node *> data;
+        data.push(root);
         while (!data.empty()) {
-        	Node * tmp = data.top();
-        	data.pop();
-        	if (tmp) {
-        		res.push_back(tmp->val);
-        		for (int i = tmp->children.size()-1; i >= 0; i --) {
-        			data.push(tmp->children[i]);
-				}
-			}
-		}
-		return res;
+            Node * tmp = data.top();
+            data.pop();
+            if (tmp) {
+                res.push_back(tmp->val);
+                for (int i = tmp->children.size()-1; i >= 0; i --) {
+                    data.push(tmp->children[i]);
+                }
+            }
+        }
+        return res;
     }
 };
 
@@ -85,6 +85,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

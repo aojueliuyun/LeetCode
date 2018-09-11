@@ -33,24 +33,24 @@ public:
         
     }
     bool isPalindrome(int n) {
-    	string s = to_string(n);
-    	for (int i = 0, j = s.length()-1; i < j; i ++, j --) {
-    		if (s[i] != s[j]) return false;
-		}
-		return true;
-	}
+        string s = to_string(n);
+        for (int i = 0, j = s.length()-1; i < j; i ++, j --) {
+            if (s[i] != s[j]) return false;
+        }
+        return true;
+    }
 }; 
 
 
 int main()
 {
-	int n;
-	Solution S;
-	while(cin >> n) {
-		cout << S.isPalindrome(n) << endl;
-	}
+    int n;
+    Solution S;
+    while(cin >> n) {
+        cout << S.isPalindrome(n) << endl;
+    }
 
 
-	return 0;
+    return 0;
 }
 

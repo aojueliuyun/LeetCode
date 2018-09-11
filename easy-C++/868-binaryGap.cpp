@@ -30,19 +30,19 @@ class Solution {
 public:
     int binaryGap(int N) {
         int pos = -1, last1 = -1, gap = 0, maxgap = 0;
-    	while (N) {
-    		pos ++;
-    		if (N & 1) {
-    			if (last1 == -1) last1 = pos; // first 1
-    			else {
-    				gap = pos - last1;
-    				maxgap = max(gap, maxgap);
-    				last1 = pos;
-				}
-			}
-			N >>= 1;
-		}
-		return maxgap;
+        while (N) {
+            pos ++;
+            if (N & 1) {
+                if (last1 == -1) last1 = pos; // first 1
+                else {
+                    gap = pos - last1;
+                    maxgap = max(gap, maxgap);
+                    last1 = pos;
+                }
+            }
+            N >>= 1;
+        }
+        return maxgap;
     }
 }; 
 
@@ -52,6 +52,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

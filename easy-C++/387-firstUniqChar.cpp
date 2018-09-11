@@ -27,32 +27,32 @@ using namespace std;
 class Solution {
 public:
     int firstUniqChar(string s) {
-    	vector<pair<int, int>> vec(26);
-    	for (int i = 0; i < s.length(); i ++) {
-    		int num = s[i] - 'a';
-    		vec[num].first ++;
-    		if (vec[num].first == 1)
-				vec[num].second = i;
-		}
-		int pos = s.length();
-		for (auto x : vec) {
-			if (pos > x.second && x.first == 1) pos = x.second;
-		}
-		if (pos == s.length()) return -1;
-		return pos;
+        vector<pair<int, int>> vec(26);
+        for (int i = 0; i < s.length(); i ++) {
+            int num = s[i] - 'a';
+            vec[num].first ++;
+            if (vec[num].first == 1)
+                vec[num].second = i;
+        }
+        int pos = s.length();
+        for (auto x : vec) {
+            if (pos > x.second && x.first == 1) pos = x.second;
+        }
+        if (pos == s.length()) return -1;
+        return pos;
     }
 };
 
 int main()
 {
 
-	Solution S;
-	string s;
-	while (cin >> s) {
-		cout << S.firstUniqChar(s) << endl;
-	} 
+    Solution S;
+    string s;
+    while (cin >> s) {
+        cout << S.firstUniqChar(s) << endl;
+    } 
 
 
-	return 0;
+    return 0;
 }
 

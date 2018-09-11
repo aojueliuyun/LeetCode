@@ -35,16 +35,16 @@ struct ListNode {
 class Solution {
 public:
     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
-    	set<ListNode *> SA;
+        set<ListNode *> SA;
         while (headA != nullptr) {
-        	SA.insert(headA);
-        	headA = headA->next;
-		}
-		while (headB != nullptr) {
-			if (SA.find(headB) != SA.end()) return headB;
-			headB = headB->next;
-		}
-		return nullptr;
+            SA.insert(headA);
+            headA = headA->next;
+        }
+        while (headB != nullptr) {
+            if (SA.find(headB) != SA.end()) return headB;
+            headB = headB->next;
+        }
+        return nullptr;
     }
 };
 
@@ -55,26 +55,26 @@ public:
 class Solution2 {
 public:
     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
-    	int lenA = getLength(headA);
-    	int lenB = getLength(headB);
-    	if (lenA > lenB)
-    		for (int i = 0; i < lenA-lenB; i++) headA = headA -> next;
-    	else for (int i = 0; i < lenB-lenA; i++) headB = headB -> next;
-    	while (headA && headB) {
-    		if (headA == headB) return headA;
-    		headA = headA -> next;
-    		headB = headB -> next;
-		}
-		return nullptr;
+        int lenA = getLength(headA);
+        int lenB = getLength(headB);
+        if (lenA > lenB)
+            for (int i = 0; i < lenA-lenB; i++) headA = headA -> next;
+        else for (int i = 0; i < lenB-lenA; i++) headB = headB -> next;
+        while (headA && headB) {
+            if (headA == headB) return headA;
+            headA = headA -> next;
+            headB = headB -> next;
+        }
+        return nullptr;
     }
     int getLength(ListNode * p) {
-    	int count = 0;
-    	while (p != nullptr) {
-    		p = p->next;
-    		count ++;
-		}
-		return count;
-	}
+        int count = 0;
+        while (p != nullptr) {
+            p = p->next;
+            count ++;
+        }
+        return count;
+    }
 };
 
 
@@ -84,6 +84,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

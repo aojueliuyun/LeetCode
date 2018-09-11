@@ -28,28 +28,28 @@ using namespace std;
 class Solution {
 public:
     int compress(vector<char>& chars) {
-    	char cur = chars[0];
-    	int count = 1, pos = 0;
-    	for (int i = 1; i < chars.size(); i ++) {
-    		if (chars[i] == cur) {
-    			count ++;
-			}
-			else {
-				chars[pos++] = cur;		
-				if (count != 1) {
-					for (auto ch : to_string(count))
-						chars[pos++] = ch;
-				}
-				cur = chars[i];
-				count = 1;
-			}
-		}
-		chars[pos++] = cur;		
-		if (count != 1) {
-			for (auto ch : to_string(count))
-				chars[pos++] = ch;
-		}
-		return pos;
+        char cur = chars[0];
+        int count = 1, pos = 0;
+        for (int i = 1; i < chars.size(); i ++) {
+            if (chars[i] == cur) {
+                count ++;
+            }
+            else {
+                chars[pos++] = cur;        
+                if (count != 1) {
+                    for (auto ch : to_string(count))
+                        chars[pos++] = ch;
+                }
+                cur = chars[i];
+                count = 1;
+            }
+        }
+        chars[pos++] = cur;        
+        if (count != 1) {
+            for (auto ch : to_string(count))
+                chars[pos++] = ch;
+        }
+        return pos;
     }
 };
 
@@ -58,6 +58,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

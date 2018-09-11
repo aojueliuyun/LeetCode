@@ -24,15 +24,15 @@ using namespace std;
 class Solution {
 public:
     vector<vector<int>> generate(int numRows) {
-    	vector<vector<int>> C(numRows);
-		for (int n = 0; n < numRows; n++) {
-			C[n].resize(n+1);               // attention : reserve() & resize()
-			C[n][0] = C[n][n] = 1; 
-		}
-		for (int n = 2; n < numRows; n++)
-			for (int i = 1; i < n; i++) 
-				C[n][i] = C[n-1][i] + C[n-1][i-1];
-		return C;
+        vector<vector<int>> C(numRows);
+        for (int n = 0; n < numRows; n++) {
+            C[n].resize(n+1);               // attention : reserve() & resize()
+            C[n][0] = C[n][n] = 1; 
+        }
+        for (int n = 2; n < numRows; n++)
+            for (int i = 1; i < n; i++) 
+                C[n][i] = C[n-1][i] + C[n-1][i-1];
+        return C;
     }
 };
 
@@ -60,16 +60,16 @@ public:
 
 int main()
 {
-	// vector test 
-	// reverse() & resize()
-	vector<int> v(4);
-	cout << v.size() << endl;
-	v.push_back(10);
-	cout << v.size() << endl;
-	v.resize(10);
-	cout << v.size() << endl;
+    // vector test 
+    // reverse() & resize()
+    vector<int> v(4);
+    cout << v.size() << endl;
+    v.push_back(10);
+    cout << v.size() << endl;
+    v.resize(10);
+    cout << v.size() << endl;
 
 
-	return 0;
+    return 0;
 }
 

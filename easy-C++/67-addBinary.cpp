@@ -25,23 +25,23 @@ using namespace std;
 class Solution {
 public:
     string addBinary(string a, string b) {
-    	reverse(a.begin(), a.end());                 // reverse two string to calculate 
-    	reverse(b.begin(), b.end());
-    	if (a.length() < b.length()) {               // fill two strings to make them have same length
-    		a.append(b.length() - a.length(), '0');
-		}
-		else b.append(a.length() - b.length(), '0');
-		string ans;
-		int radix = 2, carry = 0, sum = 0;
-    	for (int i = 0; i < a.length(); i++) {
-    		sum = (a[i] - '0') + (b[i] - '0');
-    		ans.push_back((sum + carry)% radix + '0');
-    		carry = (sum + carry) / radix;
-		}
-		if(carry > 0) ans.push_back('0' + carry);      // 最高位进位
-		reverse(ans.begin(), ans.end());
-		return ans;
-	}
+        reverse(a.begin(), a.end());                 // reverse two string to calculate 
+        reverse(b.begin(), b.end());
+        if (a.length() < b.length()) {               // fill two strings to make them have same length
+            a.append(b.length() - a.length(), '0');
+        }
+        else b.append(a.length() - b.length(), '0');
+        string ans;
+        int radix = 2, carry = 0, sum = 0;
+        for (int i = 0; i < a.length(); i++) {
+            sum = (a[i] - '0') + (b[i] - '0');
+            ans.push_back((sum + carry)% radix + '0');
+            carry = (sum + carry) / radix;
+        }
+        if(carry > 0) ans.push_back('0' + carry);      // 最高位进位
+        reverse(ans.begin(), ans.end());
+        return ans;
+    }
 };
 
 
@@ -50,12 +50,12 @@ public:
 
 int main()
 {
-	string a,b;
-	Solution S;
-	while(cin >> a >> b) {
-		cout << S.addBinary(a, b) << endl;
-	}
+    string a,b;
+    Solution S;
+    while(cin >> a >> b) {
+        cout << S.addBinary(a, b) << endl;
+    }
 
-	return 0;
+    return 0;
 }
 

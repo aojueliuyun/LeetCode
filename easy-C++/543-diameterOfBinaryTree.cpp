@@ -36,14 +36,14 @@ struct TreeNode {
 class Solution {
 public:
     int diameterOfBinaryTree(TreeNode * root) {
-    	if (root == nullptr) return 0;
-    	int maxPathLen = max(diameterOfBinaryTree(root->left), diameterOfBinaryTree(root->right));
+        if (root == nullptr) return 0;
+        int maxPathLen = max(diameterOfBinaryTree(root->left), diameterOfBinaryTree(root->right));
         return max(maxDepth(root->left) + maxDepth(root->right), maxPathLen);
     }
     int maxDepth(TreeNode * root) {
-    	if (root == nullptr) return 0;
-    	return max(maxDepth(root->left), maxDepth(root->right)) + 1;
-	}
+        if (root == nullptr) return 0;
+        return max(maxDepth(root->left), maxDepth(root->right)) + 1;
+    }
 };
 
 
@@ -53,6 +53,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

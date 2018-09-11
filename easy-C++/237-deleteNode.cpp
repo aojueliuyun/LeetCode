@@ -24,9 +24,9 @@ using namespace std;
 
 //Definition for singly-linked list.
 struct ListNode {
-	int val;
-	ListNode * next;
-	ListNode(int x) : val(x), next(nullptr) {}
+    int val;
+    ListNode * next;
+    ListNode(int x) : val(x), next(nullptr) {}
 };
 
 // solution : swap node and node->next, and delete node->next
@@ -34,15 +34,15 @@ class Solution {
 public:
     void deleteNode(ListNode* node) {
         if (node == nullptr) {
-        	delete node;
-        	return;
-		}
-		else {
-			swap(node->val, node->next->val);
-			ListNode * temp = node->next;
-			node->next = temp->next;
-			delete temp;
-		}
+            delete node;
+            return;
+        }
+        else {
+            swap(node->val, node->next->val);
+            ListNode * temp = node->next;
+            node->next = temp->next;
+            delete temp;
+        }
     }
 };
 
@@ -50,9 +50,9 @@ public:
 class Solution2 {
 public:
     void deleteNode(ListNode* node) {
-    	if (node == nullptr || node->next == nullptr) return;
-    	node->val = node->next->val;
-    	node->next = node->next->next;
+        if (node == nullptr || node->next == nullptr) return;
+        node->val = node->next->val;
+        node->next = node->next->next;
     }
 };
 
@@ -62,6 +62,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

@@ -21,16 +21,16 @@ using namespace std;
 class Solution {
 public:
     int lengthOfLastWord(string s) {
-    	if (s.empty()) return 0;
-    	while (s[s.length() - 1] == ' ') {
-    		s = s.substr(0, s.length()-1);
-		}
+        if (s.empty()) return 0;
+        while (s[s.length() - 1] == ' ') {
+            s = s.substr(0, s.length()-1);
+        }
         for (int i = s.length() - 1; i >= 0; i --) {
-        	if (s[i] == ' ') {
-        		return s.length() - i - 1;
-			}
-		}
-		return s.length();
+            if (s[i] == ' ') {
+                return s.length() - i - 1;
+            }
+        }
+        return s.length();
     }
 };
 
@@ -47,6 +47,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

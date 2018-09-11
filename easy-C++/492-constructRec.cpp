@@ -30,13 +30,13 @@ public:
     vector<int> constructRectangle(int area) {
         vector<int> res;
         for (int w = floor(sqrt(area)); w >= 1; w --) {
-        	if (area % w == 0) {
-        		res.push_back(area/w);
-        		res.push_back(w);
-        		return res;
-			}
-		}
-		return {0, 0};
+            if (area % w == 0) {
+                res.push_back(area/w);
+                res.push_back(w);
+                return res;
+            }
+        }
+        return {0, 0};
     }
 };
  
@@ -46,6 +46,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

@@ -34,29 +34,29 @@ public:
     int maximumProduct(vector<int>& nums) {
         int firstmin = INT_MAX, secondmin = INT_MAX, firstmax = INT_MIN, secondmax = INT_MIN, thirdmax = INT_MIN;
         for (auto x : nums) {
-        	if (x >= firstmax) {
-        		thirdmax = secondmax;
-        		secondmax = firstmax;
-        		firstmax = x;
-			}
-			else if (x >= secondmax) {
-				thirdmax = secondmax;
-				secondmax = x;
-			}
-			else if (x >= thirdmax) {
-				thirdmax = x;
-			}
-			if (x <= firstmin) {
-				secondmin = firstmin;
-				firstmin = x;
-			}
-			else if (x <= secondmin) {
-				secondmin = x;
-			}
-		}
-		cout << firstmin << secondmin << endl;
-		cout << firstmax << secondmax << thirdmax << endl; 
-		return max(firstmin*secondmin*firstmax, firstmax*secondmax*thirdmax);
+            if (x >= firstmax) {
+                thirdmax = secondmax;
+                secondmax = firstmax;
+                firstmax = x;
+            }
+            else if (x >= secondmax) {
+                thirdmax = secondmax;
+                secondmax = x;
+            }
+            else if (x >= thirdmax) {
+                thirdmax = x;
+            }
+            if (x <= firstmin) {
+                secondmin = firstmin;
+                firstmin = x;
+            }
+            else if (x <= secondmin) {
+                secondmin = x;
+            }
+        }
+        cout << firstmin << secondmin << endl;
+        cout << firstmax << secondmax << thirdmax << endl; 
+        return max(firstmin*secondmin*firstmax, firstmax*secondmax*thirdmax);
     }
 }; 
 
@@ -69,7 +69,7 @@ class Solution2 {
 public:
     int maximumProduct(vector<int>& nums) {
         sort(nums.begin(), nums.end());
-		return max(nums[0] * nums[1] * nums.back(), nums.back() * (*(nums.end()-2)) * (*(nums.end()-3)));
+        return max(nums[0] * nums[1] * nums.back(), nums.back() * (*(nums.end()-2)) * (*(nums.end()-3)));
     }
 }; 
 
@@ -77,11 +77,11 @@ public:
 
 int main()
 {
-	vector<int> test{-1,-2,-3};
-	Solution2 S;
-	cout << S.maximumProduct(test) << endl;
+    vector<int> test{-1,-2,-3};
+    Solution2 S;
+    cout << S.maximumProduct(test) << endl;
 
 
-	return 0;
+    return 0;
 }
 

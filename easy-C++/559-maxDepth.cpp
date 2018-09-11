@@ -43,18 +43,18 @@ class Solution {
 public:
     int maxDepth(Node* root) {
         if (root == nullptr)
-			return 0;
+            return 0;
         else if (root->children.empty())
-        	return 1;
+            return 1;
         else {
-        	int maxlevel = 0;
-        	for (auto node : root->children) {
-        		int depth = maxDepth(node);
-        		if (depth > maxlevel)
-        			maxlevel = depth;
-			}
-			return maxlevel + 1;
-		}
+            int maxlevel = 0;
+            for (auto node : root->children) {
+                int depth = maxDepth(node);
+                if (depth > maxlevel)
+                    maxlevel = depth;
+            }
+            return maxlevel + 1;
+        }
     }
 };
 
@@ -67,6 +67,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

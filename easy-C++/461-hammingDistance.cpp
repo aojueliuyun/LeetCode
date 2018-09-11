@@ -29,25 +29,25 @@ class Solution {
 public:
     int hammingDistance(int x, int y) {
         int tmp = x ^ y;
-    	int ans = 0;
-    	while (tmp) {
-    		if (tmp & 1) ans ++;
-    		tmp >>= 1;
-		}
-		return ans;
+        int ans = 0;
+        while (tmp) {
+            if (tmp & 1) ans ++;
+            tmp >>= 1;
+        }
+        return ans;
     }
 }; 
 
 
 int main()
 {
-	int x, y;
-	Solution S;
-	while (cin >> x >> y) {
-		cout << S.hammingDistance(x, y) << endl;
-	}
+    int x, y;
+    Solution S;
+    while (cin >> x >> y) {
+        cout << S.hammingDistance(x, y) << endl;
+    }
 
 
-	return 0;
+    return 0;
 }
 

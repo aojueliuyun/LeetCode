@@ -48,26 +48,26 @@ public:
         vector<int> vec;
         int level = 1;
         while (!Q.empty()) {
-        	pair<Node *, int> cur = Q.front();
-        	Q.pop();
-        	if (cur.first == nullptr)
-        		continue;
-        	for (auto node : cur.first->children) {
-        		Q.push({node, cur.second + 1});
-			}
-			if (cur.second == level) {
-				vec.push_back(cur.first->val);
-			}
-			else {
-				res.push_back(vec);
-				vec.clear();
-				vec.push_back(cur.first->val);
-				level ++;
-			}
-		}
-		if (root != nullptr)
-			res.push_back(vec);
-		return res;
+            pair<Node *, int> cur = Q.front();
+            Q.pop();
+            if (cur.first == nullptr)
+                continue;
+            for (auto node : cur.first->children) {
+                Q.push({node, cur.second + 1});
+            }
+            if (cur.second == level) {
+                vec.push_back(cur.first->val);
+            }
+            else {
+                res.push_back(vec);
+                vec.clear();
+                vec.push_back(cur.first->val);
+                level ++;
+            }
+        }
+        if (root != nullptr)
+            res.push_back(vec);
+        return res;
     }
 };
 
@@ -79,22 +79,22 @@ public:
         queue<Node *> Q;
         vector<vector<int>> ans;
         if (root == nullptr)
-        	return ans;
+            return ans;
         Q.push(root);
         while (!Q.empty()) {
-        	vector<int> seq;
-        	int n = Q.size();
-        	for (int i = 0; i < n; i ++) {
-        		Node * cur = Q.front();
-        		Q.pop();
-        		for (auto node : cur->children) {
-        			Q.push(node);
-				}
-				seq.push_back(cur->val);
-			}
-			ans.push_back(seq);
-		}
-		return ans;
+            vector<int> seq;
+            int n = Q.size();
+            for (int i = 0; i < n; i ++) {
+                Node * cur = Q.front();
+                Q.pop();
+                for (auto node : cur->children) {
+                    Q.push(node);
+                }
+                seq.push_back(cur->val);
+            }
+            ans.push_back(seq);
+        }
+        return ans;
     }
 };
 
@@ -106,6 +106,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

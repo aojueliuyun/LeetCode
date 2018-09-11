@@ -31,12 +31,12 @@ public:
         vector<int> index;
         set<char> vowels{'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
         for (int i = 0; i < s.length(); i ++) {
-        	if (vowels.count(s[i])) index.push_back(i);
-		}
-		for (int i = 0, j = index.size()-1; i < j; i ++, j --) {
-			swap(s[index[i]], s[index[j]]);
-		}
-		return s;
+            if (vowels.count(s[i])) index.push_back(i);
+        }
+        for (int i = 0, j = index.size()-1; i < j; i ++, j --) {
+            swap(s[index[i]], s[index[j]]);
+        }
+        return s;
     }
 };
 
@@ -47,11 +47,11 @@ public:
         set<char> vowels{'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
         int i = 0, j = s.length()-1;
         while (i < j) {
-        	if (vowels.count(s[i]) == 0) i++;
-        	else if (vowels.count(s[j]) == 0) j--;
-        	else swap(s[i++], s[j--]);
-		}
-		return s;
+            if (vowels.count(s[i]) == 0) i++;
+            else if (vowels.count(s[j]) == 0) j--;
+            else swap(s[i++], s[j--]);
+        }
+        return s;
     }
 };
 
@@ -61,6 +61,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

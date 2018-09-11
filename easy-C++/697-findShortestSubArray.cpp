@@ -34,29 +34,29 @@ public:
         vector<int> mostnum;
         for (auto x : nums) dict[x] ++;
         int most, maxnum = 0;
-		for (auto x : dict) {
-			if (x.second > maxnum) {
-				maxnum = x.second;
-				mostnum = {x.first};
-			}
-			else if (x.second == maxnum) {
-				mostnum.push_back(x.first);
-			}
-		}
-		int res = nums.size();
-		for (auto x : mostnum) {
-			int i = 0, j = nums.size()-1;
-			while (i < nums.size()) {
-				if (nums[i] == x) break;
-				i ++;
-			}
-			while (j >= 0) {
-				if (nums[j] == x) break;
-				j --;
-			}
-			res = min(j-i+1, res);
-		}
-		return res;
+        for (auto x : dict) {
+            if (x.second > maxnum) {
+                maxnum = x.second;
+                mostnum = {x.first};
+            }
+            else if (x.second == maxnum) {
+                mostnum.push_back(x.first);
+            }
+        }
+        int res = nums.size();
+        for (auto x : mostnum) {
+            int i = 0, j = nums.size()-1;
+            while (i < nums.size()) {
+                if (nums[i] == x) break;
+                i ++;
+            }
+            while (j >= 0) {
+                if (nums[j] == x) break;
+                j --;
+            }
+            res = min(j-i+1, res);
+        }
+        return res;
     }
 };
 
@@ -67,22 +67,22 @@ public:
 class Solution2 {
 public:
     int findShortestSubArray(vector<int>& nums) {
-    	int res = nums.size(), degree = 0;
-    	unordered_map<int, int> m;     // record the number repeat numbers
+        int res = nums.size(), degree = 0;
+        unordered_map<int, int> m;     // record the number repeat numbers
         unordered_map<int, pair<int, int>> pos; // record the begin and end position of every subarray
         for (int i = 0; i < nums.size(); i ++) {
-        	if (++m[nums[i]] == 1) {
-        		pos[nums[i]] = {i, i};
-			}
-			else pos[nums[i]].second = i;
-			degree = max(degree, m[nums[i]]);
-		}
-		for (auto x : m) {
-			if (x.second == degree) {
-				res = min(pos[x.first].second - pos[x.first].first + 1, res);	
-			}
-		}
-		return res;
+            if (++m[nums[i]] == 1) {
+                pos[nums[i]] = {i, i};
+            }
+            else pos[nums[i]].second = i;
+            degree = max(degree, m[nums[i]]);
+        }
+        for (auto x : m) {
+            if (x.second == degree) {
+                res = min(pos[x.first].second - pos[x.first].first + 1, res);    
+            }
+        }
+        return res;
     }
 };
 
@@ -91,11 +91,11 @@ public:
 
 int main()
 {
-	vector<int> vec{49999, 0, 0};
-	Solution2 S;
-	cout << S.findShortestSubArray(vec) << endl;
+    vector<int> vec{49999, 0, 0};
+    Solution2 S;
+    cout << S.findShortestSubArray(vec) << endl;
 
 
-	return 0;
+    return 0;
 }
 

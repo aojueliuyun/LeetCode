@@ -34,9 +34,9 @@ public:
 
 int main()
 {
-	cout << -1 % 9 << endl;
+    cout << -1 % 9 << endl;
 
 
-	return 0;
+    return 0;
 }
 

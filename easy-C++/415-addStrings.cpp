@@ -28,21 +28,21 @@ class Solution {
 public:
     string addStrings(string num1, string num2) {
         string res;
-       	reverse(num1.begin(), num1.end());
-		reverse(num2.begin(), num2.end());
-		if (num1.length() > num2.length()) // fill 0 to make two string same length
-			num2.append(num1.length() - num2.length(), '0');
-		else num1.append(num2.length() - num1.length(), '0');
-		int carry = 0;
-		for (int i = 0; i < num1.length(); i ++) {
-			int temp = num1[i] - '0' + num2[i] - '0' + carry; // must add carry
-			res += '0' + temp % 10;
-			carry = temp / 10;
-		}
-		if (carry != 0)
-			res += carry + '0';
-		reverse(res.begin(), res.end());
-		return res;
+           reverse(num1.begin(), num1.end());
+        reverse(num2.begin(), num2.end());
+        if (num1.length() > num2.length()) // fill 0 to make two string same length
+            num2.append(num1.length() - num2.length(), '0');
+        else num1.append(num2.length() - num1.length(), '0');
+        int carry = 0;
+        for (int i = 0; i < num1.length(); i ++) {
+            int temp = num1[i] - '0' + num2[i] - '0' + carry; // must add carry
+            res += '0' + temp % 10;
+            carry = temp / 10;
+        }
+        if (carry != 0)
+            res += carry + '0';
+        reverse(res.begin(), res.end());
+        return res;
     }
 };
 
@@ -50,13 +50,13 @@ public:
 
 int main()
 {
-	string a, b;
-	Solution S;
-	while (cin >> a >> b) {
-		cout << S.addStrings(a, b) << endl;
-	}
-	
+    string a, b;
+    Solution S;
+    while (cin >> a >> b) {
+        cout << S.addStrings(a, b) << endl;
+    }
+    
 
-	return 0;
+    return 0;
 }
 

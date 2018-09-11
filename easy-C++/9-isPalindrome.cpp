@@ -20,7 +20,7 @@ class Solution {
 public:
     bool isPalindrome(int x) {
         if(x < 0) return false;
-		int rev = 0;
+        int rev = 0;
         int temp = x;
         while (x != 0) {
             int pop = x % 10;
@@ -82,12 +82,12 @@ public:
 
 int main()
 {
-	Solution2 S;
-	int x;
-	while(cin >> x) {
-		cout << S.isPalindrome(x) << endl;
-	}
+    Solution2 S;
+    int x;
+    while(cin >> x) {
+        cout << S.isPalindrome(x) << endl;
+    }
 
-	return 0;
+    return 0;
 }
 

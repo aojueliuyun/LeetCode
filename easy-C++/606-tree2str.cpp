@@ -44,21 +44,21 @@ public:
         return res;
     }
     void treeToStr(TreeNode * t, string & s) {
-    	if (t) {
-    		s += to_string(t->val);
-    		if (t->left) {
-    			s += "(";
-    			treeToStr(t->left, s);
-    			s += ")";
-			}
-			else if (t->right) s += "()";
-			if (t->right) {
-				s += "(";
-				treeToStr(t->right, s);
-				s += ")";
-			}
-		}
-	}
+        if (t) {
+            s += to_string(t->val);
+            if (t->left) {
+                s += "(";
+                treeToStr(t->left, s);
+                s += ")";
+            }
+            else if (t->right) s += "()";
+            if (t->right) {
+                s += "(";
+                treeToStr(t->right, s);
+                s += ")";
+            }
+        }
+    }
 };
 
 
@@ -68,13 +68,13 @@ public:
     string tree2str(TreeNode* t) {
         string res;
         if (t) {
-        	res += to_string(t->val); 
-        	if (t->left) res += '(' + tree2str(t->left) + ')';
-        	else if (t->right) res += "()";
-        	if (t->right) res += '(' + tree2str(t->right) + ')';
-		}
-		return res;
-	}
+            res += to_string(t->val); 
+            if (t->left) res += '(' + tree2str(t->left) + ')';
+            else if (t->right) res += "()";
+            if (t->right) res += '(' + tree2str(t->right) + ')';
+        }
+        return res;
+    }
 };
 
 
@@ -84,6 +84,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

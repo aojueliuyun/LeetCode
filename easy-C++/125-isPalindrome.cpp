@@ -28,23 +28,23 @@ public:
     bool isPalindrome(string s) {
         int head = 0, tail = s.length()-1;
         while (head < tail) {
-        	while (!isalnum(s[head]) && head < s.length()) head ++;
-        	while (!isalnum(s[tail]) && tail >= 0) tail --;
-        	if (tolower(s[head++]) == tolower(s[tail--])) continue;
-        	else return false;
-		}
-		return true;
+            while (!isalnum(s[head]) && head < s.length()) head ++;
+            while (!isalnum(s[tail]) && tail >= 0) tail --;
+            if (tolower(s[head++]) == tolower(s[tail--])) continue;
+            else return false;
+        }
+        return true;
     }
 };
 
 int main()
 {
-	string s;
-	Solution S;
-	while (cin >> s) {
-		cout << S.isPalindrome(s) << endl;
-	}
+    string s;
+    Solution S;
+    while (cin >> s) {
+        cout << S.isPalindrome(s) << endl;
+    }
 
-	return 0;
+    return 0;
 }
 

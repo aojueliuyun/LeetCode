@@ -27,12 +27,12 @@ public:
     int maxSubArray(vector<int>& nums) {
         int sum = 0, maxSum = nums[0];
         for (int i = 0; i < nums.size(); i ++) {
-        	if (sum >= 0) sum += nums[i];
-        	else sum = nums[i];       // if subarray could have 0 element then sum = 0 
-        	// two lines above can be replaced by -------> sum = max(sum + nums[i], nums[i]);
-        	if(sum > maxSum) maxSum = sum;
-		}
-		return maxSum;
+            if (sum >= 0) sum += nums[i];
+            else sum = nums[i];       // if subarray could have 0 element then sum = 0 
+            // two lines above can be replaced by -------> sum = max(sum + nums[i], nums[i]);
+            if(sum > maxSum) maxSum = sum;
+        }
+        return maxSum;
     }
 }; 
 
@@ -72,6 +72,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

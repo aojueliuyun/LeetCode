@@ -41,28 +41,28 @@ class Solution {
 public:
     int minDiffInBST(TreeNode* root) {
         if (root->left && root->right) {
-        	return min(min(minDiffInBST(root->left), minDiffInBST(root->right)), min(root->val - maxVal(root->left), minVal(root->right) - root->val));
-		}
-		else if (root->left) {
-			return min(root->val - maxVal(root->left), minDiffInBST(root->left));
-		}
-		else if (root->right) {
-			return min(minVal(root->right) - root->val, minDiffInBST(root->right));
-		}
- 		else return INT_MAX;
+            return min(min(minDiffInBST(root->left), minDiffInBST(root->right)), min(root->val - maxVal(root->left), minVal(root->right) - root->val));
+        }
+        else if (root->left) {
+            return min(root->val - maxVal(root->left), minDiffInBST(root->left));
+        }
+        else if (root->right) {
+            return min(minVal(root->right) - root->val, minDiffInBST(root->right));
+        }
+         else return INT_MAX;
     }
     int minVal(TreeNode * root) {
-    	if (root->left)
-    		return minVal(root->left);
-		else
-			return root->val;
-	}
-	int maxVal(TreeNode * root) {
-		if (root->right) 
-		   return maxVal(root->right);
-		else 
-			 return root->val;
-	}
+        if (root->left)
+            return minVal(root->left);
+        else
+            return root->val;
+    }
+    int maxVal(TreeNode * root) {
+        if (root->right) 
+           return maxVal(root->right);
+        else 
+             return root->val;
+    }
 };
 
 
@@ -76,17 +76,17 @@ public:
        preTraverse(root, seq);
        int res = seq[1] - seq[0];
        for (int i = 1; i < seq.size()-1; i ++) {
-	   	   res = min(res, seq[i+1] - seq[i]);
-	   }
-	   return res;
-	}
-	void preTraverse(TreeNode * root, vector<int> & seq) {
-		if (root) {
-			preTraverse(root->left, seq);
-			seq.push_back(root->val);
-			preTraverse(root->right, seq);
-		}
-	}
+              res = min(res, seq[i+1] - seq[i]);
+       }
+       return res;
+    }
+    void preTraverse(TreeNode * root, vector<int> & seq) {
+        if (root) {
+            preTraverse(root->left, seq);
+            seq.push_back(root->val);
+            preTraverse(root->right, seq);
+        }
+    }
 };
 
  
@@ -96,6 +96,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

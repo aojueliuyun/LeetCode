@@ -40,43 +40,43 @@ public:
     bool findTarget(TreeNode* root, int k) {
         vector<int> vec;
         traverse(root, vec);
-    	set<int> A;
-    	for (auto x : vec) {
-    		if (A.count(k-x)) return true;
-    		A.insert(x);
-		}
-		return false;
+        set<int> A;
+        for (auto x : vec) {
+            if (A.count(k-x)) return true;
+            A.insert(x);
+        }
+        return false;
     }
     void traverse(TreeNode * root, vector<int> & vec) {
-    	if (root) {
-    		traverse(root->left, vec);
-    		vec.push_back(root->val);
-    		traverse(root->right, vec);
-		}
-	}
+        if (root) {
+            traverse(root->left, vec);
+            vec.push_back(root->val);
+            traverse(root->right, vec);
+        }
+    }
 };
 
 
 // solution 2 : recursion
 class Solution2 {
 public:
-	unordered_set<int> S;
+    unordered_set<int> S;
     bool findTarget(TreeNode* root, int k) {
-		if (root == nullptr)
-			return false;
-		if (S.count(k - root->val))
-			return true;
-		S.insert(root->val);
-		return findTarget(root->left, k) || findTarget(root->right, k);
-	}
+        if (root == nullptr)
+            return false;
+        if (S.count(k - root->val))
+            return true;
+        S.insert(root->val);
+        return findTarget(root->left, k) || findTarget(root->right, k);
+    }
 };
 
 
 int main()
 {
-	
+    
 
 
-	return 0;
+    return 0;
 }
 

@@ -39,29 +39,29 @@ public:
     int longestUnivaluePath(TreeNode* root) {
         int maxlen = 0;
         if (root) {
-        	dfs(root, maxlen);
-        	return maxlen;
-		}
-		else return 0;
+            dfs(root, maxlen);
+            return maxlen;
+        }
+        else return 0;
     }
     // return to the max length of path from root
     int dfs(TreeNode * root, int & maxlen) {
-    	int l = 0, r = 0;
-    	if (root->left && root->val == root->left->val) {
-    		l = dfs(root->left, maxlen) + 1;
-		}
-		else if (root->left) {
-			dfs(root->left, maxlen);
-		}
-		if (root->right && root->right->val == root->val) {
-			r = dfs(root->right, maxlen) + 1;
-		}
-		else if (root->right) {
-			dfs(root->right, maxlen);
-		}
-		maxlen = max(l+r, maxlen);
-		return max(l, r);
-	}
+        int l = 0, r = 0;
+        if (root->left && root->val == root->left->val) {
+            l = dfs(root->left, maxlen) + 1;
+        }
+        else if (root->left) {
+            dfs(root->left, maxlen);
+        }
+        if (root->right && root->right->val == root->val) {
+            r = dfs(root->right, maxlen) + 1;
+        }
+        else if (root->right) {
+            dfs(root->right, maxlen);
+        }
+        maxlen = max(l+r, maxlen);
+        return max(l, r);
+    }
 };
 
 
@@ -72,6 +72,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

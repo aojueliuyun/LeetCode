@@ -32,24 +32,24 @@ using namespace std;
 class Solution {
 public:
     bool repeatedSubstringPattern(string s) {
-    	bool flag = false;
+        bool flag = false;
         for (int i = 1; i <= s.length()/2; i ++) {
-        	if (s.length() % i != 0) continue;
-        	else {
-        		string repeat = s.substr(0,i);
-        		for (int j = i; j < s.length(); j +=i) {
-        			if (s.substr(j, i) == repeat) {
-        				flag = true;
-					}
-					else {
-						flag = false;
-						break;
-					}
-				}
-				if (flag) return true;
-			}
-		}
-		return false;
+            if (s.length() % i != 0) continue;
+            else {
+                string repeat = s.substr(0,i);
+                for (int j = i; j < s.length(); j +=i) {
+                    if (s.substr(j, i) == repeat) {
+                        flag = true;
+                    }
+                    else {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag) return true;
+            }
+        }
+        return false;
     }
 };
 
@@ -75,13 +75,13 @@ public:
 
 int main()
 {
-	string s;
-	Solution S;
-	while (cin >> s) {
-		cout << S.repeatedSubstringPattern(s) << endl;
-	}
+    string s;
+    Solution S;
+    while (cin >> s) {
+        cout << S.repeatedSubstringPattern(s) << endl;
+    }
 
 
-	return 0;
+    return 0;
 }
 

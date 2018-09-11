@@ -43,12 +43,12 @@ public:
         return tiltSum;
     }
     int getTilt(TreeNode * root, int & tiltSum) { // return to the sum of the tree nodes values
-		if (root == nullptr) return 0;
-		int suml = getTilt(root->left, tiltSum);
-		int sumr = getTilt(root->right, tiltSum);
-		tiltSum += abs(suml - sumr);
-		return root->val + suml + sumr; 
-	}
+        if (root == nullptr) return 0;
+        int suml = getTilt(root->left, tiltSum);
+        int sumr = getTilt(root->right, tiltSum);
+        tiltSum += abs(suml - sumr);
+        return root->val + suml + sumr; 
+    }
 }; 
 
 
@@ -56,16 +56,16 @@ public:
 class Solution2 {
 public:
     int findTilt(TreeNode* root) {
-    	int sum;
+        int sum;
         return getTilt(root, sum);
     }
     int getTilt(TreeNode * root, int & sum) { // return to the sum of the tree nodes tilts
-    	if (root == nullptr) return 0;
-		int suml = 0, sumr = 0;
-		int tiltSum = getTilt(root->left, suml) + getTilt(root->right, sumr);
-		sum = root->val + suml + sumr;
-		return tiltSum + abs(suml - sumr);
-	}
+        if (root == nullptr) return 0;
+        int suml = 0, sumr = 0;
+        int tiltSum = getTilt(root->left, suml) + getTilt(root->right, sumr);
+        sum = root->val + suml + sumr;
+        return tiltSum + abs(suml - sumr);
+    }
 };
 
 
@@ -75,6 +75,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

@@ -28,16 +28,16 @@ using namespace std;
 // solution 1 : 拉链法处理哈希冲突 
 
 struct Node {
-	int val;
-	Node * next;
-	Node(int v = 0, Node * p = nullptr) : val(v), next(p) { }
+    int val;
+    Node * next;
+    Node(int v = 0, Node * p = nullptr) : val(v), next(p) { }
 };
 
 // result : ----------------> TLE !!! --------------> How about just use set
 class MyHashSet {
 private:
-	Node * data;
-	int size = 10007;  // hash function : addr = key % size
+    Node * data;
+    int size = 10007;  // hash function : addr = key % size
 public:
     /** Initialize your data structure here. */
     MyHashSet() {
@@ -48,31 +48,31 @@ public:
         int addr = key % size;
         Node * tmp = & data[addr];
         while (tmp->next) {
-        	if (tmp->next->val < key) {
-        		tmp = tmp->next;
-			}
-			else if (tmp->next->val == key) { // exist, do not need insert
-				return;
-			}
-		}
-		tmp->next = new Node(key, tmp->next);
+            if (tmp->next->val < key) {
+                tmp = tmp->next;
+            }
+            else if (tmp->next->val == key) { // exist, do not need insert
+                return;
+            }
+        }
+        tmp->next = new Node(key, tmp->next);
     }
     
     void remove(int key) {
         int addr = key % size;
         Node * tmp = & data[addr];
         while (tmp->next) {
-        	if (tmp->next->val < key) {
-        		tmp = tmp->next;
-			}
-			else if (tmp->next->val == key) {
-				Node * t = tmp->next;
-				tmp->next = t->next;
-				delete t;
-				break;
-			}
-			else break; // do not exist
-		}
+            if (tmp->next->val < key) {
+                tmp = tmp->next;
+            }
+            else if (tmp->next->val == key) {
+                Node * t = tmp->next;
+                tmp->next = t->next;
+                delete t;
+                break;
+            }
+            else break; // do not exist
+        }
     }
     
     /** Returns true if this set did not already contain the specified element */
@@ -80,15 +80,15 @@ public:
         int addr = key % size;
         Node * tmp = & data[addr];
         while (tmp->next) {
-        	if (tmp->next->val < key) {
-        		tmp = tmp->next;
-			}
-			else if (tmp->next->val == key) {
-				return true;
-			}
-			else break;
-		}
-		return false;
+            if (tmp->next->val < key) {
+                tmp = tmp->next;
+            }
+            else if (tmp->next->val == key) {
+                return true;
+            }
+            else break;
+        }
+        return false;
     }
 };
 
@@ -105,7 +105,7 @@ public:
 // execution time : 60 ms
 class MyHashSet2 {
 private:
-	vector<bool> data;
+    vector<bool> data;
 public:
     /** Initialize your data structure here. */
     MyHashSet2() {
@@ -132,11 +132,11 @@ public:
 // execution time : 96 ms 
 class MyHashSet3 {
 private:
-	set<int> data;
+    set<int> data;
 public:
     /** Initialize your data structure here. */
     MyHashSet3() {
-    	
+        
     }
     
     void add(int key) {
@@ -158,13 +158,13 @@ public:
 
 int main()
 {
-	MyHashSet3 S;
-	S.add(1);
-	cout << S.contains(1) << endl;
-	S.remove(1);
-	cout << S.contains(1) << endl;
+    MyHashSet3 S;
+    S.add(1);
+    cout << S.contains(1) << endl;
+    S.remove(1);
+    cout << S.contains(1) << endl;
 
 
-	return 0;
+    return 0;
 }
 

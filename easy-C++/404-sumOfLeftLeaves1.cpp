@@ -37,7 +37,7 @@ public:
     int sumOfLeftLeaves(TreeNode* root) {
         if (root == nullptr) return 0;
         if (root->left && root->left->left == nullptr && root->left->right == nullptr)
-        	return root->left->val + sumOfLeftLeaves(root->right);
+            return root->left->val + sumOfLeftLeaves(root->right);
         return sumOfLeftLeaves(root->left) + sumOfLeftLeaves(root->right);
     }
 };
@@ -51,19 +51,19 @@ public:
         Q.push(root);
         int sum = 0;
         while (!Q.empty()) {
-        	TreeNode * cur = Q.front();
-        	Q.pop();
-        	if (cur == nullptr) continue;
-        	else if (cur->left && cur->left->left == nullptr && cur->left->right == nullptr) {
-        		sum += cur->left->val;
-        		Q.push(cur->right);
-			}
-			else {
-				Q.push(cur->left);
-				Q.push(cur->right);
-			}
-		}
-		return sum;
+            TreeNode * cur = Q.front();
+            Q.pop();
+            if (cur == nullptr) continue;
+            else if (cur->left && cur->left->left == nullptr && cur->left->right == nullptr) {
+                sum += cur->left->val;
+                Q.push(cur->right);
+            }
+            else {
+                Q.push(cur->left);
+                Q.push(cur->right);
+            }
+        }
+        return sum;
     }
 };
  
@@ -73,6 +73,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

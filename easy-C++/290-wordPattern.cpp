@@ -36,31 +36,31 @@ public:
         vector<string> vec;
         int pos = 0, rpos = str.find(' ');
         while (rpos != string::npos) { // string::npos is the max value of string::size_type, usually indicates not found
-        	if (rpos != pos)
-				vec.push_back(str.substr(pos, rpos-pos));
-			pos = rpos + 1;
-			rpos = str.find(' ', pos);
-		}
-		if (pos != str.length())
-			vec.push_back(str.substr(pos));
+            if (rpos != pos)
+                vec.push_back(str.substr(pos, rpos-pos));
+            pos = rpos + 1;
+            rpos = str.find(' ', pos);
+        }
+        if (pos != str.length())
+            vec.push_back(str.substr(pos));
 
-		// judge mathch or not
-		if (pattern.length() != vec.size()) return false;
-		unordered_map<char, string> cTos;
-		unordered_map<string, char> sToc;
-		for (int i = 0; i < pattern.length(); i ++) {
-			auto citer = cTos.find(pattern[i]);
-			auto siter = sToc.find(vec[i]);
-			if (citer != cTos.end()) {     // found
-				if (citer->second != vec[i] || siter == sToc.end() || siter->second != pattern[i]) // not match
-					return false;
-			}
-			else if (siter != sToc.end()) return false;
-			else {   // not found
-				cTos[pattern[i]] = vec[i];
-				sToc[vec[i]] = pattern[i];
-			}
-		}
+        // judge mathch or not
+        if (pattern.length() != vec.size()) return false;
+        unordered_map<char, string> cTos;
+        unordered_map<string, char> sToc;
+        for (int i = 0; i < pattern.length(); i ++) {
+            auto citer = cTos.find(pattern[i]);
+            auto siter = sToc.find(vec[i]);
+            if (citer != cTos.end()) {     // found
+                if (citer->second != vec[i] || siter == sToc.end() || siter->second != pattern[i]) // not match
+                    return false;
+            }
+            else if (siter != sToc.end()) return false;
+            else {   // not found
+                cTos[pattern[i]] = vec[i];
+                sToc[vec[i]] = pattern[i];
+            }
+        }
         return true;
     }
 };
@@ -83,6 +83,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

@@ -28,15 +28,15 @@ using namespace std;
 // solution 1 : single linked list
 // execution time : 108 ms
 typedef struct Node {
-	int val;
-	Node * next;
-	Node(int x, Node *p = nullptr) : val(x), next(p) {}
+    int val;
+    Node * next;
+    Node(int x, Node *p = nullptr) : val(x), next(p) {}
 } * pNode;
 
 // attention : index start from 0
 class MyLinkedList {
 private:
-	Node * head;
+    Node * head;
 public:
     /** Initialize your data structure here. */
     MyLinkedList() {
@@ -45,11 +45,11 @@ public:
     
     /** Get the value of the index-th node in the linked list. If the index is invalid, return -1. */
     int get(int index) {
-    	Node * p = head;
+        Node * p = head;
         for (int i = 0; i <= index && p; i ++) {
-        	p = p->next;
-		}
-		return p ? p->val : -1;
+            p = p->next;
+        }
+        return p ? p->val : -1;
     }
     
     /** Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list. */
@@ -69,24 +69,24 @@ public:
         Node * p = head;
         int i;
         for (i = 0; i < index && p->next; i ++) {
-        	p = p->next;
-		}
-		if (p->next || i == index) {
-			p->next = new Node(val, p->next);
-		}
+            p = p->next;
+        }
+        if (p->next || i == index) {
+            p->next = new Node(val, p->next);
+        }
     }
     
     /** Delete the index-th node in the linked list, if the index is valid. */
     void deleteAtIndex(int index) {
         Node * p = head;
         for (int i = 0; i < index && p->next; i ++) {
-        	p = p->next;
-		}
-		if (p->next) {
-			Node * tmp = p->next;
-			p->next = tmp->next;
-			delete tmp;
-		}
+            p = p->next;
+        }
+        if (p->next) {
+            Node * tmp = p->next;
+            p->next = tmp->next;
+            delete tmp;
+        }
     }
 };
 
@@ -96,16 +96,16 @@ public:
 
 int main()
 {
-	MyLinkedList L;
-	cout << L.get(0) << endl;
-	L.addAtIndex(1,2);
-	cout << L.get(0) << endl;
-	cout << L.get(1) << endl;
-	L.addAtIndex(0,1);
-	cout << L.get(0) << endl;
-	cout << L.get(1) << endl;
+    MyLinkedList L;
+    cout << L.get(0) << endl;
+    L.addAtIndex(1,2);
+    cout << L.get(0) << endl;
+    cout << L.get(1) << endl;
+    L.addAtIndex(0,1);
+    cout << L.get(0) << endl;
+    cout << L.get(1) << endl;
 
 
-	return 0;
+    return 0;
 }
 

@@ -27,12 +27,12 @@ public:
         if (nums.empty()) return 0;
         auto temp = nums.begin();
         for (auto iter = nums.begin(); iter != nums.end(); iter ++) {
-        	if (* iter != val) {
-        		* temp = * iter;
-        		temp ++;
-			}
-		}
-		return temp - nums.begin();
+            if (* iter != val) {
+                * temp = * iter;
+                temp ++;
+            }
+        }
+        return temp - nums.begin();
     }
 };
 
@@ -57,6 +57,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

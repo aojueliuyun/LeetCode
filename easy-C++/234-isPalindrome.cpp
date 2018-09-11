@@ -28,9 +28,9 @@ using namespace std;
 
 //Definition for singly-linked list.
 struct ListNode {
-	int val;
-	ListNode * next;
-	ListNode(int x) : val(x), next(nullptr) {}
+    int val;
+    ListNode * next;
+    ListNode(int x) : val(x), next(nullptr) {}
 }; 
 
 // solution : save values to a vector, and judge ------------> memory limit exceed.
@@ -41,12 +41,12 @@ public:
     bool isPalindrome(ListNode* head) {
         vector<int> vals;
         while (head) {
-        	vals.push_back(head->val);
-		}
-		for (auto left=vals.begin(), right=vals.end()-1; left < right; left ++, right --) {
-			if (*left != *right) return false;
-		}
-		return true;
+            vals.push_back(head->val);
+        }
+        for (auto left=vals.begin(), right=vals.end()-1; left < right; left ++, right --) {
+            if (*left != *right) return false;
+        }
+        return true;
     }
 };
 
@@ -60,25 +60,25 @@ public:
         int count = 0;
         ListNode * slow = head, * fast = head;
         while (fast && fast->next) {
-        	slow = slow->next;
-        	fast = fast->next->next;
-		}
-		ListNode * temp; 
-		if (fast) temp = slow->next;  // the number of nodes is even / 偶数 
-		else temp = slow;             // the number of node is odd / 奇数 
-		slow = nullptr;
-		while (temp) {                // reverse the sublist (temp to end)
-			ListNode * tp = slow;
-			slow = temp;
-			temp = temp->next;
-			slow->next = tp;
-		}
-		while (head && slow) {
-			if (head->val != slow->val) return false;
-			head = head->next;
-			slow = slow->next;
-		}
-		return true;
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+        ListNode * temp; 
+        if (fast) temp = slow->next;  // the number of nodes is even / 偶数 
+        else temp = slow;             // the number of node is odd / 奇数 
+        slow = nullptr;
+        while (temp) {                // reverse the sublist (temp to end)
+            ListNode * tp = slow;
+            slow = temp;
+            temp = temp->next;
+            slow->next = tp;
+        }
+        while (head && slow) {
+            if (head->val != slow->val) return false;
+            head = head->next;
+            slow = slow->next;
+        }
+        return true;
     }
 };
 
@@ -89,6 +89,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

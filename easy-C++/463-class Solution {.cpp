@@ -31,22 +31,22 @@ using namespace std;
 class Solution {
 public:
     int islandPerimeter(vector<vector<int>>& grid) {
-    	if (grid.empty()) return 0;
-    	int row = grid.size(), column = grid[0].size();
-    	int ans = 0;
+        if (grid.empty()) return 0;
+        int row = grid.size(), column = grid[0].size();
+        int ans = 0;
         for (int i = 0; i < row; i ++) {
-        	for (int j = 0; j < column; j ++) {
-        		if (grid[i][j] == 1) {
-        			int adj = 0;
-        			if (i-1 >= 0)     adj += grid[i-1][j];
-        			if (i+1 < row)    adj += grid[i+1][j];
-        			if (j-1 >= 0)     adj += grid[i][j-1];
-        			if (j+1 < column) adj += grid[i][j+1];
-        			ans += 4-adj;
-				}
-			}
-		}
-		return ans;
+            for (int j = 0; j < column; j ++) {
+                if (grid[i][j] == 1) {
+                    int adj = 0;
+                    if (i-1 >= 0)     adj += grid[i-1][j];
+                    if (i+1 < row)    adj += grid[i+1][j];
+                    if (j-1 >= 0)     adj += grid[i][j-1];
+                    if (j+1 < column) adj += grid[i][j+1];
+                    ans += 4-adj;
+                }
+            }
+        }
+        return ans;
     }
 };
 
@@ -56,6 +56,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

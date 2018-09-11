@@ -20,24 +20,24 @@ using namespace std;
 class Solution {
 public:
     int reverse(int x) {
-    	bool neg = false;
-    	long long res = 0;
-    	 // 负数比正数多一个, 最后一个case, 这里可以使用 INT_MAX & INT_MIN 
-    	if (x == - 0x7fffffff - 1) { 
-    		return 0;
-		}
-    	if (x < 0) {
-    		neg = true;
-    		x = -x;
-		}
-		while(x != 0) { // 这里不需要显示计算出x的位数 
-			res = 10*res + x%10;
-			x /= 10;
-		}
-		if (res > 0x7fffffff) { // judge overflow 
-			return 0;
-		}
-		return neg ? -res : res;
+        bool neg = false;
+        long long res = 0;
+         // 负数比正数多一个, 最后一个case, 这里可以使用 INT_MAX & INT_MIN 
+        if (x == - 0x7fffffff - 1) { 
+            return 0;
+        }
+        if (x < 0) {
+            neg = true;
+            x = -x;
+        }
+        while(x != 0) { // 这里不需要显示计算出x的位数 
+            res = 10*res + x%10;
+            x /= 10;
+        }
+        if (res > 0x7fffffff) { // judge overflow 
+            return 0;
+        }
+        return neg ? -res : res;
     }
 };
 
@@ -64,10 +64,10 @@ public:
 
 int main()
 {
-	Solution S;
-	int x;
-	cin >> x;
-	cout << S.reverse(x) << endl;
-	return 0;
+    Solution S;
+    int x;
+    cin >> x;
+    cout << S.reverse(x) << endl;
+    return 0;
 }
 

@@ -35,26 +35,26 @@ public:
 // solution 2 : find the law
 class Solution2 {
 public:
-	bool canWinNim(int n) {
-		return n % 4 != 0;
-	}
+    bool canWinNim(int n) {
+        return n % 4 != 0;
+    }
 }; 
 
 
 
 int main()
 {
-	int n;
-	Solution2 S;
-	while (cin >> n) {
-		for (int i = 1; i <= n; i ++) {
-			if (S.canWinNim(i)) cout << i << ' ';
-		}
-		cout << endl;
-//		if (S.canWinNim(n)) cout << "You can win !" << endl;
-	}
+    int n;
+    Solution2 S;
+    while (cin >> n) {
+        for (int i = 1; i <= n; i ++) {
+            if (S.canWinNim(i)) cout << i << ' ';
+        }
+        cout << endl;
+//        if (S.canWinNim(n)) cout << "You can win !" << endl;
+    }
 
 
-	return 0;
+    return 0;
 }
 

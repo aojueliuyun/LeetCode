@@ -25,26 +25,26 @@ using namespace std;
 class Solution {
 public:
     bool isValid(string s) {
-    	stack<char> S;
+        stack<char> S;
         for (auto ch : s) {
-        	switch(ch) {
-        		case '(': case '[': case '{':
-        			S.push(ch); break;
-        		case ')':
-        			if (S.empty() || S.top() != '(') return false; // || ÅÐ¶ÏÇ°ÕßÎª1¼´Í£Ö¹ 
-        			S.pop();
-        			break;
-				case '}':
-					if (S.empty() || S.top() != '{') return false;
-        			S.pop();
-        			break;
-				case ']':
-					if (S.empty() || S.top() != '[') return false;
-        			S.pop();
-        			break;
-			}
-		}
-		return S.empty();
+            switch(ch) {
+                case '(': case '[': case '{':
+                    S.push(ch); break;
+                case ')':
+                    if (S.empty() || S.top() != '(') return false; // || ÅÐ¶ÏÇ°ÕßÎª1¼´Í£Ö¹ 
+                    S.pop();
+                    break;
+                case '}':
+                    if (S.empty() || S.top() != '{') return false;
+                    S.pop();
+                    break;
+                case ']':
+                    if (S.empty() || S.top() != '[') return false;
+                    S.pop();
+                    break;
+            }
+        }
+        return S.empty();
     }
 };
 
@@ -70,9 +70,9 @@ public:
 
 int main()
 {
-	
+    
 
 
-	return 0;
+    return 0;
 }
 

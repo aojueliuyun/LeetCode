@@ -33,13 +33,13 @@ public:
     int findMaxConsecutiveOnes(vector<int>& nums) {
         int ans = 0, count = 0;
         for (auto x : nums) {
-        	if (x == 1) count ++;
-			else {
-				ans = max(ans, count);
-				count = 0;
-			}
-		}
-		return ans;
+            if (x == 1) count ++;
+            else {
+                ans = max(ans, count);
+                count = 0;
+            }
+        }
+        return ans;
     }
 };
 
@@ -50,6 +50,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

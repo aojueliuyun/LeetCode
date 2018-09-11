@@ -40,12 +40,12 @@ public:
     ListNode* reverseList(ListNode* head) {
         ListNode Head(0);
         while (head) {
-        	ListNode * tmp = Head.next;
-			Head.next = head;
-			head = head->next;
-			Head.next->next = tmp;
-		}
-		return Head.next;
+            ListNode * tmp = Head.next;
+            Head.next = head;
+            head = head->next;
+            Head.next->next = tmp;
+        }
+        return Head.next;
     }
 }; 
 
@@ -56,21 +56,21 @@ public:
 class Solution2 {
 public:
     ListNode* reverseList(ListNode* head) {
-    	if (head == nullptr) return nullptr;
+        if (head == nullptr) return nullptr;
         ListNode * tail = head;
         while (tail->next) tail = tail->next;
         Reverse(head, tail);
         return haed;
     }
     void Reverse(ListNode* & head, ListNode* & tail) { // recursion
-    	if (head == nullptr || head == tail) return;
-    	ListNode * phead = head->next, * ptail = tail;
-    	Reverse(phead, ptail);
-    	head->next = nullptr;
-    	ptail->next = head;
-    	head = phead;
-    	tail = ptail->next;
-	}
+        if (head == nullptr || head == tail) return;
+        ListNode * phead = head->next, * ptail = tail;
+        Reverse(phead, ptail);
+        head->next = nullptr;
+        ptail->next = head;
+        head = phead;
+        tail = ptail->next;
+    }
 }; 
 
 
@@ -79,6 +79,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

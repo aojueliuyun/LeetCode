@@ -28,13 +28,13 @@ using namespace std;
 class Solution {
 public:
     int poorPigs(int buckets, int minutesToDie, int minutesToTest) {
-    	if (minutesToDie > minutesToTest) // can not acomplish the test
-			return 0; 
-		int res = 0, columns = minutesToTest / minutesToDie + 1;
-		while (int(pow(columns, res)) < buckets) res ++;
-		return res;
-		// also can diretly use the formula
-		// return ceil(log(buckets) / log(minutestToTest / minutesToDie + 1));
+        if (minutesToDie > minutesToTest) // can not acomplish the test
+            return 0; 
+        int res = 0, columns = minutesToTest / minutesToDie + 1;
+        while (int(pow(columns, res)) < buckets) res ++;
+        return res;
+        // also can diretly use the formula
+        // return ceil(log(buckets) / log(minutestToTest / minutesToDie + 1));
     }
 };
 
@@ -42,12 +42,12 @@ public:
 
 int main()
 {
-	int n, md, mt;
-	Solution S;
-	while (cin >> n >> md >> mt) {
-		cout << S.poorPigs(n, md, mt) << endl;
-	}
+    int n, md, mt;
+    Solution S;
+    while (cin >> n >> md >> mt) {
+        cout << S.poorPigs(n, md, mt) << endl;
+    }
 
-	return 0;
+    return 0;
 }
 

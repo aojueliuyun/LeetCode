@@ -32,16 +32,16 @@ using namespace std;
 class Solution {
 public:
     void moveZeroes(vector<int>& nums) {
-    	vector<int> temp;
-    	for (auto x : nums) {
-    		if (x != 0) temp.push_back(x);
-		}
-		for (int i = 0; i < temp.size(); i ++) {
-			nums[i] = temp[i];
-		}
-		for (int i = temp.size(); i < nums.size(); i ++) {
-			nums[i] = 0;
-		}
+        vector<int> temp;
+        for (auto x : nums) {
+            if (x != 0) temp.push_back(x);
+        }
+        for (int i = 0; i < temp.size(); i ++) {
+            nums[i] = temp[i];
+        }
+        for (int i = temp.size(); i < nums.size(); i ++) {
+            nums[i] = 0;
+        }
     }
 };
 
@@ -52,15 +52,15 @@ public:
 class Solution2 {
 public:
     void moveZeroes(vector<int>& nums) {
-    	int n = 0;  // the number of zeros
-    	for (int i = 0; i < nums.size(); i ++) {
-    		if (nums[i] == 0) {
-    			n ++;
-    			continue;
-			}
-			else nums[i-n] = nums[i];
-		}
-		for (int i = nums.size()-n; i < nums.size(); i ++) nums[i] = 0;
+        int n = 0;  // the number of zeros
+        for (int i = 0; i < nums.size(); i ++) {
+            if (nums[i] == 0) {
+                n ++;
+                continue;
+            }
+            else nums[i-n] = nums[i];
+        }
+        for (int i = nums.size()-n; i < nums.size(); i ++) nums[i] = 0;
     }
 };
 
@@ -70,14 +70,14 @@ public:
 class Solution3 {
 public:
     void moveZeroes(vector<int>& nums) {
-    	int j = 0;
-    	for (int i = 0; i < nums.size(); i ++) {
-    		if (nums[i] != 0) {
-    			nums[j] = nums[i];
-    			j ++;
-			}
-		}
-		for (; j < nums.size(); j ++) nums[j] = 0;
+        int j = 0;
+        for (int i = 0; i < nums.size(); i ++) {
+            if (nums[i] != 0) {
+                nums[j] = nums[i];
+                j ++;
+            }
+        }
+        for (; j < nums.size(); j ++) nums[j] = 0;
     }
 };
 
@@ -88,6 +88,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

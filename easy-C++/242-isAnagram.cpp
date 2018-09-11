@@ -30,13 +30,13 @@ public:
     bool isAnagram(string s, string t) {
         unordered_map<char, int> ms, mt;
         for (auto c : s) ms[c] ++;
-		for (auto c : t) mt[c] ++;
-		for (auto x : ms) {
-			if (x.second != mt[x.first]) return false;
-			mt.erase(x.first);
-		}
-		if (mt.empty()) return true;
-		return false;
+        for (auto c : t) mt[c] ++;
+        for (auto x : ms) {
+            if (x.second != mt[x.first]) return false;
+            mt.erase(x.first);
+        }
+        if (mt.empty()) return true;
+        return false;
     }
 }; 
 
@@ -49,14 +49,14 @@ public:
     bool isAnagram(string s, string t) {
         int ret = 0, stimes = 1, ttimes = 1;
         for (auto c : s) {
-        	ret ^= c;
-        	stimes *= c;
-		}
-		for (auto c : t) {
-			ret ^= c;
-			ttimes *= c;
-		}
-		return ret == 0 && stimes == ttimes;
+            ret ^= c;
+            stimes *= c;
+        }
+        for (auto c : t) {
+            ret ^= c;
+            ttimes *= c;
+        }
+        return ret == 0 && stimes == ttimes;
     }
 };
 
@@ -66,13 +66,13 @@ public:
 class Solution3 {
 public:
     bool isAnagram(string s, string t) {
-    	if (s.length() != t.length()) return false;
+        if (s.length() != t.length()) return false;
         sort(s.begin(), s.end());
         sort(t.begin(), t.end());
         for (int i=0; i < s.length(); i ++) {
-        	if (s[i] != t[i]) return false;
-		}
-		return true;
+            if (s[i] != t[i]) return false;
+        }
+        return true;
     }
 };
 
@@ -82,6 +82,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

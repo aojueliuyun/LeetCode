@@ -29,28 +29,28 @@ using namespace std;
 class Solution {
 public:
     bool hasAlternatingBits(int n) {
-    	int pre = n%2;
-    	n /= 2;
+        int pre = n%2;
+        n /= 2;
         while (n) {
-        	if (n%2 == pre) 
-        		return false;
-        	pre = n%2;
-        	n /= 2;
-		}
-		return true;
+            if (n%2 == pre) 
+                return false;
+            pre = n%2;
+            n /= 2;
+        }
+        return true;
     }
 };
 
 
 int main()
 {
-	int n;
-	Solution S;
-	while (cin >> n) {
-		cout << S.hasAlternatingBits(n) << endl;
-	}
+    int n;
+    Solution S;
+    while (cin >> n) {
+        cout << S.hasAlternatingBits(n) << endl;
+    }
 
 
-	return 0;
+    return 0;
 }
 

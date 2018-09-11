@@ -40,12 +40,12 @@ public:
     ListNode* middleNode(ListNode* head) {
         ListNode * slow = head, * fast = head;
         while (fast) {
-        	if (fast->next == nullptr) break;
-        	slow = slow->next;
-        	fast = fast->next;
-        	if (fast->next) fast = fast->next;
-		}
-		return slow;
+            if (fast->next == nullptr) break;
+            slow = slow->next;
+            fast = fast->next;
+            if (fast->next) fast = fast->next;
+        }
+        return slow;
     }
 };
 
@@ -57,7 +57,7 @@ public:
     ListNode* middleNode(ListNode* head) {
         vector<ListNode *> A = {head};
         while (A.back()->next)
-        	A.push_back(A.back()->next);
+            A.push_back(A.back()->next);
         return A[A.size()/2];
     }
 };
@@ -71,10 +71,10 @@ public:
     ListNode* middleNode(ListNode* head) {
         ListNode * slow = head, * fast = head;
         while (fast && fast->next) {
-        	slow = slow->next;
-        	fast = fast->next->next;
-		}
-		return slow;
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+        return slow;
     }
 };
 
@@ -82,25 +82,25 @@ public:
 
 int main()
 {
-	ListNode * head = new ListNode(0), *p = head;
-	for (int i = 1; i <= 5; i ++) {
-		p->next = new ListNode(i);
-		p = p->next;
-	}
-	p = head->next;
-	while (p) {
-		cout << p->val << "->";
-		p = p->next;
-	}
-	
-	Solution3 S;
-	ListNode * mid = S.middleNode(head);
-	cout << mid->val << endl;
-	while (mid) {
-		cout << mid->val << "->";
-		mid = mid->next;
-	}
+    ListNode * head = new ListNode(0), *p = head;
+    for (int i = 1; i <= 5; i ++) {
+        p->next = new ListNode(i);
+        p = p->next;
+    }
+    p = head->next;
+    while (p) {
+        cout << p->val << "->";
+        p = p->next;
+    }
+    
+    Solution3 S;
+    ListNode * mid = S.middleNode(head);
+    cout << mid->val << endl;
+    while (mid) {
+        cout << mid->val << "->";
+        mid = mid->next;
+    }
 
-	return 0;
+    return 0;
 }
 

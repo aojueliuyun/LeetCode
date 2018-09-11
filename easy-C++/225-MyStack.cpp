@@ -27,11 +27,11 @@ using namespace std;
 // get top time: O(1)
 class MyStack {
 private:
-	queue<int> q1,q2;
+    queue<int> q1,q2;
 public:
     /** Initialize your data structure here. */
     MyStack() {
-    	
+        
     }
     
     /** Push element x onto stack. */
@@ -41,25 +41,25 @@ public:
     
     /** Removes the element on top of the stack and returns that element. */
     int pop() {
-    	int element;
+        int element;
         if (q1.empty()) {
-        	element = q2.back();
-        	while (q2.size() > 1) {
-        		q1.push(q2.front());
-        		q2.pop();
-			}
-			element = q2.front();
-			q2.pop();
-		}
-		else {
-			while (q1.size() > 1) {
-				q2.push(q1.front());
-				q1.pop();
-			}
-			element = q1.front();
-			q1.pop();
-		}
-		return element;
+            element = q2.back();
+            while (q2.size() > 1) {
+                q1.push(q2.front());
+                q2.pop();
+            }
+            element = q2.front();
+            q2.pop();
+        }
+        else {
+            while (q1.size() > 1) {
+                q2.push(q1.front());
+                q1.pop();
+            }
+            element = q1.front();
+            q1.pop();
+        }
+        return element;
     }
     
     /** Get the top element. */
@@ -83,31 +83,31 @@ public:
 // get top time : O(1)
 class MyStack2 {
 private:
-	queue<int> q, b;
+    queue<int> q, b;
 public:
     /** Initialize your data structure here. */
     MyStack2() {
-    	
+        
     }
     
     /** Push element x onto stack. */
     void push(int x) {
         while (!q.empty()) {
-        	b.push(q.front());
-        	q.pop();
-		}
-		q.push(x);
-		while (!b.empty()) {
-			q.push(b.front());
-			b.pop();
-		}
+            b.push(q.front());
+            q.pop();
+        }
+        q.push(x);
+        while (!b.empty()) {
+            q.push(b.front());
+            b.pop();
+        }
     }
     
     /** Removes the element on top of the stack and returns that element. */
     int pop() {
-    	int tmp = q.front();
-    	q.pop();
-    	return tmp;
+        int tmp = q.front();
+        q.pop();
+        return tmp;
     }
     
     /** Get the top element. */
@@ -124,7 +124,7 @@ public:
 
 int main()
 {
-	
+    
 
-	return 0;
+    return 0;
 }

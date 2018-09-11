@@ -28,16 +28,16 @@ class Solution {
 public:
     int majorityElement(vector<int>& nums) {
         map<int, int> record;
-    	for (auto x : nums) {
-    		if (record.find(x) == record.end())
-    			record[x] = 1;
-    		else record[x] ++;
-		}
-		for (auto p : record) {
-			if (p.second > nums.size() / 2)
-				return p.first;
-		}
-		return 0;
+        for (auto x : nums) {
+            if (record.find(x) == record.end())
+                record[x] = 1;
+            else record[x] ++;
+        }
+        for (auto p : record) {
+            if (p.second > nums.size() / 2)
+                return p.first;
+        }
+        return 0;
     }
 };
 
@@ -61,9 +61,9 @@ public:
     int majorityElement(vector<int>& nums) {
         unordered_map<int, int> dict;
         for (auto x : nums)
-        	if (++dict[x] > nums.size()/2) return x; // when x in not in map, there will insert a map[key] = default value (for int it's 0)
+            if (++dict[x] > nums.size()/2) return x; // when x in not in map, there will insert a map[key] = default value (for int it's 0)
         return -1;
-	}
+    }
 };
 
 
@@ -71,11 +71,11 @@ public:
 
 int main()
 {
-	vector<int> V{3,2,3};
-	Solution3 S;
-	cout << S.majorityElement(V) << endl;
+    vector<int> V{3,2,3};
+    Solution3 S;
+    cout << S.majorityElement(V) << endl;
 
 
-	return 0;
+    return 0;
 }
 

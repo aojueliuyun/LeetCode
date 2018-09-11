@@ -26,14 +26,14 @@ using namespace std;
 class Solution {
 public:
     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
-    	vector<int> temp;
-    	int i = 0, j = 0;
-		while (i < m && j < n) {
-			temp.push_back(nums1[i] < nums2[j] ? nums1[i++] : nums2[j++]);
-		}
-		while (i < m) temp.push_back(nums1[i++]);
-		while (j < n) temp.push_back(nums2[j++]);
-		for (i = 0; i < n+m; i++) nums1[i] = temp[i];
+        vector<int> temp;
+        int i = 0, j = 0;
+        while (i < m && j < n) {
+            temp.push_back(nums1[i] < nums2[j] ? nums1[i++] : nums2[j++]);
+        }
+        while (i < m) temp.push_back(nums1[i++]);
+        while (j < n) temp.push_back(nums2[j++]);
+        for (i = 0; i < n+m; i++) nums1[i] = temp[i];
     }
 };
 
@@ -45,13 +45,13 @@ public:
 class Solution2 {
 public:
     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
-    	int p1 = m-1, p2 = n-1, last = n+m-1;
-    	while (p1 >=0 && p2 >= 0) {
-    		nums1[last--] = nums1[p1] > nums2[p2] ? nums1[p1--] : nums2[p2--];
-		}
-		while (p2 >= 0) nums1[last--] = nums2[p2--];
-//		// optimazition to one loop
-//		while (p2 >= 0) nums1[last--] = p1 >= 0 && nums1[p1] > nums2[p2] ? nums1[p1--] : nums2[p2--];
+        int p1 = m-1, p2 = n-1, last = n+m-1;
+        while (p1 >=0 && p2 >= 0) {
+            nums1[last--] = nums1[p1] > nums2[p2] ? nums1[p1--] : nums2[p2--];
+        }
+        while (p2 >= 0) nums1[last--] = nums2[p2--];
+//        // optimazition to one loop
+//        while (p2 >= 0) nums1[last--] = p1 >= 0 && nums1[p1] > nums2[p2] ? nums1[p1--] : nums2[p2--];
     }
 };
 
@@ -64,10 +64,10 @@ public:
 class Solution3 {
 public:
     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
-    	for (int i = 0; i < n; i++) {
-    		nums1[m+i] = nums2[i];
-		}
-		sort(nums1.begin(), nums1.end());
+        for (int i = 0; i < n; i++) {
+            nums1[m+i] = nums2[i];
+        }
+        sort(nums1.begin(), nums1.end());
     }
 };
 
@@ -77,6 +77,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

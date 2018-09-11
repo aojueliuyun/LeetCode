@@ -20,7 +20,7 @@ using namespace std;
 
 // 2018.7.27
 
-// leetcode 4 : findMedianSortedArrays / 查找两个排序数组的中位数
+// leetcode 4 : findMedianSortedArrays
 // require : O(log(m+n)) time comlexity
 
 // level : hard || my first hard question.
@@ -36,18 +36,18 @@ public:
         vector<int> merge;
         int i = 0, j = 0;
         while (i < nums1.size() && j < nums2.size()) {
-        	if (nums1[i] < nums2[j])
-				merge.push_back(nums1[i++]);
-        	else
-				merge.push_back(nums2[j++]);
-		}
-		while (i < nums1.size())
-			merge.push_back(nums1[i++]);
-		while (j < nums2.size())
-			merge.push_back(nums2[j++]);
-		if (merge.size() % 2 == 0)
-			return (merge[merge.size()/2] + merge[merge.size()/2-1]) * 0.5;
-		else return merge[merge.size() / 2];
+            if (nums1[i] < nums2[j])
+                merge.push_back(nums1[i++]);
+            else
+                merge.push_back(nums2[j++]);
+        }
+        while (i < nums1.size())
+            merge.push_back(nums1[i++]);
+        while (j < nums2.size())
+            merge.push_back(nums2[j++]);
+        if (merge.size() % 2 == 0)
+            return (merge[merge.size()/2] + merge[merge.size()/2-1]) * 0.5;
+        else return merge[merge.size() / 2];
     }
 };
 
@@ -67,6 +67,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

@@ -28,12 +28,12 @@ using namespace std;
 class Solution {
 public:
     int arrayPairSum(vector<int>& nums) {
-    	int sum = 0;
+        int sum = 0;
         sort(nums.begin(), nums.end());
         for (int i = 0; i < nums.size(); i +=2) {
-        	sum += nums[i]; // have already sorted
-		}
-		return sum;
+            sum += nums[i]; // have already sorted
+        }
+        return sum;
     }
 };
 
@@ -44,6 +44,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

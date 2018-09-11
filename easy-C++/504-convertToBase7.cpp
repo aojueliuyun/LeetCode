@@ -28,29 +28,29 @@ using namespace std;
 class Solution {
 public:
     string convertToBase7(int num) {
-    	if (num == 0) return "0";
+        if (num == 0) return "0";
         bool neg = num < 0;
         num = abs(num);
         string res;
         while (num) {
-        	res = to_string(num % 7) + res;
-        	num /= 7;
-		}
-		if (neg) res = '-' + res;
-		return res;
+            res = to_string(num % 7) + res;
+            num /= 7;
+        }
+        if (neg) res = '-' + res;
+        return res;
     }
 }; 
 
 
 int main()
 {
-	int n;
-	Solution S;
-	while (cin >> n) {
-		cout << S.convertToBase7(n) << endl;
-	} 
+    int n;
+    Solution S;
+    while (cin >> n) {
+        cout << S.convertToBase7(n) << endl;
+    } 
 
 
-	return 0;
+    return 0;
 }
 

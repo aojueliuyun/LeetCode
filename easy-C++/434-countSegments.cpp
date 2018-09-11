@@ -28,20 +28,20 @@ using namespace std;
 class Solution {
 public:
     int countSegments(string s) {
-    	int last = -1; // the position of last space
-    	int count = 0;
-    	for (int i = 0; i < s.length(); i ++) {
-    		if (s[i] == ' ') {
-    			if (i == last + 1) last ++;
-    			else {
-    				last = i;
-    				count ++;
-				}
-			}
-		}
-		if (last != s.length()-1)
-			count ++;
-		return count; 
+        int last = -1; // the position of last space
+        int count = 0;
+        for (int i = 0; i < s.length(); i ++) {
+            if (s[i] == ' ') {
+                if (i == last + 1) last ++;
+                else {
+                    last = i;
+                    count ++;
+                }
+            }
+        }
+        if (last != s.length()-1)
+            count ++;
+        return count; 
     }
 };
 
@@ -56,6 +56,6 @@ int main()
 {
 
 
-	return 0;
+    return 0;
 }
 

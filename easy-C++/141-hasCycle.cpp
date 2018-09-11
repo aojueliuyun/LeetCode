@@ -34,15 +34,15 @@ struct ListNode {
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-    	if (head == nullptr) return false;
-    	ListNode * fast = head->next, * slow = head;
-    	while (fast != nullptr && slow != nullptr) {
-    		if (fast == slow) return true;
-    		if (fast->next != nullptr) fast = fast->next->next;
-    		else return false;
-    		slow = slow->next;
-		}
-		return false;
+        if (head == nullptr) return false;
+        ListNode * fast = head->next, * slow = head;
+        while (fast != nullptr && slow != nullptr) {
+            if (fast == slow) return true;
+            if (fast->next != nullptr) fast = fast->next->next;
+            else return false;
+            slow = slow->next;
+        }
+        return false;
     }
 };
 
@@ -51,17 +51,17 @@ public:
 class Solution2 {
 public:
     bool hasCycle(ListNode *head) {
-    	if (head == nullptr) return false;
-    	set<ListNode *> S;
-    	ListNode * p = head;
-    	while (p != nullptr) {
-    		if (S.find(p) == S.end()) {
-    			S.insert(p);
-    			p = p->next;
-			}
-    		else return true;
-		}
-		return false;
+        if (head == nullptr) return false;
+        set<ListNode *> S;
+        ListNode * p = head;
+        while (p != nullptr) {
+            if (S.find(p) == S.end()) {
+                S.insert(p);
+                p = p->next;
+            }
+            else return true;
+        }
+        return false;
     }
 };
 
@@ -72,6 +72,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

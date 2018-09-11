@@ -32,8 +32,8 @@ using namespace std;
 class Solution {
 public:
     void rotate(vector<int> & nums, int k) {
-    	int size = nums.size();
-    	k = k % size;
+        int size = nums.size();
+        k = k % size;
         nums.insert(nums.begin(), nums.end()-k, nums.end());
         nums.resize(size);
     }
@@ -47,19 +47,19 @@ public:
 class Solution2 {
 public:
     void rotate(vector<int> & nums, int k) {
-    	int n = nums.size();
-    	k = k % n;
-    	reverseVector(nums, 0, n-k-1);
-    	reverseVector(nums, n-k, n-1);
-    	reverseVector(nums, 0, n-1);   // reverse it back
+        int n = nums.size();
+        k = k % n;
+        reverseVector(nums, 0, n-k-1);
+        reverseVector(nums, n-k, n-1);
+        reverseVector(nums, 0, n-1);   // reverse it back
     }
     void reverseVector(vector<int> & nums, int i, int j) {
-    	while (i < j) {
-    		int temp = nums[i];
-    		nums[i++] = nums[j];
-    		nums[j--] = temp;
-		}
-	}
+        while (i < j) {
+            int temp = nums[i];
+            nums[i++] = nums[j];
+            nums[j--] = temp;
+        }
+    }
 };
 
 
@@ -67,11 +67,11 @@ public:
 class Solution3 {
 public:
     void rotate(vector<int> & nums, int k) {
-    	k = k % nums.size();   // essential
-    	reverse(nums.begin(), nums.end()-k);
-    	reverse(nums.end()-k, nums.end());
-    	reverse(nums.begin(), nums.end());
-	}
+        k = k % nums.size();   // essential
+        reverse(nums.begin(), nums.end()-k);
+        reverse(nums.end()-k, nums.end());
+        reverse(nums.begin(), nums.end());
+    }
 };
 
 
@@ -79,6 +79,6 @@ public:
 int main()
 {
 
-	return 0;
+    return 0;
 }
 

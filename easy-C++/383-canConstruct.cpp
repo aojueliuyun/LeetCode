@@ -30,12 +30,12 @@ class Solution {
 public:
     bool canConstruct(string ransomNote, string magazine) {
         unordered_map<char, int> dict;
-		for (auto c : magazine) dict[c] ++;
-		for (auto c : ransomNote) {
-			if (dict[c] == 0) return false;
-			else dict[c] --;
-		}
-		return true; 
+        for (auto c : magazine) dict[c] ++;
+        for (auto c : ransomNote) {
+            if (dict[c] == 0) return false;
+            else dict[c] --;
+        }
+        return true; 
     }
 };
 
@@ -53,26 +53,26 @@ class Solution2 {
 public:
     bool canConstruct(string ransomNote, string magazine) {
         for (auto c : ransomNote) {
-        	int pos = magazine.find(c);
-        	if (pos != string::npos) {
-        		swap(magazine[pos], magazine.back());
-        		magazine.pop_back();
-			}
-			else return false;
-		}
-		return true;
+            int pos = magazine.find(c);
+            if (pos != string::npos) {
+                swap(magazine[pos], magazine.back());
+                magazine.pop_back();
+            }
+            else return false;
+        }
+        return true;
     }
 };
 
 int main()
 {
-	string a, b;
-	Solution S;
-	while (cin >> a >> b) {
-		cout << S.canConstruct(a, b) << endl;
-	}
+    string a, b;
+    Solution S;
+    while (cin >> a >> b) {
+        cout << S.canConstruct(a, b) << endl;
+    }
 
 
-	return 0;
+    return 0;
 }
 

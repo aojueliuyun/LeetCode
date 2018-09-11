@@ -32,19 +32,19 @@ public:
     int minCostClimbingStairs(vector<int>& cost) {
         vector<int> dp(cost.size() + 1, 0);
         for (int i = 2; i < dp.size(); i ++) {
-        	dp[i] = min(dp[i-1] + cost[i-1], dp[i-2] + cost[i-2]);
-		}
-		return dp.back();
+            dp[i] = min(dp[i-1] + cost[i-1], dp[i-2] + cost[i-2]);
+        }
+        return dp.back();
     }
 };
 
 
 int main()
 {
-	Solution S;
-	vector<int> test{0,1,2,0};
-	cout << S.minCostClimbingStairs(test) << endl;
+    Solution S;
+    vector<int> test{0,1,2,0};
+    cout << S.minCostClimbingStairs(test) << endl;
 
-	return 0;
+    return 0;
 }
 

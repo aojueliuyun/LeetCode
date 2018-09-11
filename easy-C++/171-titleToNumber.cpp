@@ -27,11 +27,11 @@ using namespace std;
 class Solution {
 public:
     int titleToNumber(string s) {
-    	int res = 0;
+        int res = 0;
         for (char ch : s) {
-        	res = res*26 + ch - 'A' + 1;
-		}
-		return res;
+            res = res*26 + ch - 'A' + 1;
+        }
+        return res;
     }
 };
 
@@ -42,13 +42,13 @@ public:
 int main()
 {
 
-	Solution S;
-	string s;
-	while (cin >> s) {
-		cout << S.titleToNumber(s) << endl; 
-	}
+    Solution S;
+    string s;
+    while (cin >> s) {
+        cout << S.titleToNumber(s) << endl; 
+    }
 
 
-	return 0;
+    return 0;
 }
 

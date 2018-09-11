@@ -39,21 +39,21 @@ public:
         ListNode * p = head, * pk = head;
         int count = 0;
         while (p) {
-        	if (count <= n) count ++;
-        	else pk = pk->next;
-        	p = p->next;
-		}
-		ListNode * tmp;
-		if (count == n) {
-			tmp = head->next;
-			delete head;
-			return tmp;
-		}
-		else {
-			tmp = pk->next;
-			pk->next = tmp->next;
-			return head;
-		}
+            if (count <= n) count ++;
+            else pk = pk->next;
+            p = p->next;
+        }
+        ListNode * tmp;
+        if (count == n) {
+            tmp = head->next;
+            delete head;
+            return tmp;
+        }
+        else {
+            tmp = pk->next;
+            pk->next = tmp->next;
+            return head;
+        }
     }
 };
 
@@ -64,14 +64,14 @@ public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
         ListNode * p = head, * pk = head, * tmp;
         for (int i = 0; i < n; i ++) {
-        	p = p->next;
-		}
-		if (p == NULL) return head->next;
-		while (p->next) {
-			p = p->next;
-			pk = pk->next;
-		}
-		pk->next = pk->next->next;
+            p = p->next;
+        }
+        if (p == NULL) return head->next;
+        while (p->next) {
+            p = p->next;
+            pk = pk->next;
+        }
+        pk->next = pk->next->next;
         return head;
     }
 };
@@ -79,14 +79,14 @@ public:
 
 int main()
 {
-	ListNode * head = new ListNode (0);
-	head->next = new ListNode (1);
-	Solution2 S;
-	
-	ListNode * p = S.removeNthFromEnd(head, 1);
-	cout << p->val << endl;
+    ListNode * head = new ListNode (0);
+    head->next = new ListNode (1);
+    Solution2 S;
+    
+    ListNode * p = S.removeNthFromEnd(head, 1);
+    cout << p->val << endl;
 
 
-	return 0;
+    return 0;
 }
 

@@ -34,21 +34,21 @@ struct TreeNode {
 class Solution {
 public:
     bool hasPathSum(TreeNode * root, int sum) {
-    	if (root == nullptr) return false;
+        if (root == nullptr) return false;
         if (root->left == nullptr && root->right == nullptr) {
-        	if (root->val == sum) return true;
-        	else return false;
-		}
-		return hasPathSum(root->left, sum - root->val) || hasPathSum(root->right, sum - root->val);
-	}
+            if (root->val == sum) return true;
+            else return false;
+        }
+        return hasPathSum(root->left, sum - root->val) || hasPathSum(root->right, sum - root->val);
+    }
 };
 
 // solution 2 : ---------> DFS  depth first search    ========> same thing , ignore
 class Solution2 {
 public:
     bool hasPathSum(TreeNode * root, int sum) {
-    	
-	}
+        
+    }
 };
 
 
@@ -58,6 +58,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

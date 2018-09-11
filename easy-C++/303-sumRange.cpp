@@ -25,14 +25,14 @@ using namespace std;
 // sumRange time: O(j-i+1)
 class NumArray {
 private:
-	vector<int> array;
+    vector<int> array;
 public:
     NumArray(vector<int> nums) : array(nums) {
-    	
+        
     }
     
     int sumRange(int i, int j) {
-    	int sum = 0;
+        int sum = 0;
         for (int k = i; k <= j; k ++) sum += array[k];
         return sum;
     }
@@ -42,18 +42,18 @@ public:
 // sumRange time: O(1)
 class NumArray2 {
 private:
-	vector<int> sum;
+    vector<int> sum;
 public:
     NumArray2(vector<int> nums) {
-    	int tmp = 0;
-    	for (int i = 0; i < nums.size(); i ++) {
-    		tmp += nums[i];
-    		sum.push_back(tmp);
-		}
+        int tmp = 0;
+        for (int i = 0; i < nums.size(); i ++) {
+            tmp += nums[i];
+            sum.push_back(tmp);
+        }
     }
     int sumRange(int i, int j) {
-    	if (i == 0) return sum[j];
-    	else return sum[j] - sum[i-1];
+        if (i == 0) return sum[j];
+        else return sum[j] - sum[i-1];
     }
 };
 
@@ -64,6 +64,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

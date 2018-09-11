@@ -46,15 +46,15 @@ public:
     vector<int> postorder(Node* root) {
         vector<int> res;
         postTraverse(root, res);
-		return res; 
+        return res; 
     }
     void postTraverse(Node * root, vector<int> & vec) {
-    	if (root) {
-    		for (auto node : root->children)
-    			postTraverse(node, vec);
-    		vec.push_back(root->val);
-		}
-	}
+        if (root) {
+            for (auto node : root->children)
+                postTraverse(node, vec);
+            vec.push_back(root->val);
+        }
+    }
 };
 
 // solution 2 : use iteration , also use std::stack
@@ -62,20 +62,20 @@ class Solution2 {
 public:
     vector<int> postorder(Node* root) {
         vector<int> res;
-    	stack<Node *> data;
-    	data.push(root);
+        stack<Node *> data;
+        data.push(root);
         while (!data.empty()) {
-        	Node * tmp = data.top();
-        	data.pop();
-        	if (tmp) {
-        		for (int i = 0; i < tmp->children.size(); i ++) {
-        			data.push(tmp->children[i]);
-				}
-				res.push_back(tmp->val);
-			}
-		}
-		reverse(res.begin(), res.end()); // return vector<int>(res.rbegin(), res.rend());
-		return res;
+            Node * tmp = data.top();
+            data.pop();
+            if (tmp) {
+                for (int i = 0; i < tmp->children.size(); i ++) {
+                    data.push(tmp->children[i]);
+                }
+                res.push_back(tmp->val);
+            }
+        }
+        reverse(res.begin(), res.end()); // return vector<int>(res.rbegin(), res.rend());
+        return res;
     }
 };
 
@@ -86,6 +86,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

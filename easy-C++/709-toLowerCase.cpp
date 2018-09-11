@@ -31,9 +31,9 @@ public:
     string toLowerCase(string str) {
         string res;
         for (auto c : str) {
-        	res += tolower(c);
-		}
-		return res;
+            res += tolower(c);
+        }
+        return res;
     }
 };
 
@@ -43,10 +43,10 @@ class Solution2 {
 public:
     string toLowerCase(string str) {
         for (auto & c : str) {
-        	if (isupper(c))
-        		c = tolower(c);
-		}
-		return str;
+            if (isupper(c))
+                c = tolower(c);
+        }
+        return str;
     }
 };
 
@@ -54,13 +54,13 @@ public:
 
 int main()
 {
-	Solution S;
-	string s;
-	while (cin >> s) {
-		cout << S.toLowerCase(s) << endl;
-	}
+    Solution S;
+    string s;
+    while (cin >> s) {
+        cout << S.toLowerCase(s) << endl;
+    }
 
 
-	return 0;
+    return 0;
 }
 

@@ -25,8 +25,8 @@ using namespace std;
 class Solution {
 public:
     string reverseString(string s) {
-    	reverse(s.begin(), s.end());
-    	return s;
+        reverse(s.begin(), s.end());
+        return s;
     }
 };
 
@@ -35,10 +35,10 @@ public:
 class Solution2 {
 public:
     string reverseString(string s) {
-    	if (s.length() <= 1) return s;
-    	for (int i = 0, j = s.length()-1; i < j; i ++, j --)
-			swap(s[i], s[j]);
-		return s;
+        if (s.length() <= 1) return s;
+        for (int i = 0, j = s.length()-1; i < j; i ++, j --)
+            swap(s[i], s[j]);
+        return s;
     }
 };
 
@@ -46,11 +46,11 @@ public:
 class Solution3 {
 public:
     string reverseString(string s) {
-    	if (s.length() <= 1) return s;
-    	string res;
-    	for (int i = s.length()-1; i >= 0; i --) 
-    		res += s[i];
-    	return res;
+        if (s.length() <= 1) return s;
+        string res;
+        for (int i = s.length()-1; i >= 0; i --) 
+            res += s[i];
+        return res;
     }
 };
 
@@ -60,6 +60,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

@@ -27,13 +27,13 @@ using namespace std;
 class Solution {
 public:
     int climbStairs(int n) {
-    	vector<int> dp;
-    	dp.push_back(1);
-    	dp.push_back(2);
+        vector<int> dp;
+        dp.push_back(1);
+        dp.push_back(2);
         for (int i = 2; i < n; i ++) {
-        	dp.push_back(dp[i-1] + dp[i-2]);
-		}
-		return dp[n-1];
+            dp.push_back(dp[i-1] + dp[i-2]);
+        }
+        return dp[n-1];
     }
 };
 
@@ -41,26 +41,26 @@ public:
 class Solution2 {
 public:
     int climbStairs(int n) {
-    	if (n == 1 || n == 2) return n;
-    	int dp[n+1]; // VLA , C syntax
-    	dp[1] = 1;
-    	dp[2] = 2;
+        if (n == 1 || n == 2) return n;
+        int dp[n+1]; // VLA , C syntax
+        dp[1] = 1;
+        dp[2] = 2;
         for (int i = 3; i <= n; i ++) {
-        	dp[i] = dp[i-1] + dp[i-2];
-		}
-		return dp[n];
+            dp[i] = dp[i-1] + dp[i-2];
+        }
+        return dp[n];
     }
 };  
 
 int main()
 {
-	int n;
-	Solution S;
-	while (cin >> n) {
-		cout << S.climbStairs(n) << endl;
-	}
+    int n;
+    Solution S;
+    while (cin >> n) {
+        cout << S.climbStairs(n) << endl;
+    }
 
 
-	return 0;
+    return 0;
 }
 

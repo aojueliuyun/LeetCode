@@ -41,16 +41,16 @@ public:
         return count;
     }
     void countPaths(TreeNode * root, vector<int> vec, int sum, int & count) {
-    	if (root == nullptr) return;
-    	for (auto & x : vec) {
-    		x += root->val;
-    		if (x == sum) count ++; 
-		}
-		if (root->val == sum) count ++;
-		vec.push_back(root->val);
-		countPaths(root->left, vec, sum, count);
-		countPaths(root->right, vec, sum, count);
-	}
+        if (root == nullptr) return;
+        for (auto & x : vec) {
+            x += root->val;
+            if (x == sum) count ++; 
+        }
+        if (root->val == sum) count ++;
+        vec.push_back(root->val);
+        countPaths(root->left, vec, sum, count);
+        countPaths(root->right, vec, sum, count);
+    }
 };
  
 
@@ -60,6 +60,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

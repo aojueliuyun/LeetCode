@@ -28,11 +28,11 @@ using namespace std;
 // solution 1 : search and insert
 class KthLargest {
 private:
-	vector<int> data;
-	int k;
+    vector<int> data;
+    int k;
 public:
     KthLargest(int k, vector<int> nums) : k(k), data(nums) {
-    	sort(data.begin(), data.end());
+        sort(data.begin(), data.end());
     }
     
     int add(int val) {
@@ -54,10 +54,10 @@ public:
 class KthLargest {
 public:
     KthLargest(int k, vector<int> nums){
-    	
+        
     }
     int add(int val) {
-    	
+        
     }
 };
 
@@ -68,6 +68,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

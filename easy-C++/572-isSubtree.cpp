@@ -42,22 +42,22 @@ public:
         vector<TreeNode *> snodes;
         traverse(s, snodes);
         for (auto sn : snodes) {
-        	if (subtree(sn, t)) return true;
-		}
-		return false;
+            if (subtree(sn, t)) return true;
+        }
+        return false;
     }
     void traverse(TreeNode * root, vector<TreeNode *> & vec) { // save all ndoes of a tree to a vector
-    	if (root) {
-    		traverse(root->left, vec);
-    		vec.push_back(root);
-    		traverse(root->right, vec);
-		}
-	}
-	bool subtree(TreeNode * s, TreeNode * t) { // juege whether two trees equal
-		if (s == nullptr && t == nullptr) return true;
-		else if (s == nullptr || t == nullptr) return false;
-		return s->val == t->val && subtree(s->left, t->left) && subtree(s->right, t->right);
-	}
+        if (root) {
+            traverse(root->left, vec);
+            vec.push_back(root);
+            traverse(root->right, vec);
+        }
+    }
+    bool subtree(TreeNode * s, TreeNode * t) { // juege whether two trees equal
+        if (s == nullptr && t == nullptr) return true;
+        else if (s == nullptr || t == nullptr) return false;
+        return s->val == t->val && subtree(s->left, t->left) && subtree(s->right, t->right);
+    }
 };
 
 
@@ -68,14 +68,14 @@ public:
 class Solution2 {
 public:
     bool isSubtree(TreeNode* s, TreeNode* t) {
-    	if (s == nullptr) return false;
-		return sameTree(s, t) || isSubtree(s->left, t) || isSubtree(s->right, t); 
+        if (s == nullptr) return false;
+        return sameTree(s, t) || isSubtree(s->left, t) || isSubtree(s->right, t); 
     }
     bool sameTree(TreeNode * s, TreeNode * t) {
-    	if (s == nullptr && t == nullptr) return true;
-    	else if (s == nullptr || t == nullptr) return false;
-    	return s->val == t->val && sameTree(s->left, t->left) && sameTree(s->right, t->right);
-	}
+        if (s == nullptr && t == nullptr) return true;
+        else if (s == nullptr || t == nullptr) return false;
+        return s->val == t->val && sameTree(s->left, t->left) && sameTree(s->right, t->right);
+    }
 };
 
 
@@ -86,6 +86,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

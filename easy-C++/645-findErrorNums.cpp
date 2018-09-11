@@ -29,16 +29,16 @@ using namespace std;
 class Solution {
 public:
     vector<int> findErrorNums(vector<int>& nums) {
-    	vector<int> record(nums.size(), 0);
-    	vector<int> res(2, 0);
-    	for (auto x : nums) {
-    		record[x-1] ++;
-		}
-		for (int i = 0; i < record.size(); i ++) {
-			if (record[i] == 2) res[0] = i+1;
-			if (record[i] == 0) res[1] = i+1;
-		}
-    	return res;
+        vector<int> record(nums.size(), 0);
+        vector<int> res(2, 0);
+        for (auto x : nums) {
+            record[x-1] ++;
+        }
+        for (int i = 0; i < record.size(); i ++) {
+            if (record[i] == 2) res[0] = i+1;
+            if (record[i] == 0) res[1] = i+1;
+        }
+        return res;
     }
 };
 
@@ -49,6 +49,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

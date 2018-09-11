@@ -34,16 +34,16 @@ using namespace std;
 class Solution {
 public:
     vector<int> findDisappearedNumbers(vector<int>& nums) {
-    	vector<int> counts(nums.size()+1);
-    	for (auto x : nums) {
-    		counts[x] ++;
-		}
-		vector<int> ans;
-		for (int i = 1; i < counts.size(); i ++) {
-			if (counts[i] == 0)
-				ans.push_back(i);
-		}
-		return ans;
+        vector<int> counts(nums.size()+1);
+        for (auto x : nums) {
+            counts[x] ++;
+        }
+        vector<int> ans;
+        for (int i = 1; i < counts.size(); i ++) {
+            if (counts[i] == 0)
+                ans.push_back(i);
+        }
+        return ans;
     }
 };
  
@@ -53,35 +53,35 @@ public:
 // space: O(1)
 class Solution2 {
 public:
-	vector<int> findDisappearedNumbers(vector<int> & nums) {
-		for (auto x : nums) {
-			if (nums[abs(x)-1] > 0)
-				nums[abs(x)-1] = nums[abs(x)-1] * (-1);
-		}
-		vector<int> ans;
-		for (int i = 0; i < nums.size(); i ++) {
-			if (nums[i] > 0)
-				ans.push_back(i+1);
-		}
-		return ans;
-	}
+    vector<int> findDisappearedNumbers(vector<int> & nums) {
+        for (auto x : nums) {
+            if (nums[abs(x)-1] > 0)
+                nums[abs(x)-1] = nums[abs(x)-1] * (-1);
+        }
+        vector<int> ans;
+        for (int i = 0; i < nums.size(); i ++) {
+            if (nums[i] > 0)
+                ans.push_back(i+1);
+        }
+        return ans;
+    }
 };
 
 
 
 template<typename T>
 void printVec(vector<T> vec) {
-	for (auto x : vec) cout << x << " ";
-	cout << endl;
+    for (auto x : vec) cout << x << " ";
+    cout << endl;
 }
 
 int main()
 {
-	vector<int> vec{4,3,2,7,8,2,3,1};
-	Solution2 S;
-	printVec(S.findDisappearedNumbers(vec));
+    vector<int> vec{4,3,2,7,8,2,3,1};
+    Solution2 S;
+    printVec(S.findDisappearedNumbers(vec));
 
 
-	return 0;
+    return 0;
 }
 

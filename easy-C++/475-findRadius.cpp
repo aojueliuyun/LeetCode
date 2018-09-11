@@ -31,20 +31,20 @@ using namespace std;
 class Solution {
 public:
     int findRadius(vector<int>& houses, vector<int>& heaters) {
-    	sort(houses.begin(), houses.end());
-    	sort(heaters.begin(), heaters.end());
+        sort(houses.begin(), houses.end());
+        sort(heaters.begin(), heaters.end());
         int ans = 0, n = houses.size(), m = heaters.size();
         for (int i = 0, j = 0; i < n; i ++) {
-        	while (houses[i] > heaters[j] && j+1 < m) {
-        		j ++;
-			}
-			int mindis = abs(heaters[j] - houses[i]);
-			if (j-1 >= 0) {
-				mindis = min(mindis, houses[i] - heaters[j-1]);
-			}
-			ans = max(mindis, ans);
-		}
-		return ans;
+            while (houses[i] > heaters[j] && j+1 < m) {
+                j ++;
+            }
+            int mindis = abs(heaters[j] - houses[i]);
+            if (j-1 >= 0) {
+                mindis = min(mindis, houses[i] - heaters[j-1]);
+            }
+            ans = max(mindis, ans);
+        }
+        return ans;
     }
 };
 
@@ -72,12 +72,12 @@ public:
 
 int main()
 {
-	vector<int> houses{282475249,622650073,984943658,144108930,470211272,101027544,457850878,458777923};
-	vector<int> heaters{823564440,115438165,784484492,74243042,114807987,137522503,441282327,16531729,823378840,143542612};
-	Solution2 S;
-	cout << S.findRadius(houses, heaters);
-	// result : 161834419
+    vector<int> houses{282475249,622650073,984943658,144108930,470211272,101027544,457850878,458777923};
+    vector<int> heaters{823564440,115438165,784484492,74243042,114807987,137522503,441282327,16531729,823378840,143542612};
+    Solution2 S;
+    cout << S.findRadius(houses, heaters);
+    // result : 161834419
 
-	return 0;
+    return 0;
 }
 

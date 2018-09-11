@@ -32,10 +32,10 @@ class Solution {
 public:
     bool judgeSquareSum(int c) {
         for (int a = 0; a <= floor(sqrt(c)); a ++) {
-        	int b = floor(sqrt(c-a*a));
-        	if (a*a + b*b == c) return true;
-		}
-		return false;
+            int b = floor(sqrt(c-a*a));
+            if (a*a + b*b == c) return true;
+        }
+        return false;
     }
 };
 
@@ -43,9 +43,9 @@ public:
 
 int main()
 {
-	
-	
-	
-	return 0;
+    
+    
+    
+    return 0;
 }
 

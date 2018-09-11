@@ -45,11 +45,11 @@ public:
         vector<int> res;
         for (auto x : nums1) dict[x] ++;
         for (auto x : nums2) {
-        	if (dict[x]) {
-        		res.push_back(x);
-        		dict[x] --;
-			}
-		}
+            if (dict[x]) {
+                res.push_back(x);
+                dict[x] --;
+            }
+        }
         return res;
     }
 };
@@ -60,6 +60,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

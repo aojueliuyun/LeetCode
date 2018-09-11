@@ -40,28 +40,28 @@ public:
         int count = 1;
         ListNode * p = head, * pre = nullptr;
         while (count < m) {
-        	pre = p;
-        	p = p->next;
-        	count ++;
-		}
-		ListNode * r = p->next, * tmp = p;
-		while (count < n) {
-			if (pre == nullptr) {  // m == 1, reverse from head
-				head = r;
-				r = r->next;
-				head->next = p;
-				p = head;
-			}
-			else {
-				pre->next = r;
-				r = r->next;
-				pre->next->next = p;
-				p = pre->next;
-			}
-			count ++;
-		}
-		tmp->next = r;  // the tail node of the m-n sublist
-		return head;
+            pre = p;
+            p = p->next;
+            count ++;
+        }
+        ListNode * r = p->next, * tmp = p;
+        while (count < n) {
+            if (pre == nullptr) {  // m == 1, reverse from head
+                head = r;
+                r = r->next;
+                head->next = p;
+                p = head;
+            }
+            else {
+                pre->next = r;
+                r = r->next;
+                pre->next->next = p;
+                p = pre->next;
+            }
+            count ++;
+        }
+        tmp->next = r;  // the tail node of the m-n sublist
+        return head;
     }
 };
  
@@ -72,6 +72,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

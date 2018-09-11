@@ -29,7 +29,7 @@ using namespace std;
 // execution time : 96 ms
 class MyHashMap {
 private:
-	vector<int> data;
+    vector<int> data;
 public:
     /** Initialize your data structure here. */
     MyHashMap() {
@@ -67,6 +67,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

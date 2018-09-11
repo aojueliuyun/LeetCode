@@ -91,6 +91,6 @@ int main()
     cout << S.mostCommonWord(para, ban) << endl; 
 
 
-	return 0;
+    return 0;
 }
 

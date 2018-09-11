@@ -37,11 +37,11 @@ class Solution {
 public:
     bool containsNearbyDuplicate(vector<int>& nums, int k) {
         for (int i=0; i < nums.size(); i ++) {
-        	for (int j=1; j <= k; j ++) {
-        		if (i+j < nums.size() && nums[i+j] == nums[i]) return true;
-			}
-		}
-		return false; 
+            for (int j=1; j <= k; j ++) {
+                if (i+j < nums.size() && nums[i+j] == nums[i]) return true;
+            }
+        }
+        return false; 
     }
 };
 
@@ -54,11 +54,11 @@ class Solution2 {
 public:
     bool containsNearbyDuplicate(vector<int>& nums, int k) {
         unordered_map<int, int> dict;
-    	for (int i=0; i < nums.size(); i ++) {
-    		if (dict.find(nums[i]) != dict.end() && dict[nums[i]] >= i-k) return true;
-			else dict[nums[i]] = i;
-		}
-		return false;
+        for (int i=0; i < nums.size(); i ++) {
+            if (dict.find(nums[i]) != dict.end() && dict[nums[i]] >= i-k) return true;
+            else dict[nums[i]] = i;
+        }
+        return false;
     }
 };
 
@@ -67,14 +67,14 @@ public:
 
 int main()
 {
-	vector<int> v{1,2,3,1};
-	Solution S;
-	int k;
-	while (cin >> k) {
-		cout << S.containsNearbyDuplicate(v, k) << endl; 
-	}	
+    vector<int> v{1,2,3,1};
+    Solution S;
+    int k;
+    while (cin >> k) {
+        cout << S.containsNearbyDuplicate(v, k) << endl; 
+    }    
 
 
-	return 0;
+    return 0;
 }
 

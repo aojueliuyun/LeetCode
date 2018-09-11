@@ -32,20 +32,20 @@ struct ListNode {
 class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
-    	if (head == NULL) return head;
+        if (head == NULL) return head;
         ListNode * pre = head, * now = pre->next;
         while(now != NULL) {
-        	if(now->val == pre->val) {
-        		pre->next = now->next;
-        		delete now;
-        		now = pre->next;
-			}
-			else {
-				pre = pre->next;
-				now = now->next;
-			}
-		}
-		return head;
+            if(now->val == pre->val) {
+                pre->next = now->next;
+                delete now;
+                now = pre->next;
+            }
+            else {
+                pre = pre->next;
+                now = now->next;
+            }
+        }
+        return head;
     }
 };
  
@@ -54,6 +54,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

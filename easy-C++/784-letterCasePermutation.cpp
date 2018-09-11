@@ -29,25 +29,25 @@ using namespace std;
 class Solution {
 public:
     vector<string> letterCasePermutation(string S) {
-    	vector<int> index;
-    	for (int i = 0; i < S.length(); i ++) {
-    		if (isalpha(S[i])) index.push_back(i);
-		}
-    	vector<string> res;
-    	get(res, S, index, 0, index.size());
-    	return res;
-	}
-	void get(vector<string> & res, string S, const vector<int> & index, int i, int j) {
-		if (i == j) {
-			res.push_back(S);
-		}
-		else if (i < j) {
-			S[index[i]] = tolower(S[index[i]]);
-			get(res, S, index, i+1, j);
-			S[index[i]] = toupper(S[index[i]]);
-			get(res, S, index, i+1, j);
-		}
-	}
+        vector<int> index;
+        for (int i = 0; i < S.length(); i ++) {
+            if (isalpha(S[i])) index.push_back(i);
+        }
+        vector<string> res;
+        get(res, S, index, 0, index.size());
+        return res;
+    }
+    void get(vector<string> & res, string S, const vector<int> & index, int i, int j) {
+        if (i == j) {
+            res.push_back(S);
+        }
+        else if (i < j) {
+            S[index[i]] = tolower(S[index[i]]);
+            get(res, S, index, i+1, j);
+            S[index[i]] = toupper(S[index[i]]);
+            get(res, S, index, i+1, j);
+        }
+    }
 };
 
 
@@ -55,7 +55,7 @@ public:
 class Solution2 {
 public:
     vector<string> letterCasePermutation(string S) {
-    	vector<string> res{""};
+        vector<string> res{""};
         for (auto c : S) {
             int len = res.size();
             if (c >= '0' && c <= '9') {
@@ -70,7 +70,7 @@ public:
             }
         }
         return res;
-	}
+    }
 };
 
 
@@ -89,6 +89,6 @@ int main()
     }
     
 
-	return 0;
+    return 0;
 }
 

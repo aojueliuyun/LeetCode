@@ -46,11 +46,11 @@ public:
         if (V.empty()) return -1;
         int temp = V[0];
         for (auto x : V)
-        	if (x < temp) temp = x;
+            if (x < temp) temp = x;
         return temp;
     }
 private:
-	vector<int> V;
+    vector<int> V;
 };
 
 /**
@@ -67,7 +67,7 @@ private:
 // solution 2 : maintain a min stack saving min value of current stack, and pop along with the value stack.
 class MinStack2 {
 private:
-	stack<int> vals, mins;
+    stack<int> vals, mins;
 public:
     /** initialize your data structure here. */
     MinStack2() {
@@ -80,7 +80,7 @@ public:
     }
     
     void pop() {
-    	if (vals.top() == mins.top()) mins.pop();
+        if (vals.top() == mins.top()) mins.pop();
         vals.pop();
     }
     
@@ -98,6 +98,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

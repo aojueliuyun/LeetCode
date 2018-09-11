@@ -33,13 +33,13 @@ public:
 class Solution2 {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-    	unordered_map<int, int> record;
+        unordered_map<int, int> record;
         for (int i=0; i<nums.size(); i++) {
-        	int component = target - nums[i];
+            int component = target - nums[i];
             if (record.find(component) != record.end()) {
-            	return {record[component], i};
-			}
-			record[nums[i]] = i;
+                return {record[component], i};
+            }
+            record[nums[i]] = i;
         }
         return {0,0};
     }
@@ -51,6 +51,6 @@ int main()
 {
 
 
-	return 0;
+    return 0;
 }
 

@@ -26,13 +26,13 @@ using namespace std;
 class Solution {
 public:
     bool isPowerOfTwo(int n) {
-    	if (n <= 0) return false;
+        if (n <= 0) return false;
         while (n) {
-        	if (n == 1) break;
-        	if (n % 2 == 1) return false;
-        	n /= 2;
-		}
-		return true;
+            if (n == 1) break;
+            if (n % 2 == 1) return false;
+            n /= 2;
+        }
+        return true;
     }
 };
 
@@ -41,9 +41,9 @@ public:
 class Solution2 {
 public:
     bool isPowerOfTwo(int n) {
-    	int i=1;
-    	for (int j = 0; j < 31 && i < n; j ++) i <<= 1;
-    	return i == n;
+        int i=1;
+        for (int j = 0; j < 31 && i < n; j ++) i <<= 1;
+        return i == n;
     }
 };
 
@@ -52,20 +52,20 @@ public:
 class Solution3 {
 public:
     bool isPowerOfTwo(int n) {
-    	return n > 0 && !(n & (n-1));
+        return n > 0 && !(n & (n-1));
     }
 };
 
 
 int main()
 {
-	int n;
-	Solution3 S;
-	while (cin >> n) {
-		cout << S.isPowerOfTwo(n) << endl;
-	}
+    int n;
+    Solution3 S;
+    while (cin >> n) {
+        cout << S.isPowerOfTwo(n) << endl;
+    }
 
 
-	return 0;
+    return 0;
 }
 

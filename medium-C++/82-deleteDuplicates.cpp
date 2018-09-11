@@ -36,22 +36,22 @@ struct ListNode {
 class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
-    	if (head == nullptr || head->next == nullptr) return head;  // zero or one node
+        if (head == nullptr || head->next == nullptr) return head;  // zero or one node
         ListNode Head(0), * p = & Head;
         Head.next = head;
         unordered_map<int, int> record; 
         while (p->next) {
-        	record[p->next->val] ++;
-        	p = p->next;
-		}
-		p = & Head;
-		while (p->next) {
-			if (record[p->next->val] > 1) {
-				p->next = p->next->next;     // did not free the memory
-			}
-			else p = p->next;
-		}
-		return Head.next;
+            record[p->next->val] ++;
+            p = p->next;
+        }
+        p = & Head;
+        while (p->next) {
+            if (record[p->next->val] > 1) {
+                p->next = p->next->next;     // did not free the memory
+            }
+            else p = p->next;
+        }
+        return Head.next;
     }
 };
 
@@ -60,21 +60,21 @@ public:
 class Solution2 {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
-    	if (head == nullptr) return head;
-    	ListNode * pre = nullptr, * cur = head;
-    	while (cur) {
-    		if (cur->next && cur->next->val == cur->val) {
-    			int a = cur->val;
-    			while (cur->next && cur->next->val == a) {
-    				cur = cur->next;
-				}
-				if (pre == nullptr) head = cur->next;
-				else pre->next = cur->next;
-			}
-			else pre = cur;
-			cur = cur->next;
-		}
-		return head;
+        if (head == nullptr) return head;
+        ListNode * pre = nullptr, * cur = head;
+        while (cur) {
+            if (cur->next && cur->next->val == cur->val) {
+                int a = cur->val;
+                while (cur->next && cur->next->val == a) {
+                    cur = cur->next;
+                }
+                if (pre == nullptr) head = cur->next;
+                else pre->next = cur->next;
+            }
+            else pre = cur;
+            cur = cur->next;
+        }
+        return head;
     }
 };
 
@@ -83,24 +83,24 @@ public:
 class Solution3 {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
-    	ListNode * fakeNode = new ListNode (0);
-    	fakeNode->next = head;
-    	ListNode * pre = fakeNode;
-    	while (head) {
-    		if (head->next && head->next->val == head->val) {
-    			int v = head->val;
-    			while (head && head->val == v) {
-    				pre->next = head->next;
-    				delete head;
-    				head = pre->next;
-				}
-			}
-			else {
-				pre = head;
-				head = head->next;
-			}
-		}
-		return fakeNode->next;
+        ListNode * fakeNode = new ListNode (0);
+        fakeNode->next = head;
+        ListNode * pre = fakeNode;
+        while (head) {
+            if (head->next && head->next->val == head->val) {
+                int v = head->val;
+                while (head && head->val == v) {
+                    pre->next = head->next;
+                    delete head;
+                    head = pre->next;
+                }
+            }
+            else {
+                pre = head;
+                head = head->next;
+            }
+        }
+        return fakeNode->next;
     }
 };
 
@@ -110,6 +110,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

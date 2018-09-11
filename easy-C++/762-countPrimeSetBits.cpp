@@ -31,17 +31,17 @@ using namespace std;
 class Solution {
 public:
     int countPrimeSetBits(int L, int R) {
-    	int res = 0;
+        int res = 0;
         unordered_set<int> primes{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31};
         for (int i = L; i <= R; i ++) {
-        	int n = i, count = 0;
-        	while (n) {
-        		if (n & 1) count ++;
-        		n >>= 1;
-			}
-			if (primes.count(count)) res ++;
-		}
-		return res;
+            int n = i, count = 0;
+            while (n) {
+                if (n & 1) count ++;
+                n >>= 1;
+            }
+            if (primes.count(count)) res ++;
+        }
+        return res;
     }
 };
 
@@ -67,6 +67,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

@@ -36,22 +36,22 @@ struct TreeNode {
 class Solution_wroung {
 public:
     int getMinimumDifference(TreeNode* root) {
-    	if (root->left && root->right) {
-    		return min(getMin(root->left, root->val), getMin(root->right, root->val));
-		}
-		else if (root->left) {
-			return getMin(root->left, root->val);
-		}
-		else return getMin(root->right, root->val);
+        if (root->left && root->right) {
+            return min(getMin(root->left, root->val), getMin(root->right, root->val));
+        }
+        else if (root->left) {
+            return getMin(root->left, root->val);
+        }
+        else return getMin(root->right, root->val);
     }
     int getMin(TreeNode * node, int val) {
-    	int minval = abs(val - node->val);
-    	if (node->left)
-			minval = min(minval, getMin(node->left, node->val));
-    	if (node->right)
-			minval = min(minval, getMin(node->right, node->val));
-    	return minval;
-	}
+        int minval = abs(val - node->val);
+        if (node->left)
+            minval = min(minval, getMin(node->left, node->val));
+        if (node->right)
+            minval = min(minval, getMin(node->right, node->val));
+        return minval;
+    }
 };
 
 
@@ -60,20 +60,20 @@ public:
 class Solution {
 public:
     int getMinimumDifference(TreeNode* root) {
-    	vector<int> seq;
-    	inTraverse(root, seq);
-    	int mindiff = abs(seq[0] - seq[1]);
-    	for (int i = 1; i < seq.size()-1; i ++) {
-    		mindiff = min(abs(seq[i+1] -  seq[i]), mindiff);
-		}
-		return mindiff;
-	}
-	void inTraverse(TreeNode * root, vector<int> & vec) {
-		if (root == nullptr) return;
-		inTraverse(root->left, vec);
-		vec.push_back(root->val);
-		inTraverse(root->right, vec);
-	}
+        vector<int> seq;
+        inTraverse(root, seq);
+        int mindiff = abs(seq[0] - seq[1]);
+        for (int i = 1; i < seq.size()-1; i ++) {
+            mindiff = min(abs(seq[i+1] -  seq[i]), mindiff);
+        }
+        return mindiff;
+    }
+    void inTraverse(TreeNode * root, vector<int> & vec) {
+        if (root == nullptr) return;
+        inTraverse(root->left, vec);
+        vec.push_back(root->val);
+        inTraverse(root->right, vec);
+    }
 };
 
 
@@ -82,18 +82,18 @@ public:
 class Solution2 {
 public:
     int getMinimumDifference(TreeNode* root) {
-    	int last = -1, ans = INT_MAX;
-    	inOrder(root, last, ans);
-    	return ans;
-	}
-	void inOrder(TreeNode * p, int & last, int & ans) {
-		if (p == nullptr) return;
-		inOrder(p->left, last, ans);
-		if (last != -1)
-			ans = min(ans, p->val - last);
-		last = p->val;
-		inOrder(p->right, last, ans);
-	}
+        int last = -1, ans = INT_MAX;
+        inOrder(root, last, ans);
+        return ans;
+    }
+    void inOrder(TreeNode * p, int & last, int & ans) {
+        if (p == nullptr) return;
+        inOrder(p->left, last, ans);
+        if (last != -1)
+            ans = min(ans, p->val - last);
+        last = p->val;
+        inOrder(p->right, last, ans);
+    }
 };
 
 
@@ -102,6 +102,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 

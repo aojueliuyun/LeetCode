@@ -29,16 +29,16 @@ using namespace std;
 class Solution {
 public:
     double findMaxAverage(vector<int>& nums, int k) {
-    	double sum = 0, maxsum = -1e200;
-    	for (int i = 0; i < k; i ++) {
-    		sum += nums[i];
-		}
-		maxsum = sum;
-    	for (int i = k; i < nums.size(); i ++) {
-    		sum += nums[i] - nums[i-k];
-    		if (sum > maxsum) maxsum = sum;
-		}
-		return maxsum / k;
+        double sum = 0, maxsum = -1e200;
+        for (int i = 0; i < k; i ++) {
+            sum += nums[i];
+        }
+        maxsum = sum;
+        for (int i = k; i < nums.size(); i ++) {
+            sum += nums[i] - nums[i-k];
+            if (sum > maxsum) maxsum = sum;
+        }
+        return maxsum / k;
     }
 };
 
@@ -46,11 +46,11 @@ public:
 
 int main()
 {
-	vector<int> nums{-1};
-	Solution S;
-	cout << S.findMaxAverage(nums, 1) << endl;
+    vector<int> nums{-1};
+    Solution S;
+    cout << S.findMaxAverage(nums, 1) << endl;
 
 
-	return 0;
+    return 0;
 }
 

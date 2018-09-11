@@ -59,6 +59,6 @@ int main()
     Solution S;
     cout << S.threeSumClosest(test, 3) << endl;
 
-	return 0;
+    return 0;
 }
 

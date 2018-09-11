@@ -29,27 +29,27 @@ using namespace std;
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-    	if (s.empty()) return 0;
-    	int maxlength = 0;
-    	for (int i = 0; i < s.length(); i ++) {
-    		bool repeat = false;
-    		for (int j = i; j < s.length(); j ++) {
-    			int record[256];
-    			memset(record, 0, sizeof(int) * 256);
-    			for (int k = i; k <= j; k ++) {
-    				if (record[s[k]] < 1) {
-    					record[s[k]] ++;
-    					maxlength = max(maxlength, k-i+1);
-					}
-    				else {
-    					repeat = true;
-    					break;
-					}
-				}
-				if (repeat) break;
-			}
-		}
-		return maxlength;
+        if (s.empty()) return 0;
+        int maxlength = 0;
+        for (int i = 0; i < s.length(); i ++) {
+            bool repeat = false;
+            for (int j = i; j < s.length(); j ++) {
+                int record[256];
+                memset(record, 0, sizeof(int) * 256);
+                for (int k = i; k <= j; k ++) {
+                    if (record[s[k]] < 1) {
+                        record[s[k]] ++;
+                        maxlength = max(maxlength, k-i+1);
+                    }
+                    else {
+                        repeat = true;
+                        break;
+                    }
+                }
+                if (repeat) break;
+            }
+        }
+        return maxlength;
     }
 }; 
 
@@ -60,20 +60,20 @@ public:
 class Solution2 {
 public:
     int lengthOfLongestSubstring(string s) {
-    	if (s.empty()) return 0;
-    	int maxlength = 1;
-    	int i = 0, j = 1;
-    	while (j < s.length()) {
-    		int pos = s.find(s[j], i);
-    		while (pos < j) {
-    			i = pos+1;
-    			pos = s.find(s[j], i);
-			}
-			maxlength = max(maxlength, j-i+1);
-//			cout << i << ' ' << j << ' ' << maxlength << endl;
-			j ++;
-		}
-		return maxlength;
+        if (s.empty()) return 0;
+        int maxlength = 1;
+        int i = 0, j = 1;
+        while (j < s.length()) {
+            int pos = s.find(s[j], i);
+            while (pos < j) {
+                i = pos+1;
+                pos = s.find(s[j], i);
+            }
+            maxlength = max(maxlength, j-i+1);
+//            cout << i << ' ' << j << ' ' << maxlength << endl;
+            j ++;
+        }
+        return maxlength;
     }
 }; 
 
@@ -83,13 +83,13 @@ public:
 
 int main()
 {
-	string s;
-	Solution S;
-	while (cin >> s) {
-		cout << S.lengthOfLongestSubstring(s) << endl;
-	}
+    string s;
+    Solution S;
+    while (cin >> s) {
+        cout << S.lengthOfLongestSubstring(s) << endl;
+    }
 
 
-	return 0;
+    return 0;
 }
 

@@ -33,18 +33,18 @@ public:
     bool isToeplitzMatrix(vector<vector<int>>& matrix) {
         int r = matrix.size(), c = matrix[0].size();
         for (int i = -c+1; i < r; i++) {
-        	int val = -1;
-        	for (int x = 0; x < c; x ++) {
-        		int y = x + i;
-        		if (y >= 0 && y < r) {
-        			if (val == -1) 
-						val = matrix[y][x];
-        			else if (val != matrix[y][x]) 
-						return false;
-				}
-			}
-		}
-		return true;
+            int val = -1;
+            for (int x = 0; x < c; x ++) {
+                int y = x + i;
+                if (y >= 0 && y < r) {
+                    if (val == -1) 
+                        val = matrix[y][x];
+                    else if (val != matrix[y][x]) 
+                        return false;
+                }
+            }
+        }
+        return true;
     }
 }; 
 
@@ -57,13 +57,13 @@ public:
     bool isToeplitzMatrix(vector<vector<int>>& matrix) {
         int r = matrix.size(), c = matrix[0].size();
         for (int i = 0; i < r; i ++) {
-        	for (int j = 0; j < c; j ++) {
-        		if (i+1 < r && j+1 < c && matrix[i+1][j+1] != matrix[i][j]) {
-        			return false;
-				}
-			}
-		}
-		return true;
+            for (int j = 0; j < c; j ++) {
+                if (i+1 < r && j+1 < c && matrix[i+1][j+1] != matrix[i][j]) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 };
 
@@ -74,6 +74,6 @@ int main()
 
 
 
-	return 0;
+    return 0;
 }
 
