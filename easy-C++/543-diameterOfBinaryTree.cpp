@@ -21,7 +21,7 @@ using namespace std;
 
 // 2018.7.29
 
-// leetcode 543 : diameterOfBinaryTree / 求二叉树的直径
+// leetcode 543 : diameterOfBinaryTree
 
 
 // Definition for a binary tree node.

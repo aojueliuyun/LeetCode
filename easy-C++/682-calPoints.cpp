@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.4
 
-// leetcode 682 : calPoints / ∞Ù«Ú±»»¸
+// leetcode 682 : calPoints 
 
 
 // solution : just simulation

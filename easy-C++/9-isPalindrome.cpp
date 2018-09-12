@@ -11,11 +11,10 @@ using namespace std;
 
 // 2018.7.14
 
-// leetcode 9 : 回文数 / palindromic number
+// leetcode 9 : palindromic number
 
 
 // Solution 1
-// 运用 7 的结果 
 class Solution {
 public:
     bool isPalindrome(int x) {
@@ -36,7 +35,7 @@ public:
 
 // Solution 2
 // to string 
-// C++11 --------> std::to_string(x)  能够将 (unsigned) (long long/long) int/double/float 转换为字符串。  
+// C++11 --------> std::to_string(x)   (unsigned) (long long/long) int/double/float
 class Solution2 {
 public:
     bool isPalindrome(int x) {
@@ -52,7 +51,6 @@ public:
 
 
 
-// 有了下面这几行更快，不过代表什么意思尚不清楚，以后补上 
 static const auto _ = []()
 {
     ios::sync_with_stdio(false);

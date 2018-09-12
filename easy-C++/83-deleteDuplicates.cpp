@@ -17,7 +17,7 @@ using namespace std;
 
 // 2018.7.15
 
-// leetcode 83 : 删除排序链表中的重复元素
+// leetcode 83 : deleteDuplicates
 
 
 

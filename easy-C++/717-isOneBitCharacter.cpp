@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.14
 
-// leetcode 717 : isOneBitCharacter / 1比特与2比特字符
+// leetcode 717 : isOneBitCharacter 
 
 
 // solution : traverse

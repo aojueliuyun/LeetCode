@@ -23,7 +23,7 @@ using namespace std;
 
 // 2018.8.18
 
-// leetcode 824 : toGoatLatin / É½ÑòÀ­¶¡ÎÄ
+// leetcode 824 : toGoatLatin 
 
 
 // solution :  stringstram is good

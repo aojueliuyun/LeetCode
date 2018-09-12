@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.22
 
-// leetcode 217 containsNearbyDuplicate / 判断数组是否包含临近不超过距离k的重复元素 
+// leetcode 217 containsNearbyDuplicate
 
 
 // thinking : use queue, but queue doesn't support traversal !!!--------> so Failed

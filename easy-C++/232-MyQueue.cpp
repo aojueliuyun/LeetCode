@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.22
 
-// leetcode 232 : implement a stack by using queues / 用栈实现队列
+// leetcode 232 : implement a stack by using queues 
 
 
 // solution 1 : move element to the bottom of a stack when pushing through another stack

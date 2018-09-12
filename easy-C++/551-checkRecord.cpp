@@ -21,7 +21,7 @@ using namespace std;
 
 // 2018.7.29
 
-// leetcode 551 : checkRecord /  学生出勤纪录 I
+// leetcode 551 : checkRecord
 
 // solution
 class Solution {

@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.23
 
-// leetcode 237 : deleteNode / 删除链表中的给定节点 
+// leetcode 237 : deleteNode 
 
 
 //Definition for singly-linked list.

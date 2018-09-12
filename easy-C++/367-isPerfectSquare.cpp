@@ -15,11 +15,12 @@
 #include<cctype>
 #include<numeric>
 #include<unordered_map>
+#include<cmath>
 using namespace std;
 
 // 2018.7.24
 
-// leetcode 367 isPerfectSquare / 判断一个数是否是完全平方数
+// leetcode 367 isPerfectSquare 
 
 // solution 
 class Solution {

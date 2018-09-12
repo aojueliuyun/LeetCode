@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.3
 
-// leetcode 665 : checkPossibility / ·ÇµÝ¼õÊýÁÐ
+// leetcode 665 : checkPossibility
 
 
 // solution : 

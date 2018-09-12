@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.24
 
-// leetcode 342: isPowerOfFour / 判断一个数是否是4的幂
+// leetcode 342: isPowerOfFour 
 
 // solution 1 : use shift and &
 class Solution {

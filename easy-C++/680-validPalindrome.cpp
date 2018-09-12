@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.4
 
-// leetcode 680 : validPalindrome /  验证回文字符串 Ⅱ
+// leetcode 680 : validPalindrome 
 
 
 // solution : 

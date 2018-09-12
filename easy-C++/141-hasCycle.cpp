@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.17
 
-// leetcode 141 : Linked List Cycle --------> 判断链表是否有环
+// leetcode 141 : Linked List Cycle 
 
 
 // Definition for singly-linked list.

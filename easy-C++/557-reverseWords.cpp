@@ -21,7 +21,7 @@ using namespace std;
 
 // 2018.7.29
 
-// leetcode 557 : reverseWords /  反转字符串中的单词 III
+// leetcode 557 : reverseWords 
 
 
 // solution : use string::find()

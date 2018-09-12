@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.13
 
-// leetcode 695 : maxAreaOfIsland / 岛屿的最大面积
+// leetcode 695 : maxAreaOfIsland 
 
 
 // solution : BFS, use queue

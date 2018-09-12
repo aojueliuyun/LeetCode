@@ -17,7 +17,7 @@ using namespace std;
 
 // 2018.7.18
 
-// leetcode 107 : Level Order Traversal 树的层次遍历-----------> 借助队列实现 
+// leetcode 107 : Level Order Traversal 
 // same as 102
 
 

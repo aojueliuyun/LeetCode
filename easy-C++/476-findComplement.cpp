@@ -21,7 +21,7 @@ using namespace std;
 
 // 2018.7.28
 
-// leetcode 476 : findComplement / 将一个数按二进制位取反，保持同样长度
+// leetcode 476 : findComplement 
 
 
 // solution 1 : get it's bits and shift

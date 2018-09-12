@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.7.30
 
-// leetcode 598 : maxCount / ·¶Î§ÇóºÍ II 
+// leetcode 598 : maxCount
 
 
 // solution -1 : jsut simulation

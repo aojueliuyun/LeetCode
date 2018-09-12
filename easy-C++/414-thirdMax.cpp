@@ -15,13 +15,13 @@
 #include<cctype>
 #include<numeric>
 #include<bitset>
-#include<funciontal> // for greater<int>
+#include<functional> // for greater<int>
 #include<unordered_map>
 using namespace std;
 
 // 2018.7.26
 
-// leetcode 414 : thirdMax / 第三大的数
+// leetcode 414 : thirdMax 
 
 // require : time complexity is O(n)
 

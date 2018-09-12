@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.13
 
-// leetcode 703 : KthLargest / 数据流中的第K大元素
+// leetcode 703 : KthLargest 
 
 
 // solution 1 : search and insert
@@ -51,9 +51,9 @@ public:
 
 
 // solution 2 : use priority queue / heap ----------> To be continued
-class KthLargest {
+class KthLargest2 {
 public:
-    KthLargest(int k, vector<int> nums){
+    KthLargest2(int k, vector<int> nums){
         
     }
     int add(int val) {

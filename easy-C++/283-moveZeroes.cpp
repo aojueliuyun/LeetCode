@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.23
 
-// leetcode 283 : moveZeroes / 将数组中所有0移动到数组末尾,同时保持非0元素顺序 
+// leetcode 283 : moveZeroes 
 
 // require: in-place
 // time: O(n)

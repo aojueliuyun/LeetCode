@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.3
 
-// leetcode 643 : findMaxAverage / 子数组最大平均数 I
+// leetcode 643 : findMaxAverage 
 
 
 // solution 1 : maintain a sum of k values

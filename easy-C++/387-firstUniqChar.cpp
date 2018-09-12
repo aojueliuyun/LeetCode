@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.24
 
-// leetcode 387 : find first unique char / 找到字符串中第一个不重复的字符 
+// leetcode 387 : find first unique char
 
 // solution :  use vector, only contain a to z
 // time: O(n)

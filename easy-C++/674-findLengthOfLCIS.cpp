@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.4
 
-// leetcode 674 : findLengthOfLCIS / 最长连续递增序列
+// leetcode 674 : findLengthOfLCIS
 
 
 // solution : 

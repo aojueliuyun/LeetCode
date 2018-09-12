@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.24
 
-// leetocde 326 isPowerOfThree / 判断一个数是否是3的mi
+// leetocde 326 isPowerOfThree 
 
 
 // solution 

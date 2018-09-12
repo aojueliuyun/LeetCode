@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.17
 
-// leetcode 762 : countPrimeSetBits / 二进制表示中质数个计算置位
+// leetcode 762 : countPrimeSetBits
 
 
 // solution : traverse, judge and count

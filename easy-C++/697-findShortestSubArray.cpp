@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.13
 
-// leetcode 697 : findShortestSubArray / 数组的度
+// leetcode 697 : findShortestSubArray
 
 
 // solution 1 : record the length of every subarray that includes every most number

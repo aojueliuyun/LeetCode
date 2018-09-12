@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.4 
 
-// leetcode 671 : findSecondMinimumValue / 二叉树中第二小的节点
+// leetcode 671 : findSecondMinimumValue 
 
 
 // Definition for a binary tree node.

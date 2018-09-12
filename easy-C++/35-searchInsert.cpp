@@ -30,7 +30,7 @@ public:
     }
 };
  
-// Solution 2: binary search -------------> 处理各种边界情况，一点都不优美 ------> 不如使用 STL  
+// Solution 2: binary search 
 class Solution2 {
 public:
     int searchInsert(vector<int>& nums, int target) {

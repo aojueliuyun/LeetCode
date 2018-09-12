@@ -20,7 +20,7 @@ using namespace std;
 
 // 2018.7.26
 
-// leetcode 447 : numberOfBoomerangs / 回旋镖的数量
+// leetcode 447 : numberOfBoomerangs
 
 // all points are different from each other. 
 

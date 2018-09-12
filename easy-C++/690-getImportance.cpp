@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.10
 
-// leetcode 690 : getImportance / 员工的重要性
+// leetcode 690 : getImportance 
 
 
 

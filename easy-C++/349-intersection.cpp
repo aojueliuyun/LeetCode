@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.24
 
-// leetcode 349 intersection / 求两个vector交集
+// leetcode 349 intersection 
 
 
 // solution 1 : use std::set and std::set_intersection (in <algorithm>)

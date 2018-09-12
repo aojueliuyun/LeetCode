@@ -18,7 +18,7 @@ using namespace std;
 
 // 2018.7.16
 
-// leetcode 104 : maxDepth of a tree 求树的最大深度
+// leetcode 104 : maxDepth of a tree 
 
 // Definition for a binary tree node.
 struct TreeNode {

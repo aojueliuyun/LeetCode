@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.18
 
-// leetcode 812 : largestTriangleArea / 最大三角形面积
+// leetcode 812 : largestTriangleArea
 
 
 // the triangle area equation : A (x1, y1) B(x2, y2) C(x3, y3)

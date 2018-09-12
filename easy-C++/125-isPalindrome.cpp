@@ -17,7 +17,7 @@
 using namespace std;
 
 // 2018.7.17
-// leetcode 125 : isPalindrome 验证回文字符串 
+// leetcode 125 : isPalindrome 
 
 
 // solution : just use two pointers ---------> Life is short, STL is good!

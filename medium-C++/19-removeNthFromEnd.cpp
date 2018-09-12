@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.10
 
-// leetcode 19 : removeNthFromEnd / 删除链表的倒数第N个节点
+// leetcode 19 : removeNthFromEnd 
 
 // Definition for singly-linked list.
 struct ListNode {

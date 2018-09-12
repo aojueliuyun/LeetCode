@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.24
 
-// leetcode 389 findTheDifference / 扎到两个字符串随机后添加的不同的字母
+// leetcode 389 findTheDifference
 
 
 // solution : use hash map / unordered_map

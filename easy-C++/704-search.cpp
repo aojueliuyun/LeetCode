@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.14
 
-// leetcode 704 : Binary search / 二分查找模板
+// leetcode 704 : Binary search
 
 
 // solution : binary search

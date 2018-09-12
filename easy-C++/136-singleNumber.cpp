@@ -13,11 +13,12 @@
 #include<deque>
 #include<numeric>
 #include<unordered_map>
+#include<cmath>
 using namespace std;
 
 // 20018.7.15
 
-// leetcode 136 singleNumber 只出现一次的数字
+// leetcode 136 singleNumber
 
 // solution 1
 // time: O(n)
@@ -35,8 +36,8 @@ public:
 }; 
 
 // solution 2
-// xor / ^ operation ---------> so tricky 很骚 
-class Solution {
+// xor / ^ operation ---------> so tricky
+class Solution2 {
 public:
     int singleNumber(vector<int>& nums) {
         int res = 0;

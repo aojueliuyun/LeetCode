@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.18
 
-// leetcode 788 : rotatedDigits / Ðý×ªÊý×Ö
+// leetcode 788 : rotatedDigits 
 
 
 

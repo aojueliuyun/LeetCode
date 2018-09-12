@@ -17,7 +17,7 @@ using namespace std;
 
 // 2018.7.15
 
-// ;eetcode 53 : maxSubArray 最大子序列和, 注意这里要求子数组最少包含一个元素 
+// ;eetcode 53 : maxSubArray
 
 // Solution 1
 // time: O(n)

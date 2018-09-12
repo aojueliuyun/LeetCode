@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.3
 
-// leetcode 673 : averageOfLevels / 二叉树的层平均值
+// leetcode 673 : averageOfLevels 
 
 
 // Definition for a binary tree node.

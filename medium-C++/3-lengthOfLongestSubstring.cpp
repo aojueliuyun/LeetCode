@@ -20,7 +20,7 @@ using namespace std;
 
 // 2018.7.27
 
-// leetcode 3 : lengthOfLongestSubstring / 在一个字符串中找出无重复的最长子串
+// leetcode 3 : lengthOfLongestSubstring 
 
 
 // solution 1 : brute-force attack / use hash table / array to judge duplicates

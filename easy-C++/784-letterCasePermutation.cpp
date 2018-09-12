@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.18
 
-// leetcode 784 : letterCasePermutation / 字母大小写全排列
+// leetcode 784 : letterCasePermutation 
 
 
 // solution : recursion

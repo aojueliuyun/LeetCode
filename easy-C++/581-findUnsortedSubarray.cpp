@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.7.30
 
-// leetcode 581 : findUnsortedSubarray / 寻找最短无序连续子数组
+// leetcode 581 : findUnsortedSubarray
 
 
 // solution : brute-force attack || two pointers, find left and right

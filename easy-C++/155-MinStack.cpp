@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.17
 
-// leetcode 155 实现一个最小栈，支持操作push(), pop(), top(), 常数时间getMin()
+// leetcode 155 : MinStack
 
 // solution 1 : use vector ----------> Inefficient
 

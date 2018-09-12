@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.23
 
-// leetcode 264 : 找出第n个丑数(只能被2,3,5整除的数) 
+// leetcode 264 : 
 
 
 // solution : --------------> time limit exceed.  to be continued , Later

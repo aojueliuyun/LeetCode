@@ -13,19 +13,20 @@
 #include<deque>
 #include<numeric>
 #include<unordered_map>
+#include<cmath>
 using namespace std;
 
 // 2018.7.15
 
-// leetcode 69 : 整数求平方根，并向下取整
+// leetcode 69 : mysqrt
 
 
-// solution ------------> trick  投机取巧 
+// solution : 
  
 class Solution {
 public:
     int mySqrt(int x) {
-        double ans = sqrt(x);
+        double ans = sqrt(x);  // in <cmath>
         return int(ans);
     }
 }; 

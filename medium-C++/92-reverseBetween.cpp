@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.10
 
-// leetcode 92 : reverseBetween / ·´×ªÁ´±í II
+// leetcode 92 : reverseBetween
 // require : one round traversal
 
 

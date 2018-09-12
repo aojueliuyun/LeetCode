@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.3
 
-// leetcode 622 : MyCircularQueue / 设计一个循环队列
+// leetcode 622 : MyCircularQueue
 
 
 // solution : use array, rear point to the next position of rear, front point to front

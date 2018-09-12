@@ -21,7 +21,7 @@ using namespace std;
 
 // 2018.7.29
 
-// leetcode 538 : convertBST / 把二叉搜索树转换为累加树
+// leetcode 538 : convertBST 
 
 
 // Definition for a binary tree node.

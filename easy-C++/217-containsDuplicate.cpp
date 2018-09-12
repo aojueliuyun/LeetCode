@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.22
 
-// leetcode 217 containsDuplicate / 判断数组是否存在重复元素 
+// leetcode 217 containsDuplicate
 
 
 // solution 1 : use hash map / set

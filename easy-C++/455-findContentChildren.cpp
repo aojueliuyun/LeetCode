@@ -20,7 +20,7 @@ using namespace std;
 
 // 2018.7.28
 
-// leetcode 455 : findContentChildren / ·Ö·¢±ý¸É
+// leetcode 455 : findContentChildren 
 
 // strategy : greedy
 

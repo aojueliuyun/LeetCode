@@ -21,7 +21,7 @@ using namespace std;
 
 // 2018.7.29
 
-// leetcode 561 : arrayPairSum / Êý×é²ð·Ö I
+// leetcode 561 : arrayPairSum
 
 
 // solution : just sort ans split

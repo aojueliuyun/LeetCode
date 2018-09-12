@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.21
 
-// leetcode 204 countPrimes 计算小于非负整数n的质数的数量
+// leetcode 204 countPrimes 
 
 // question : How to get prime numbers ?
 // answer:    traverse -----> O(n^2)
@@ -47,7 +47,7 @@ public:
 }; 
 
 
-// solution 2 : the Sieve of Eratosthenes / 埃氏筛法 / 埃托拉色尼筛法 
+// solution 2 : the Sieve of Eratosthenes 
 // link : https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
 // time: O(n*loglogn)   how to prove? 
 // space: O(n)
@@ -72,7 +72,7 @@ public:
 };
 
 
-// solution 3 : the sieve of Euler / 欧拉筛法 / 线性筛法----------------> to be continued ... not right
+// solution 3 : the sieve of Euler ---------------> to be continued ... not right
 // time: O(m)
 // space: O(n) 
 class Solution3 {

@@ -20,7 +20,7 @@ using namespace std;
 
 // 2018.7.26
 
-// leetcode 415 : addStrings / 大数相加
+// leetcode 415 : addStrings
 
 
 // solution : just simulation

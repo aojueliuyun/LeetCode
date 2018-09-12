@@ -17,10 +17,10 @@ using namespace std;
 
 // 2018.7.16
 
-// leetcode 121 : 买卖股票的最佳时机
+// leetcode 121 : maxProfit
 
 
-// solution  1 : 暴力
+// solution  1 :
 // time: O(n*n) 
 class Solution {
 public:

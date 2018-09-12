@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.24
 
-// leetcode 404 sumOfLeftLeaves / 计算给定二叉树的所有左叶子之和
+// leetcode 404 sumOfLeftLeaves 
 
 
 //Definition for a binary tree node.

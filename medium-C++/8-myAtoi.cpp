@@ -20,7 +20,7 @@ using namespace std;
 
 // 2018.7.27
 
-// leetcode 8 : myAtoi / ×Ö·û´®×ªÕûÊý
+// leetcode 8 : myAtoi 
 
 
 // solution : just simulation

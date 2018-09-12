@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.26
 
-// leetcode 409 : longestPalindrome / 输入一个字符串，找出其能构成的最长回文字符串
+// leetcode 409 : longestPalindrome 
 
 
 // solution : use hash map to count

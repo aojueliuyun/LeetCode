@@ -20,7 +20,7 @@ using namespace std;
 
 // 2018.7.26
 
-// leetcode 559 : maxDepth / n叉树的最大深度 BFS
+// leetcode 559 : maxDepth 
 
 
 

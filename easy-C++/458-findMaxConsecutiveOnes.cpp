@@ -21,7 +21,7 @@ using namespace std;
 
 // 2018.7.28
 
-// leetcode 485 findMaxConsecutiveOnes / 找到数组中最大的连续的1的个数
+// leetcode 485 findMaxConsecutiveOnes 
 
 
 // solution 1 : traverse and record 

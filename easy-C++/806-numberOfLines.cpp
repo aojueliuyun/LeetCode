@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.18
 
-// leetcode 806 : numberOfLines / 写字符串需要的行数
+// leetcode 806 : numberOfLines
 
 
 // solution : just simulation

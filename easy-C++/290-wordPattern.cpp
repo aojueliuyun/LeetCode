@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.23
 
-// leetcode 290 wordPattern /  µ¥´ÊÄ£Ê½Æ¥Åä
+// leetcode 290 wordPattern 
 
 // key point : how to split a string to a list of strings
 // use string::substr ----> string substr (size_t pos = 0, size_t len = npos) const;
@@ -67,7 +67,7 @@ public:
 
 
 // solution 2 : just simplify the writing of solution 1
-class Solution {
+class Solution2 {
 public:
     bool wordPattern(string pattern, string str) {
        

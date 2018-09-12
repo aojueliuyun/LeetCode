@@ -21,7 +21,7 @@ using namespace std;
 
 // 2018.7.29
 
-// leetcode 520 : detectCapitalUse / ¼ì²â´óÐ´×ÖÄ¸
+// leetcode 520 : detectCapitalUse 
 
 
 // solution 1 : 

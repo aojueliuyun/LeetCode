@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.17
 
-// leetcode 746 : minCostClimbingStairs / 使用最小花费爬楼梯
+// leetcode 746 : minCostClimbingStairs
 
 
 // solution : DP :   dp[n] = min(dp(n-1) + cost[n-1], dp(n-2) + cost[n-2])

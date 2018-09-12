@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.13
 
-// leetcode 693 : hasAlternatingBits / 交替位二进制数
+// leetcode 693 : hasAlternatingBits
 
 
 // solution : 

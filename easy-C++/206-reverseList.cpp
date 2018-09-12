@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.22
 
-// leetocde 206 : reverse linked List / 反转链表
+// leetocde 206 : reverse linked List 
 // require : use iteration and recursion
 
 
@@ -32,7 +32,7 @@ struct ListNode {
 
  
  
-// solution 1 : use iteration , insert old node to the new list's head -------> 头插法 
+// solution 1 : use iteration , insert old node to the new list's head 
 // time: O(n)
 // space: O(1)
 class Solution {

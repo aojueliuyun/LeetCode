@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.17
 
-// leetcode 747 : dominantIndex / 至少是其他数字两倍的最大数
+// leetcode 747 : dominantIndex 
 
 
 // solution : one round traverse to record the indexs of first and second max numbers

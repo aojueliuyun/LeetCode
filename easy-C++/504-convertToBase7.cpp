@@ -21,7 +21,7 @@ using namespace std;
 
 // 2018.7.28
 
-// leetcode 504 : convertToBase7 / 十进制数转换为7进制整数，字符串形式给出
+// leetcode 504 : convertToBase7 
 
 
 // solution

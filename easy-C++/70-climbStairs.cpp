@@ -17,7 +17,7 @@ using namespace std;
 
 // 2018.7.15
 
-// leetcode 70 . climbStairs ÅÀÂ¥ÌÝ---------> classic DP
+// leetcode 70 : climbStairs 
 
 
 // solution : DP
@@ -42,7 +42,7 @@ class Solution2 {
 public:
     int climbStairs(int n) {
         if (n == 1 || n == 2) return n;
-        int dp[n+1]; // VLA , C syntax
+        int dp[n+1]; // VLA , C syntax, do not recommand, when you write C++, use pure C++
         dp[1] = 1;
         dp[2] = 2;
         for (int i = 3; i <= n; i ++) {

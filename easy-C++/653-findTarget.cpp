@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.3
 
-// leetcode 653 : findTarget / 两数之和 IV - 输入 BST
+// leetcode 653 : findTarget 
 
 
 //Definition for a binary tree node.

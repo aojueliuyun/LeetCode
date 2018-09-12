@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.23
 
-// leetcode 263 isUgly / 判断一个数是否只有2,3,5的质因子 
+// leetcode 263 isUgly 
 
 // solution : just simulation
 class Solution {

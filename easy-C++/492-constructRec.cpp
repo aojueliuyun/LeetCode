@@ -21,7 +21,7 @@ using namespace std;
 
 // 2018.7.28
 
-// leetcode 492 : constructRec / 给定面积，构造矩形，要求长>=宽，且长和宽之间差尽可能小 
+// leetcode 492 : constructRec
 
 
 // solution : traverse

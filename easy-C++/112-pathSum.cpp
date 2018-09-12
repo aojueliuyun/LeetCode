@@ -17,8 +17,7 @@ using namespace std;
 
 // 2018.7.16
 
-// leetcode 112 :  path sum 路径总和，
-// 判断一棵树中是否有从根节点到叶子节点的路径，其路径上节点值总和为输入数值 
+// leetcode 112 :  path sum 
 
 // Definition for a binary tree node.
 struct TreeNode {

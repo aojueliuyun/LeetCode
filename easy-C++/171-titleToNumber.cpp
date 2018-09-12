@@ -20,7 +20,7 @@ using namespace std;
 
 // 2018.7.21
 
-// leetcode 171 : titleToNumber excel的title转换为数字
+// leetcode 171 : titleToNumber
 
 
 // solution : decimal to Base 26 number

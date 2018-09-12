@@ -17,7 +17,7 @@ using namespace std;
 
 // 2018.7.16
 
-// leetcode 101 Symmetric Tree 判断一棵树是否对称 
+// leetcode 101 : Symmetric Tree 
  
 
 // Definition for a binary tree node.
@@ -28,8 +28,7 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-// solution 
-// 与上一题 100 类似，借助一个递归过程 
+// solution : 
 class Solution {
 public:
     bool isSymmetric(TreeNode* root) {

@@ -17,7 +17,7 @@ using namespace std;
 
 // 2018.7.16
 
-// leetcode 119 : Pascal Trangle ------> 输出其中第k行，时间复杂度要求 O(k) 
+// leetcode 119 : Pascal Trangle
 
 // solution : C(n,m) = C(n-1, m-1) + C(n-1, m)
 // time: O(k*k)

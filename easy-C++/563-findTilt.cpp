@@ -21,7 +21,7 @@ using namespace std;
 
 // 2018.7.29
 
-// leetcode 563 : findTilt / ÇóÊ÷µÄÆÂ¶È
+// leetcode 563 : findTilt 
 
 
 

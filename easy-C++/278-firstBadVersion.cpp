@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.23
 
-// leetcode 278 firstBadVersion / 典型二分查找 
+// leetcode 278 firstBadVersion 
 
 int badversion;
 

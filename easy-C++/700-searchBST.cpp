@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.13
 
-// leetcode 700 : searchBST / ¶þ²æËÑË÷Ê÷ÖÐµÄËÑË÷
+// leetcode 700 : searchBST
 
 
 

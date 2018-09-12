@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.24
 
-// leetcode 371 getSum / 不使用+和-计算两个整数的和 ???
+// leetcode 371 getSum 
 
 
 // solution : use bit operation and recursion || ---> interesting

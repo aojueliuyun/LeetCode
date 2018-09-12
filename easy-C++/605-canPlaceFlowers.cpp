@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.7.30
 
-// leetcode 605 : canPlaceFlowers / 种花问题 
+// leetcode 605 : canPlaceFlowers
 
 
 // solution : get the max number of the position than can insert

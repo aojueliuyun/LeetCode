@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.24
 
-// leetcode 274 guessNumber / ²ÂÊý×Ö ------> ¶þ·Ö 
+// leetcode 274 guessNumber 
 
 int mynumber = 0;
 // Forward declaration of guess API.

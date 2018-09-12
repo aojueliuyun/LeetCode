@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.22
 
-// leetcoee 231 isPowerOfTwo / 判断一个整数是否是2的幂
+// leetcoee 231 isPowerOfTwo 
 
 
 // solution 1 : divide

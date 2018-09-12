@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.26
 
-// leetcode 405 . decimal to hexadecimal / 10进制有符号整数转换为16进制 
+// leetcode 405 . decimal to hexadecimal 
 
 
 // solution 

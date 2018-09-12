@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.7.29
 
-// leetcode 566 : matrixReshape / ¾ØÕóÖØËÜ (reshape) 
+// leetcode 566 : matrixReshape 
 
 
 // notes: one of construtors of std::vector

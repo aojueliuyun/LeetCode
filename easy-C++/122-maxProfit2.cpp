@@ -17,7 +17,7 @@ using namespace std;
 
 // 2018.7.17
 
-// leetcode 122 : maxProfit 2 买卖股票的最佳时机-----------> 允许多次买入卖出
+// leetcode 122 : maxProfit 2 
 
 // solution : use delta = prices[i] - prices[i-1] ----------> tricky
 class Solution {

@@ -21,7 +21,7 @@ using namespace std;
 
 // 2018.7.26
 
-// leetcode : 434 countSegments / 统计单词中的单词数
+// leetcode : 434 countSegments 
 
 
 // solution : 

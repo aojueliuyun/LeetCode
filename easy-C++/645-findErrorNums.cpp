@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.3
 
-// leetcode 645 : findErrorNums / ´íÎóµÄ¼¯ºÏ
+// leetcode 645 : findErrorNums
 
 
 // solution 1 : use hash map

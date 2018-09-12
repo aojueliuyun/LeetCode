@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.10
 
-// leetcode 770 : MyLinkedList / 设计链表（单链表或者双链表）
+// leetcode 770 : MyLinkedList
 
 
 // solution 1 : single linked list

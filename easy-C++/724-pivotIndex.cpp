@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.14
 
-// leetcdoe 724 : pivotIndex / 寻找数组的中心索引
+// leetcdoe 724 : pivotIndex
 
 
 // solution 1 : get the sum array

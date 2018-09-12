@@ -20,7 +20,7 @@ using namespace std;
 
 // 2018.7.26
 
-// leetcode 438 : findAnagrams / ÕÒµ½×Ö·û´®ÖĞËùÓĞ×ÖÄ¸ÒìÎ»´Ê
+// leetcode 438 : findAnagrams
 
 template<typename T1, typename T2>
 void printMap(unordered_map<T1, T2> M) {
@@ -71,7 +71,7 @@ public:
 // solution 2 : use hash array
 // trick : judge whether two vectors equal, just use == (as long as the data type is a built-in type)
 
-// trick : ÊµÊ±¸üĞÂ¹şÏ£±í²¢ÅĞ¶ÏÁ½¸öÊÇ·ñÏàµÈ 
+// trick : ÊµÊ±ï¿½ï¿½ï¿½Â¹ï¿½Ï£ï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ 
 
 // time : O(|s|*|p|)
 // space: O(256)

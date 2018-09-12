@@ -21,7 +21,7 @@ using namespace std;
 
 // 2018.7.28
 
-// leetcode 479 : largestPalindrome / 最大回文数乘积
+// leetcode 479 : largestPalindrome 
 
 // WTF !!!
 

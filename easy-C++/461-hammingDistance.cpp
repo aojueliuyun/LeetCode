@@ -21,7 +21,7 @@ using namespace std;
 
 // 2018.7.28
 
-// leetcode 461 hammingDistance / 求两个数的汉明距离(不同二进制位的位数)
+// leetcode 461 hammingDistance
 
 
 // solution 1 : use xor

@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.18
 
-// leetcode 169 . majorityElement ÇóÖÚÊı
+// leetcode 169 : majorityElement
 
 // solution : traverse and save to hash map
 // time: O(n)

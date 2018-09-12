@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.10
 
-// leetcode 82 : deleteDuplicates / 删除排序链表中的重复元素 II
+// leetcode 82 : deleteDuplicates
 
 
 // Definition for singly-linked list.

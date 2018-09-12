@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.14
 
-// leetcode 728 : selfDividingNumbers / ×Ô³ýÊý
+// leetcode 728 : selfDividingNumbers 
 
 
 // solution 1 : 

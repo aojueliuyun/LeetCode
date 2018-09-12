@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.17
 
-// leetcode 771 : numJewelsInStones / 宝石与石头
+// leetcode 771 : numJewelsInStones
 
 
 // solution : of course use hash set

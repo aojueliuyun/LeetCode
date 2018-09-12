@@ -19,8 +19,6 @@ using namespace std;
 
 // leetcode 66 : plus one
 
-// 数组模拟整数 + 1
-
 
 // solution 1 : just simulation
 class Solution {

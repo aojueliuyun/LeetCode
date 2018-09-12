@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.13
 
-// leetcode 696 : countBinarySubstrings / 计数二进制子串
+// leetcode 696 : countBinarySubstrings 
 
 
 // solution -1 : brute-force 

@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.22
 
-// leetcode 226 invertTree / ·´×ª¶ş²æÊ÷
+// leetcode 226 invertTree 
 
 // source: from Google and Max Howell ----------------------> kinda funny !!
 

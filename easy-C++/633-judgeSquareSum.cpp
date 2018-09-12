@@ -22,7 +22,7 @@ using namespace std;
 
 // 2108.7.30
 
-// leetcode 633 : judgeSquareSum / 判断一个数是否是两个数平方之和 
+// leetcode 633 : judgeSquareSum
 
 
 // solution : brute-force

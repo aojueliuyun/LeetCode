@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.5
 
-// leetcode 687 : longestUnivaluePath / 最长同值路径
+// leetcode 687 : longestUnivaluePath 
 
 
 // Definition for a binary tree node.

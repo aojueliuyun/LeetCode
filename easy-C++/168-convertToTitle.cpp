@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.20
 
-// leercode 168 convertToTitle : 将整数转换为excel表列中的字符串
+// leercode 168 : convertToTitle
 
 // solution 1 : get bits of string ------> get every bit of string frontward ----------> result
 // time: O(logn)

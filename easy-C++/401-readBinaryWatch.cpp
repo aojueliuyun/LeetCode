@@ -20,7 +20,7 @@ using namespace std;
 
 // 2018.7.25
 
-// leetcode 401 readBinaryWatch / 二进制手表
+// leetcode 401 readBinaryWatch 
 
 
 

@@ -17,7 +17,7 @@ using namespace std;
 
 // 2018.7.16
 
-// leetcode 108 : sortedArrayToBST 排序数组转换为平衡二叉树 
+// leetcode 108 : sortedArrayToBST 
 
 
 // Definition for a binary tree node.
@@ -44,7 +44,6 @@ public:
 //            root -> left = left;
 //            return root;
 //        }
-        // 上面两个if语句完全可以省略 
         int mid = (l + r) / 2;
         root = new TreeNode(nums[mid]);
         root -> left = arrayToBST(nums, l, mid-1);

@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.7.30
 
-// leetcode 575 : distributeCandies / ·Ö·¢ÌÇ¹û
+// leetcode 575 : distributeCandies
 
 
 // solution : use hash table / set to get the number of kinds of candies

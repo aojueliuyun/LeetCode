@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.22
 
-// leetcode 234 : isPalindrome / ÅÐ¶ÏÒ»¸öÁ´±íÊÇ·ñÊÇ»ØÎÄÁ´±í
+// leetcode 234 : isPalindrome 
 
 // requier : O(n) time & O(1) space
 
@@ -64,8 +64,8 @@ public:
             fast = fast->next->next;
         }
         ListNode * temp; 
-        if (fast) temp = slow->next;  // the number of nodes is even / Å¼Êý 
-        else temp = slow;             // the number of node is odd / ÆæÊý 
+        if (fast) temp = slow->next;  // the number of nodes is even / Å¼ï¿½ï¿½ 
+        else temp = slow;             // the number of node is odd / ï¿½ï¿½ï¿½ï¿½ 
         slow = nullptr;
         while (temp) {                // reverse the sublist (temp to end)
             ListNode * tp = slow;

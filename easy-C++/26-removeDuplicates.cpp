@@ -18,7 +18,7 @@ using namespace std;
 
 // 2018.7.15
 
-// leetcode 26 : 原地删除数组中的重复元素
+// leetcode 26 : removeDuplicates
 
 
 // solution 

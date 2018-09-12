@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.7.30
 
-// leetcode 617 : mergeTrees / ºÏ²¢¶þ²æÊ÷
+// leetcode 617 : mergeTrees
 
 
 // Definition for a binary tree node.

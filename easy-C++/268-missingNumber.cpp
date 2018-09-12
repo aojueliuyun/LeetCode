@@ -20,7 +20,7 @@ using namespace std;
 
 // 2018.7.23
 
-// leetcode 263 missingNumber / 寻找0到n乱序中少了的一个数
+// leetcode 263 missingNumber 
 
 
 // solution : get ideal sum and substact actual sum

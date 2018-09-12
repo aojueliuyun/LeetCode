@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.21
 
-// leetcode 203 : Remove Linked List Elements 删除链表中的节点
+// leetcode 203 : Remove Linked List Elements 
 
 
 

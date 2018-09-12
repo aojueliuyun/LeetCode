@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.3
 
-// leetcode 657 : judgeCircle / ÅÐ¶ÏÂ·Ïß³ÉÈ¦
+// leetcode 657 : judgeCircle 
 
 // overload operator + for pair<T,T>
 template<typename T>

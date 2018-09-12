@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.24
 
-// leetcode 350 intersect / 多重集的交集
+// leetcode 350 intersect 
 
 
 // solution 1 : use std::multiset in <set> and std::set_intersection in <algorithm>

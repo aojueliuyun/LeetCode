@@ -20,7 +20,7 @@ using namespace std;
 
 // 2018.7.26
 
-// leetcode 453 : minMoves / 最少移动次数
+// leetcode 453 : minMoves 
 
 
 // solution : add n-1 min elements by 1, equals substract max elemnt by 1, in other way

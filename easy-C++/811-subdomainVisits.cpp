@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.18
 
-// leetcode 811 : subdomainVisits / 子域名访问计数
+// leetcode 811 : subdomainVisits
 
 
 // solution :  use string::find(char ch, size_t pos) to split string  || also can compare character directly

@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.17
 
-// leetcode 160 : 找到两个单链表相交的起始节点
+// leetcode 160 : getIntersectionNode
 // list Node
 struct ListNode {
     int val;

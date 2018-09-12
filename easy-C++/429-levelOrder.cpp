@@ -20,7 +20,7 @@ using namespace std;
 
 // 2018.7.26
 
-// leetcode 429 : levelOrder / n ²æÊ÷µÄ²ã´Î±éÀú
+// leetcode 429 : levelOrder
 
 
 

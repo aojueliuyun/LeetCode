@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.21
 
-// leetcode 198 : house robber ´ò¼Ò½ÙÉá --------------> Simple DP
+// leetcode 198 : house robber ------------> Simple DP
 
 
 // the key of DP :     recurrence equation, and boundary codition

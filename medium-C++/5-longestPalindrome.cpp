@@ -20,7 +20,7 @@ using namespace std;
 
 // 2018.7.27
 
-// leetcode 5 : longestPalindrome / 最长回文子串
+// leetcode 5 : longestPalindrome 
 
 
 // solution 1 : use xor and traverse  || not so elegant

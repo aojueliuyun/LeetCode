@@ -21,7 +21,7 @@ using namespace std;
 
 // 2018.7.28
 
-// leetcode 475 : findRadius / ¹©Å¯Æ÷
+// leetcode 475 : findRadius 
 
 
 // solution : find the min diatance to a heater for every house, the max will be the result

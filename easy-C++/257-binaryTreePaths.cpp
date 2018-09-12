@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.23
 
-// leetcode 257 binaryTreePaths / 求出二叉树的所有从根节点到叶子节点的路径
+// leetcode 257 binaryTreePaths 
 
 
 

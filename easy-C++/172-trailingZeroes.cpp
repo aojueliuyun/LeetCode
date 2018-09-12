@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.21
 
-// leetcode 172 : 求阶乘后的零个数
+// leetcode 172 : tralilingZeroes
 
 // solution
 class Solution {

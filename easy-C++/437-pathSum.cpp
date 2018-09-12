@@ -20,7 +20,7 @@ using namespace std;
 
 // 2018.7.26
 
-// leetcode 437 : pathSum / 在二叉树中找出路径和为给定值的路径条数
+// leetcode 437 : pathSum 
 
 
 //Definition for a binary tree node.

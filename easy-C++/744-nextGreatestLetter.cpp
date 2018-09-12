@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.17
 
-// leetcode 744 : nextGreatestLetter / 寻找比目标字母大的最小字母
+// leetcode 744 : nextGreatestLetter 
 
 
 // solution : traverse a cyclic vector

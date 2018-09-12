@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.21
 
-// leetcode 202 : happy number ¿ìÀÖÊı
+// leetcode 202 : happy number 
 
 
 // solution : use hash map or set to judge whether will be a infinite loop.

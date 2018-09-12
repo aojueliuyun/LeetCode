@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.21
 
-// leetocde : 190  reverseBits : 颠倒 一个32位无符号整数的二进制位
+// leetocde : 190  reverseBits 
 
 
 // solution 1 : get it's binary order reverse it ans change into uint32_t

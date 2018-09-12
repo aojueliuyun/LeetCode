@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.24
 
-// leetcode 303 : sumRange / 求数组一个范围内的和
+// leetcode 303 : sumRange 
 
 // solution 1 : initial with a vector and get sum when call sumRange
 // sumRange time: O(j-i+1)

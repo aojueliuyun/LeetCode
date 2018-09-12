@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.24
 
-// leetcode 383 canConstruct / 判断一个字符串是否能由另一个字符串中的字母构成
+// leetcode 383 canConstruct 
 
 
 // solution : use unordered_map

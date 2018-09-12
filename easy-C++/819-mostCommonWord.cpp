@@ -23,7 +23,7 @@ using namespace std;
 
 // 2018.8.18
 
-// leetcode 819 : mostCommonWord / 最常见的单词
+// leetcode 819 : mostCommonWord 
 
 
 // solution : 

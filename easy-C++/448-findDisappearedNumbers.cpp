@@ -24,7 +24,7 @@ using namespace std;
 // achievement : 100 problems (all easy) sloved on leetcode --------> done 
 
 
-// leetcode 448 : findDisappearedNumbers / 找到区间 [1, n] 中所有消失的数字
+// leetcode 448 : findDisappearedNumbers 
 // require : O(1) space
 
 

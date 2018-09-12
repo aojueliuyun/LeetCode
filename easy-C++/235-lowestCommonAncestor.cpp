@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.22
 
-// leetcode 235 : lowestCommonAncestor / 求两个树节点的最近公共祖先
+// leetcode 235 : lowestCommonAncestor
 
 // attention : the lowest common ancestor of a node can be the node itself.
 

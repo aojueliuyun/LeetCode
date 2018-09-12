@@ -21,7 +21,7 @@ using namespace std;
 
 // 2018.7.29
 
-// leetcode 501 : findMode / 二叉搜索树中的众数
+// leetcode 501 : findMode
 
 
 

@@ -21,7 +21,7 @@ using namespace std;
 
 // 2018.7.28
 
-// leetcode 463 : islandPerimeter / «Ûµ∫”Ï÷‹≥§
+// leetcode 463 : islandPerimeter
 
 
 // solution : just get how many grids is adjacent to every grid. || traverse

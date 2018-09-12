@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.8.10
 
-// leetcode 61 : rotateRight / Ðý×ªÁ´±í
+// leetcode 61 : rotateRight
 
 
 // Definition for singly-linked list.

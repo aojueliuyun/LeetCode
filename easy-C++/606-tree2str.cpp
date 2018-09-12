@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.7.30
 
-// leetcode 606 : tree2str / 根据二叉树创建字符串
+// leetcode 606 : tree2str
 
 
 

@@ -19,7 +19,7 @@ using namespace std;
 
 // 2018.7.23
 
-// leetcode 258 : addDigits / 将一个数每个位上数字相加，直到结果为1位数 
+// leetcode 258 : addDigits 
 // require: time O(1)
 
 // solution : find the regular pattern

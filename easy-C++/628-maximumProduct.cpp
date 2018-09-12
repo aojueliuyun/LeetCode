@@ -22,7 +22,7 @@ using namespace std;
 
 // 2018.7.30
 
-// leetcode 628 : maximumProduct / 三个数的最大乘积
+// leetcode 628 : maximumProduct
 
 
 // solution : maintain 5 values : firstmin, secondmin, firstmax, secondmax, thirdmax  || this five names is too long, isn't it ?

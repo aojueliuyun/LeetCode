@@ -17,7 +17,7 @@ using namespace std;
 
 // 2018.7.15
 
-// leetcode 67 : add Binary 二进制求和 
+// leetcode 67 : add Binary 
 
 
 // Solution 1 : reverse and fill two strings (make two strings same length), get sum then reverse back
@@ -38,7 +38,7 @@ public:
             ans.push_back((sum + carry)% radix + '0');
             carry = (sum + carry) / radix;
         }
-        if(carry > 0) ans.push_back('0' + carry);      // 最高位进位
+        if(carry > 0) ans.push_back('0' + carry);
         reverse(ans.begin(), ans.end());
         return ans;
     }

@@ -17,7 +17,7 @@ using namespace std;
 
 // 2018.7.16
 
-// leetcode 88 合并两个排序数组 
+// leetcode 88 : merge
 
 
 // solution 1 : not in place merge
@@ -54,7 +54,6 @@ public:
 //        while (p2 >= 0) nums1[last--] = p1 >= 0 && nums1[p1] > nums2[p2] ? nums1[p1--] : nums2[p2--];
     }
 };
-
 
 
 
